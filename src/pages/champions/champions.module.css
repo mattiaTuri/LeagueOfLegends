@@ -1,6 +1,7 @@
 .image{
     object-fit: cover;
     height: 100%;
+    position: relative;
 }
 
 .championBox{
@@ -20,8 +21,13 @@
 
 .championName{
     position: absolute;
-    bottom:100px;
+    bottom:0px;
     text-align: center;
     width: 100%;
-    font-size: 50px;
+}
+
+@media screen and (min-width: 800px) {
+    .championBox{
+        display: none;
+    }
 }

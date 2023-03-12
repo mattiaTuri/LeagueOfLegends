@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Atami";
-  src: url("../../public/assets/image/font/Gilroy-Bold.ttf");
+  font-family: "Atami-Bold" ;
+  src: url("../../public/assets/font/Atami-Bold.otf");
+}
+
+@font-face {
+  font-family: "Atami-Display-Bold" ;
+  src: url("../../public/assets/font/Atami-Display-Bold.otf");
 }
 
 *{
@@ -17,8 +22,16 @@ body{
   background-color: black;
 }
 
-h1{
-  font-family: "Atami";
+h1,h2, h3{
+  color: #ba8964;
+}
+
+h1,h2{
+  font-family: "Atami-Display-Bold" ;
+}
+
+h3{
+  font-family: "Atami-Bold" ;
 }
 
 .swiper-slide{
@@ -81,7 +94,6 @@ a:hover{
 @media screen and (min-width: 1024px) {
 
   .swiper-slide{
-    height:100% !important;
     width: 50% !important;
   }
 

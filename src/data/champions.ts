@@ -1,56 +1,67 @@
 import { Champion } from "@/models/champion";
-import img from "../../public/assets/image/gwen.jpg"
-import ahri from "../../public/assets/image/Ahri_0.jpg"
-import aatrox from "../../public/assets/image/Aatrox_0.jpg"
-import gwen from "../../public/assets/image/gwen.jpg"
+import ahri from "../../public/assets/image/ahri/ahri.jpg"
+import caitlyn from "../../public/assets/image/caitlyn/caitlyn.jpg"
+import evelynn from "../../public/assets/image/evelynn/evelynn.jpg"
+import gwen from "../../public/assets/image/gwen/gwen.jpg"
+import jinx from "../../public/assets/image/jinx/jinx.jpg"
+import ksante from "../../public/assets/image/ksante/ksante.jpg"
+import vex from "../../public/assets/image/vex/vex.jpg"
 
  export const champions: Champion[] = [
     {
-        id: 0,
-        name: "AATROX",
-        title:"The Darkin Blade",
-        region:"",
-        lore:"",
-        champions_image: aatrox
-    },
-    {
-        id: 1,
+        id: "ahri",
         name: "AHRI",
-        title:"La volpe a nove code",
-        region:"",
+        title:"The nine-tailed fox",
+        region:"Ionia",
         lore:"",
         champions_image: ahri
     },
     {
-        id: 2,
+        id: "caitlyn",
+        name: "CAITLYN",
+        title:"The sheriff of Piltover",
+        region:"Piltover",
+        lore:"",
+        champions_image: caitlyn
+    },
+    {
+        id: "evelynn",
+        name: "EVELYNN",
+        title:"Agony's embrace",
+        region:"Runeterra",
+        lore:"",
+        champions_image: evelynn
+    },
+    {
+        id: "gwen",
         name: "GWEN",
-        title:"La Sacra ricamatrice",
-        region:"",
+        title:"The hallowed seamstress",
+        region:"Shadow isles",
         lore:"",
         champions_image: gwen
     },
     {
-        id: 3,
-        name: "GWEN",
-        title:"La Sacra ricamatrice",
-        region:"",
+        id: "jinx",
+        name: "JINX",
+        title:"The loose cannon",
+        region:"Zaun",
         lore:"",
-        champions_image: gwen
+        champions_image: jinx
     },
     {
-        id: 4,
-        name: "GWEN",
-        title:"La Sacra ricamatrice",
-        region:"",
+        id: "ksante",
+        name: "K'SANTE",
+        title:"The pride of Nazumah",
+        region:"Runeterra",
         lore:"",
-        champions_image: gwen
+        champions_image: ksante
     },
     {
-        id: 5,
-        name: "GWEN",
-        title:"La Sacra ricamatrice",
-        region:"",
+        id: "vex",
+        name: "VEX",
+        title:"The gloomist",
+        region:"Shadow isles",
         lore:"",
-        champions_image: gwen
+        champions_image: vex
     },
  ]
