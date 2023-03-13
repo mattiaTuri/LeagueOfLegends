@@ -1,2 +1,84 @@
+.containerLink{
+    font-family: "Atami-Bold" ;
+    border: 1px solid #C3A06A;
+    overflow: hidden;
+}
 
+.containerLink > a{
+    height: 100%;
+    width: 100%;
+}
 
+.containerLink::before{
+    content: "";
+    background-color: #C3A06A;
+    transform-origin: bottom;
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    left: -25%;
+    top: -20%;
+    border-radius: 50%;
+    transform: translate3d(0,68%,0) scaleY(0);
+    transition: 0.8s cubic-bezier(0.1, 0, 0.3, 1);
+    z-index: -1;
+}
+
+.containerLink:hover::before{
+    transform: translate3d(0,0%,0) scaleY(1);
+}
+
+.containerLink > a::after{
+    content: attr(data-link);
+    position: absolute;
+    left: 0;
+    top:100%;
+    padding: 0.5rem;
+    color: black;
+    transition-delay: 0.5;
+}
+
+.containerLink > a{
+    transition: 0.2s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.containerLink:hover > a{
+    transform: translateY(-100%);
+}
+
+/*
+.navbarLink::before{
+    content: "";
+    background-color: #C3A06A;
+    transform-origin: bottom;
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    left: -25%;
+    top: -20%;
+    border-radius: 50%;
+    transform: scaleY(0);
+    transition: 0.5s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.navbarLink:hover::before{
+    transform: scaleY(1);
+}
+
+.navbarLink > h1::after{
+    content: attr(data-link);
+    position: absolute;
+    left: 0;
+    top:0;
+    padding: 0.625rem;
+    transform: translateY(100%);
+    color: black;
+}
+
+.navbarLink > h1{
+    transition: 0.5s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.navbarLink:hover > h1{
+    transform: translateY(0%); 
+} */

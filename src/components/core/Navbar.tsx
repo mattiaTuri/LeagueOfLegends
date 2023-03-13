@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Container from "../shared/Container";
 import style from "./navbar.module.css";
-import anime from "animejs";
 
 function Navbar() {
   return (
@@ -12,15 +11,21 @@ function Navbar() {
             <h1>TM</h1>
           </div>
           <div id="hamurgerMenu" className="md:hidden"></div>
-          <div className="hidden md:flex">
-            <Link href="/">HOME</Link>
-            <Link href="/champions" className="ml-8">
-              CHAMPIONS
-            </Link>
-            <Link href="/regions" className="ml-8">
-              REGIONS
-            </Link>
-          </div>
+          <ul className="hidden md:flex">
+            <li className={`${style.containerLink} mr-8 relative flex`}>
+              <Link href="/" data-link="HOME" className="p-2">HOME</Link>
+            </li>
+            <li className={`${style.containerLink} mr-8 relative flex`}>
+              <Link href="/champions" data-link="CHAMPIONS" className="p-2">
+                  CHAMPIONS
+              </Link>
+            </li>
+            <li className={`${style.containerLink} relative flex`}>
+              <Link href="/regions" data-link="REGIONS" className="p-2">
+                REGIONS
+              </Link>
+            </li>         
+          </ul>
         </nav>
       </Container>
     </header>
