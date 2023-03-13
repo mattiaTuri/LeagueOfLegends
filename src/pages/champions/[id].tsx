@@ -47,7 +47,11 @@ function ChampionPage() {
         >
           {nameSplit?.map((letter: string, index: number) => {
             return (
-              <motion.h1 key={index} variants={item} className="text-8xl">
+              <motion.h1
+                key={index}
+                variants={item}
+                className="text-5xl lg:text-8xl"
+              >
                 {letter}
               </motion.h1>
             );

@@ -23,7 +23,7 @@ body{
 }
 
 h1,h2, h3{
-  color: #ba8964;
+  color: #C3A06A;
 }
 
 h1,h2{
@@ -42,7 +42,7 @@ h3{
 }
 
 .swiper-slide-active{
-  border: 1px solid #ba8964;
+  border: 1px solid #C3A06A;
   opacity: 1;
 }
 
@@ -101,13 +101,13 @@ h3{
     visibility: visible;
     left: 25% !important;
     transition: 0.3s ease;
-    border: 1px solid #ba8964;
+    border: 1px solid #C3A06A;
   }
   
   .swiper-button-next{
     visibility: visible;
     right: 25% !important;
     transition: 0.3s ease;
-    border: 1px solid #ba8964;
+    border: 1px solid #C3A06A;
   }
 }

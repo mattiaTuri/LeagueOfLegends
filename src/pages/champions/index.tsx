@@ -111,7 +111,10 @@ function Champions() {
                         className={style.championName}
                         variants={textContainer}
                       >
-                        <motion.h2 variants={textMotion} className="text-8xl">
+                        <motion.h2
+                          variants={textMotion}
+                          className="text-5xl lg:text-8xl"
+                        >
                           {champion.name}
                         </motion.h2>
                         <motion.h3 variants={textMotion} className="text-2xl">
