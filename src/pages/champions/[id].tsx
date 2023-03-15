@@ -18,9 +18,9 @@ const container = {
 };
 
 const item = {
-  initial: { y: 0 },
+  initial: { y: 320 },
   animate: {
-    y: -250,
+    y: 0,
     transition: {
       duration: 1,
       ease: [0.6, 0.01, 0.05, 0.9],
@@ -37,41 +37,39 @@ function ChampionPage() {
   let nameSplit = activeChampion?.name.split("");
 
   return (
-    <div className="h-screen w-screen">
-      <div className="h-full w-full flex flex-col items-center justify-center">
-        <motion.div
-          className="flex absolute"
-          variants={container}
-          initial="initial"
-          animate="animate"
-        >
-          {nameSplit?.map((letter: string, index: number) => {
-            return (
-              <motion.h1
-                key={index}
-                variants={item}
-                className="text-5xl lg:text-8xl"
-              >
-                {letter}
-              </motion.h1>
-            );
-          })}
-        </motion.div>
-        <motion.div
-          className={`h-[50%] ${style.BoxShadow}`}
-          initial={{ width: "50%" }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 1, ease: [0.65, 0, 0.35, 1] }}
-        >
-          <Image
-            src={
-              activeChampion != undefined ? activeChampion.champions_image : ""
-            }
-            alt=""
-            className={`relative z-[-1] h-full object-cover ${style.championImg}`}
-          />
-        </motion.div>
-      </div>
+    <div className="h-full w-full flex flex-col items-center justify-center">
+      <motion.div
+        className="w-full flex justify-center items-center p-8"
+        variants={container}
+        initial="initial"
+        animate="animate"
+      >
+        {nameSplit?.map((letter: string, index: number) => {
+          return (
+            <motion.h1
+              key={index}
+              variants={item}
+              className="text-5xl lg:text-5xl"
+            >
+              {letter}
+            </motion.h1>
+          );
+        })}
+      </motion.div>
+      <motion.div
+        className={`h-[500px] ${style.BoxShadow}`}
+        initial={{ width: "50%" }}
+        animate={{ width: "100%" }}
+        transition={{ duration: 1, ease: [0.65, 0, 0.35, 1] }}
+      >
+        <Image
+          src={
+            activeChampion != undefined ? activeChampion.champions_image : ""
+          }
+          alt=""
+          className={`relative z-[-1] h-full object-cover ${style.championImg}`}
+        />
+      </motion.div>
     </div>
   );
 }

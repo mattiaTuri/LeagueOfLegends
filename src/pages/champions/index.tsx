@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -36,11 +36,11 @@ const textContainer = {
 const textMotion = {
   initial: {
     opacity: 0,
-    y: 30,
+    y: 180,
   },
   hover: {
     opacity: 1,
-    y: -180,
+    y: 0,
     transition: {
       delayChildren: 0.3,
       duration: 1,
@@ -50,27 +50,19 @@ const textMotion = {
 };
 
 function Champions() {
-  // const [activeElementImg, setActiveElementImg] = useState<string>(
-  //   champions[0].champions_image
-  // );
+  let windowWidth: number = 1025;
 
-  const GetActiveElement = () => {
-    // const elem: any = document.querySelector(".swiper-slide-active");
-    // const activeChampion = champions.find(
-    //   (e) => e.id == elem.swiperSlideIndex
-    // )!;
-    // setActiveElementImg(activeChampion.champions_image);
-  };
+  useEffect(() => {
+    windowWidth = window.innerWidth;
+  }, [windowWidth]);
 
   return (
     <>
-      <div className="text-white h-screen">
-        <div className="h-full flex items-center">
-          {/* <Image
-          src={activeElementImg}
-          alt=""
-          className="absolute opacity-7"
-        ></Image> */}
+      <div className="text-white">
+        <div className="h-full flex flex-col items-center">
+          <div className="p-8 w-full flex justify-center items-center">
+            <h1 className="text-5xl underline">CHAMPIONS</h1>
+          </div>
           <Swiper
             speed={1200}
             slidesPerView={"auto"}
@@ -92,7 +84,7 @@ function Champions() {
                 <SwiperSlide key={index} className="overflow-hidden">
                   <Link href={`/champions/${champion.id}`}>
                     <motion.div
-                      whileHover="hover"
+                      whileHover={windowWidth > 1024 ? "hover" : ""}
                       initial="initial"
                       className="h-full"
                     >
@@ -113,7 +105,7 @@ function Champions() {
                       >
                         <motion.h2
                           variants={textMotion}
-                          className="text-5xl lg:text-8xl"
+                          className="text-5xl lg:text-5xl"
                         >
                           {champion.name}
                         </motion.h2>
@@ -127,25 +119,15 @@ function Champions() {
                     href={`/champions/${champion.id}`}
                     className={style.championBox}
                   >
-                    <div className="w-full h-[50%] flex">
-                      <div className="w-[50%] border-r-[1px] border-b-[1px] border-[#ba8964] flex items-center justify-center">
-                        <h3 className="text-xs">Darkin</h3>
-                      </div>
-                      <div className="w-[50%] border-b-[1px] border-[#ba8964] flex items-center justify-center">
-                        <h3 className="text-xs">Runeterra</h3>
-                      </div>
-                    </div>
-                    <div className="w-full h-[50%] flex items-center justify-center">
+                    <div className="flex flex-col items-center justify-center">
+                      <h2 className="text-[#ba8964]">{champion.name}</h2>
                       <h2 className="text-[#ba8964]">{champion.title}</h2>
                     </div>
                   </Link>
                 </SwiperSlide>
               );
             })}
-            <div
-              className="swiper-button-prev"
-              onClick={() => GetActiveElement()}
-            >
+            <div className="swiper-button-prev">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -158,10 +140,7 @@ function Champions() {
                 />
               </svg>
             </div>
-            <div
-              className="swiper-button-next"
-              onClick={() => GetActiveElement()}
-            >
+            <div className="swiper-button-next">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

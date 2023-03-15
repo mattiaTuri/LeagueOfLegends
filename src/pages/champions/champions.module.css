@@ -16,17 +16,21 @@
     align-items: center;
     font-size: 30px;
     font-family: "Atami";
-    border: 1px solid #ba8964;
+    border: 1px solid #C3A06A;
   }
 
 .championName{
     position: absolute;
     bottom:0px;
-    text-align: center;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
     .championBox{
         display: none;
     }
