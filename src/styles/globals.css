@@ -22,7 +22,7 @@ body{
   background-color: black;
 }
 
-h1,h2, h3{
+h1,h2, h3, span{
   color: #C3A06A;
 }
 
@@ -30,7 +30,7 @@ h1,h2{
   font-family: "Atami-Display-Bold" ;
 }
 
-h3{
+h3, span{
   font-family: "Atami-Bold" ;
 }
 

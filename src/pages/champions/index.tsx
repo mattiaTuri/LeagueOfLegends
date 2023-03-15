@@ -58,7 +58,7 @@ function Champions() {
 
   return (
     <>
-      <div className="text-white">
+      <div className="text-white pt-[6.6rem]">
         <div className="h-full flex flex-col items-center">
           <div className="p-8 w-full flex justify-center items-center">
             <h1 className="text-5xl underline">CHAMPIONS</h1>

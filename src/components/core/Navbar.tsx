@@ -4,7 +4,7 @@ import style from "./navbar.module.css";
 
 function Navbar() {
   return (
-    <header className="w-full z-10 bg-[#111] border-b border-[#ba8964]">
+    <header className="w-full fixed z-10 bg-[#111] border-b border-[#ba8964]">
       <Container>
         <nav className="w-full flex items-center justify-between text-white p-8">
           <div>

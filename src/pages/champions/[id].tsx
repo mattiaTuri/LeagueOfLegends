@@ -37,7 +37,7 @@ function ChampionPage() {
   let nameSplit = activeChampion?.name.split("");
 
   return (
-    <div className="h-full w-full flex flex-col items-center justify-center">
+    <div className="h-full w-full flex flex-col items-center justify-center pt-[6.6rem]">
       <motion.div
         className="w-full flex justify-center items-center p-8"
         variants={container}
