@@ -12,6 +12,11 @@
   src: url("../../public/assets/font/Atami-Display-Bold.otf");
 }
 
+@font-face {
+  font-family: "Atami-Regular" ;
+  src: url("../../public/assets/font/Atami-Regular.otf");
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -32,6 +37,11 @@ h1,h2{
 
 h3, span{
   font-family: "Atami-Bold" ;
+}
+
+p{
+  font-family: "Atami-Regular";
+  color: #c4b998;
 }
 
 .swiper-slide{

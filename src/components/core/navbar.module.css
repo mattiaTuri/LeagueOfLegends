@@ -24,32 +24,4 @@
     transition: 0.5s cubic-bezier(0.1, 0, 0.3, 1);
 }
 
-.containerLink:hover::before{
-    transform: scaleY(1);
-}
 
-.containerLink:hover > a{
-    animation: initialState 1s forwards, EndState 0.3s forwards 0.3s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
-@keyframes initialState {
-    0%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(-100%);
-    }
-}
-
-@keyframes EndState {
-    0%{
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    100%{
-        color: black;
-        opacity: 1;
-        transform: translateY(0);
-    }
-}

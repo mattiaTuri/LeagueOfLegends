@@ -7,7 +7,7 @@ import style from "./homepage.module.css";
 function Homepage() {
   return (
     <>
-      <div className="text-white h-screen">
+      <div className="text-white h-[97vh]">
         <Container>
           <div className="relative w-full h-full flex justify-center items-center">
             <div className="flex flex-col items-center">

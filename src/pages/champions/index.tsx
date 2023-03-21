@@ -154,6 +154,16 @@ function Champions() {
               </svg>
             </div>
           </Swiper>
+          <div className="w-full pt-8 md:flex">
+            {champions.map((champion, index) => {
+              return (
+                <div key={index} className="w-full h-28">
+                    <Image className="w-[200px]" src={champion.champions_image} alt=""></Image>
+                    <div className="bg-[#111] flex justify-center items-center"><span>{champion.name}</span></div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </>

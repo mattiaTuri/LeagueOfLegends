@@ -1,4 +1,4 @@
-import Footer from "@/components/core/footer/Foooter";
+import Footer from "@/components/core/footer/Footer";
 import Navbar from "@/components/core/Navbar";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";

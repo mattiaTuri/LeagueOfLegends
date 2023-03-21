@@ -4,8 +4,15 @@
 }
 
 .BoxShadow{
-    /* box-shadow: inset 0 50px 10px -20px #000, inset 0 -50px 10px -20px #000; */
-    box-shadow: inset 0 -50px 10px -20px #000;;
+    box-shadow: inset 0 50px 10px -20px #000, inset 0 -50px 10px -20px #000;
+    /* box-shadow: inset 0 -50px 10px -20px #000; */
+}
+
+.triangle{
+    width: 30px;
+    height: 20px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background-color: #C3A06A;
 }
 
 @media screen and (min-width:1024px) {
