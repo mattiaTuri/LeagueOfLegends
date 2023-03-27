@@ -1,5 +1,11 @@
 import { Champion } from "@/models/champion";
 import ahri from "../../public/assets/image/ahri/ahri.jpg"
+import ahri1 from "../../public/assets/image/ahri/ahri_2.jpg"
+import ahri2 from "../../public/assets/image/ahri/ahri_14.jpg"
+import ahri3 from "../../public/assets/image/ahri/ahri_17.jpg"
+import ahri4 from "../../public/assets/image/ahri/ahri_27.jpg"
+import ahri5 from "../../public/assets/image/ahri/ahri_28.jpg"
+import ahri6 from "../../public/assets/image/ahri/ahri_42.jpg"
 import caitlyn from "../../public/assets/image/caitlyn/caitlyn.jpg"
 import evelynn from "../../public/assets/image/evelynn/evelynn.jpg"
 import gwen from "../../public/assets/image/gwen/gwen.jpg"
@@ -17,7 +23,15 @@ import ionia from "../../public/assets/image/region/ionia.png"
         region:"Ionia",
         region_image: ionia,
         lore:"Innately connected to the latent power of Runeterra, Ahri is a vastaya who can reshape magic into orbs of raw energy. She revels in toying with her prey by manipulating their emotions before devouring their life essence. Despite her predatory nature, Ahri retains a sense of empathy as she receives flashes of memory from each soul she consumes.",
-        champions_image: ahri
+        champions_image: [
+            ahri,
+            ahri2,
+            ahri3,
+            ahri4,
+            ahri5,
+            ahri6
+        ],
+        bgPosition: "60%"
     },
     {
         id: "caitlyn",
@@ -27,7 +41,8 @@ import ionia from "../../public/assets/image/region/ionia.png"
         region:"Piltover",
         region_image: ionia,
         lore:"",
-        champions_image: caitlyn
+        champions_image: [caitlyn],
+        bgPosition: "80%"
     },
     {
         id: "evelynn",
@@ -37,7 +52,8 @@ import ionia from "../../public/assets/image/region/ionia.png"
         region:"Runeterra",
         region_image: ionia,
         lore:"",
-        champions_image: evelynn
+        champions_image: [evelynn],
+        bgPosition: "center"
     },
     {
         id: "gwen",
@@ -47,7 +63,8 @@ import ionia from "../../public/assets/image/region/ionia.png"
         region:"Shadow isles",
         region_image: ionia,
         lore:"",
-        champions_image: gwen
+        champions_image: [gwen],
+        bgPosition: "center"
     },
     {
         id: "jinx",
@@ -57,7 +74,8 @@ import ionia from "../../public/assets/image/region/ionia.png"
         region:"Zaun",
         region_image: ionia,
         lore:"",
-        champions_image: jinx
+        champions_image: [jinx],
+        bgPosition: "center"
     },
     {
         id: "ksante",
@@ -67,7 +85,8 @@ import ionia from "../../public/assets/image/region/ionia.png"
         region:"Runeterra",
         region_image: ionia,
         lore:"",
-        champions_image: ksante
+        champions_image: [ksante],
+        bgPosition: "30%"
     },
     {
         id: "vex",
@@ -77,6 +96,7 @@ import ionia from "../../public/assets/image/region/ionia.png"
         region:"Shadow isles",
         region_image: ionia,
         lore:"",
-        champions_image: vex
+        champions_image: [vex],
+        bgPosition: "70%"
     },
  ]

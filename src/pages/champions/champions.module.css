@@ -30,8 +30,21 @@
     align-items: center;
 }
 
+.championSlider{
+    opacity: 0.3;
+    height: 500px !important;
+    width: 80% !important;
+    transition: 0.8s ease-in-out;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
 @media screen and (min-width: 1024px) {
     .championBox{
         display: none;
     }
+
+      .championSlider{
+        width: 50% !important;
+  }
 }

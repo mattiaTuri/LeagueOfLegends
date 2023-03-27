@@ -15,9 +15,37 @@
     background-color: #C3A06A;
 }
 
+.artSwiper{
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.containerSwiper{
+    height:20% !important;
+    width: 100%;
+    overflow: hidden;
+}
+
+.iconSwiper{
+    width: 25% !important;
+}
+
 @media screen and (min-width:1024px) {
     .championImg{
-    /* object-position: center -50px; */
-    object-position: top;
-}
+        object-position: top;
+    }
+
+    .containerSwiper{
+        position: absolute !important;
+        top: 0;
+        height:100% !important;
+        width: 200px;
+        background-color: #0000008b;
+    }
+
+    .iconSwiper{
+        height: 80px !important;
+        width: 100px !important;
+        left: 25%;
+    }
 }

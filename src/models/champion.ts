@@ -8,5 +8,6 @@ export interface Champion{
     region: string;
     region_image: StaticImageData
     lore: string;
-    champions_image: StaticImageData;
+    champions_image: StaticImageData[];
+    bgPosition: string;
 }

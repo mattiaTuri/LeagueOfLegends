@@ -9,6 +9,8 @@ import "swiper/css/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import SmarphoneViewChamp from "@/components/core/champions/SmartphoneViewChamp";
+import DesktopViewChamp from "@/components/core/champions/DesktopViewChamp";
 
 const hoverTransition = {
   duration: 1,
@@ -50,11 +52,14 @@ const textMotion = {
 };
 
 function Champions() {
-  let windowWidth: number = 1025;
+  const [windowWidth, setWindowWidth] = useState<Number>(window.innerWidth);
 
   useEffect(() => {
-    windowWidth = window.innerWidth;
-  }, [windowWidth]);
+    function WindowResize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", WindowResize);
+  }, []);
 
   return (
     <>
@@ -81,7 +86,7 @@ function Champions() {
           >
             {champions.map((champion, index) => {
               return (
-                <SwiperSlide key={index} className="overflow-hidden">
+                <SwiperSlide key={index} className={style.championSlider}>
                   <Link href={`/champions/${champion.id}`}>
                     <motion.div
                       whileHover={windowWidth > 1024 ? "hover" : ""}
@@ -94,7 +99,7 @@ function Champions() {
                         transition={hoverTransition}
                       >
                         <Image
-                          src={champion.champions_image}
+                          src={champion.champions_image[0]}
                           alt={champion.name}
                           className={style.image}
                         />
@@ -121,7 +126,9 @@ function Champions() {
                   >
                     <div className="flex flex-col items-center justify-center">
                       <h2 className="text-[#ba8964]">{champion.name}</h2>
-                      <h2 className="text-[#ba8964]">{champion.title}</h2>
+                      <h3 className="text-[#ba8964] text-2xl">
+                        {champion.title}
+                      </h3>
                     </div>
                   </Link>
                 </SwiperSlide>
@@ -154,16 +161,10 @@ function Champions() {
               </svg>
             </div>
           </Swiper>
-          <div className="w-full pt-8 md:flex">
-            {champions.map((champion, index) => {
-              return (
-                <div key={index} className="w-full h-28">
-                    <Image className="w-[200px]" src={champion.champions_image} alt=""></Image>
-                    <div className="bg-[#111] flex justify-center items-center"><span>{champion.name}</span></div>
-                </div>
-              )
-            })}
+          <div className="pt-8">
+            <h1 className="text-5xl underline">CHAMPIONS</h1>
           </div>
+          {windowWidth > 767 ? <DesktopViewChamp /> : <SmarphoneViewChamp />}
         </div>
       </div>
     </>
