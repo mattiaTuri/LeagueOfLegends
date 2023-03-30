@@ -21,13 +21,21 @@
 }
 
 .containerSwiper{
-    height:20% !important;
-    width: 100%;
+    width: 100vw !important;
+    padding-top: 20px !important;
     overflow: hidden;
 }
 
 .iconSwiper{
-    width: 25% !important;
+    height: 100% !important;
+    width: 20% !important;
+    cursor: pointer;
+}
+
+@media screen and (min-width:640px) {
+    .containerSwiper{
+        width: 100% !important;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -39,13 +47,21 @@
         position: absolute !important;
         top: 0;
         height:100% !important;
-        width: 200px;
+        width: 300px !important;
         background-color: #0000008b;
+        padding-bottom: 20px !important;
     }
 
     .iconSwiper{
-        height: 80px !important;
-        width: 100px !important;
-        left: 25%;
+        height: 50px !important;
+        width: 100% !important;    
+        display: flex !important;
+        padding-left: 20px;
+    }
+
+    .iconSwiper > span{
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
     }
 }

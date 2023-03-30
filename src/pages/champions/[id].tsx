@@ -72,12 +72,18 @@ function ChampionPage() {
         animate={{ width: "100%" }}
         transition={{ duration: 1, ease: [0.65, 0, 0.35, 1] }}
       >
-        <Image
-          src={
-            activeChampion != undefined ? activeChampion.champions_image[0] : ""
-          }
-          alt=""
-          className={`relative z-[-1] h-full object-cover ${style.championImg}`}
+        <div
+          style={{
+            backgroundImage: `url('${
+              activeChampion != undefined
+                ? activeChampion.champion_image.src
+                : ""
+            }')`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPositionX: activeChampion?.bgPosition,
+          }}
+          className="h-full"
         />
       </motion.div>
       <Container>
@@ -98,7 +104,7 @@ function ChampionPage() {
                 <p>{activeChampion?.champion_quote}</p>
               </blockquote>
               <figcaption>
-                <span>-{activeChampion?.name}</span>
+                <span>~{activeChampion?.name}</span>
               </figcaption>
             </figure>
           </div>
@@ -124,13 +130,13 @@ function ChampionPage() {
               <CustomButton href="" text="EXPLORE REGION" />
             </div>
           </div>
-          <div className="relative pt-12">
+          <div className="relative p-8">
             <div className="pb-8 text-center">
               <h3 className="text-[#c4b998] text-2xl lg:text-5xl">
-                ASPETTI DISPONIBILI
+                AVAILABLE SKINS
               </h3>
             </div>
-            <div className="relative">
+            <div className="relative ">
               <Swiper
                 speed={1200}
                 effect="fade"
@@ -143,10 +149,10 @@ function ChampionPage() {
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[Autoplay, EffectFade, FreeMode, Navigation, Thumbs]}
               >
-                {activeChampion?.champions_image.map((elem, index) => {
+                {activeChampion?.splash_art.map((elem, index) => {
                   return (
                     <SwiperSlide key={index} className={style.artSwiper}>
-                      <Image src={elem} alt="" className="h-full w-full" />
+                      <Image src={elem.art} alt="" className="h-full w-full" />
                     </SwiperSlide>
                   );
                 })}
@@ -154,17 +160,24 @@ function ChampionPage() {
               <Swiper
                 onSwiper={setThumbsSwiper}
                 direction={windowWidth > 1024 ? "vertical" : "horizontal"}
-                spaceBetween={50}
+                spaceBetween={60}
                 slidesPerView={"auto"}
                 freeMode={true}
                 watchSlidesProgress={true}
                 modules={[FreeMode, Navigation, Thumbs]}
-                className={style.containerSwiper}
+                className={`${style.containerSwiper}`}
               >
-                {activeChampion?.champions_image.map((elem, index) => {
+                {activeChampion?.splash_art.map((elem, index) => {
                   return (
                     <SwiperSlide key={index} className={style.iconSwiper}>
-                      <Image src={elem} alt="" className="h-full w-full" />
+                      <Image
+                        src={elem.art}
+                        alt=""
+                        className="w-full h-full lg:w-[70px]"
+                      />
+                      <span className="hidden lg:block lg:text-sm">
+                        {elem.title.toUpperCase()}
+                      </span>
                     </SwiperSlide>
                   );
                 })}

@@ -35,7 +35,7 @@ function DesktopViewChamp() {
               >
                 <div
                   style={{
-                    backgroundImage: `url('${champion.champions_image[0].src}')`,
+                    backgroundImage: `url('${champion.champion_image.src}')`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     backgroundPositionX: champion.bgPosition,

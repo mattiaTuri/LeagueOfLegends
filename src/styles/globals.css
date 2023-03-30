@@ -44,25 +44,15 @@ p{
   color: #c4b998;
 }
 
-/* .swiper-slide{
-  opacity: 0.3;
-  height: 500px !important;
-  width: 80% !important;
-  transition: 0.8s ease-in-out;
-  pointer-events: none;
-} */
-
 .swiper-slide-active{
-  border: 1px solid #C3A06A;
   opacity: 1 !important;
   pointer-events: all !important;
 } 
 
-/* .swiper-slide-thumb-active{
+.swiper-slide-thumb-active{
   border: 1px solid #C3A06A;
-  opacity: 1 !important;
-  pointer-events: all !important;
-} */
+}
+
 
 .swiper-button-prev, .swiper-button-next{
   width: 50px !important;
