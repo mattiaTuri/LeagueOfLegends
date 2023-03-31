@@ -1,0 +1,16 @@
+{
+    "home": "HOME",
+    "champions": "CAMPIONI",
+    "regions": "REGIONI",
+    "explore_the_universe_of": "ESPLORA L'UNIVERSO DI",
+    "championsList":[
+        {
+            "id": "aatrox",
+            "name": "AATROX",
+            "title":"La lama dei darkin",
+            "champion_quote": "Distruggerò anche la speranza...",
+            "region":"Runeterra",
+            "lore":"Un tempo onorati difensori di Shurima contro il Vuoto, Aatrox e i suoi compagni finirono per diventare una minaccia ancora maggiore per Runeterra, e vennero sconfitti solo da una subdola stregoneria dei mortali. Ma dopo secoli di prigionia, Aatrox fu il primo a ritrovare la libertà, corrompendo e trasformando chi si dimostrava abbastanza folle da brandire l'arma magica che conteneva la sua essenza. Ora, con un corpo rubato, vaga per Runeterra con un brutale simulacro della sua vecchia forma, alla ricerca di un'apocalittica e tanto desiderata vendetta."
+        }
+    ]
+}

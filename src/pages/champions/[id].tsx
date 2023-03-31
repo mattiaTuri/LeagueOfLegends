@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, FreeMode, Navigation, Thumbs } from "swiper";
 import "swiper/swiper-bundle.min.css";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const container = {
   initial: {},
@@ -38,6 +39,8 @@ function ChampionPage() {
   const championId = router.query;
   const [thumbsSwiper, setThumbsSwiper] = useState<any>();
   const [windowWidth, setWindowWidth] = useState<Number>(window.innerWidth);
+
+  const {t} = useTranslation<string>();
 
   const activeChampion = champions.find((elem) => elem.id == championId.id);
 
@@ -101,7 +104,7 @@ function ChampionPage() {
           <div className="p-8 flex flex-col items-center">
             <figure className="text-[#c4b998] text-center">
               <blockquote>
-                <p>{activeChampion?.champion_quote}</p>
+                <p>{t("championsList.champion_quote")}</p>
               </blockquote>
               <figcaption>
                 <span>~ {activeChampion?.name}</span>
@@ -191,3 +194,7 @@ function ChampionPage() {
 }
 
 export default ChampionPage;
+function useTraslate(): { t: any; } {
+  throw new Error("Function not implemented.");
+}
+

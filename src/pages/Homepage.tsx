@@ -1,10 +1,14 @@
 import Container from "@/components/shared/Container";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import arcaneClip from "../../public/assets/video/arcaneClip.mp4";
 import style from "./homepage.module.css";
 
 function Homepage() {
+
+  const {t} = useTranslation<string>();
+
   return (
     <>
       <div className="text-white h-[97vh]">
@@ -13,7 +17,7 @@ function Homepage() {
             <div className="flex flex-col items-center">
               <div className="pb-10">
                 <span className="text-sm md:tracking-[10px]">
-                  - EXPLORE THE UNIVERS OF -
+                  - {t("explore_the_universe_of")} -
                 </span>
               </div>
               <div className="flex items-center">
@@ -43,28 +47,6 @@ function Homepage() {
                 </Link>
               </div>
             </div>
-            {/* <div>
-              <div className="absolute flex bottom-10 right-0 px-8">
-                <div className="w-64 h-32">
-                  <Link
-                    href="/arcane"
-                    className={`w-full h-full flex items-center justify-center `}
-                  >
-                    <div className={`absolute w-full h-full text-white`}>
-                      <h3 data-link="ARCANE">ARCANE</h3>
-                    </div>
-                    <video
-                      className="h-full w-full object-cover absolute"
-                      preload="auto"
-                      loop
-                      autoPlay
-                    >
-                      <source src={arcaneClip} type="video/mp4" />
-                    </video>
-                  </Link>
-                </div>
-              </div>
-            </div> */}
           </div>
         </Container>
       </div>
