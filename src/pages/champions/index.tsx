@@ -148,7 +148,7 @@ function Champions() {
                       </Link>
                       <Link
                         href={`/champions/${champion.id}`}
-                        className={style.championBox}
+                        className={`${style.championBox} lg:hidden`}
                       >
                         <div className="flex flex-col items-center justify-center">
                           <h2 className="text-[#ba8964]">{champion.name}</h2>

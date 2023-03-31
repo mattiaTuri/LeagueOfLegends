@@ -2,9 +2,12 @@ import { Champion } from "@/models/champion";
 
 /* AATROX */
 import aatrox_base from "../../public/assets/image/aatrox/aatrox_base.jpg"
+import blood_moon_aatrox from "../../public/assets/image/aatrox/blood_moon_aatrox.jpg"
+import justice_aatrox from "../../public/assets/image/aatrox/justice_aatrox.jpg"
+import lunar_eclipse_aatrox from "../../public/assets/image/aatrox/lunar_eclipse_aatrox.jpg"
+import victorious_aatrox from "../../public/assets/image/aatrox/victorious_aatrox.jpg"
 
 /* AHRI */
-
 import ahri_base from "../../public/assets/image/ahri/ahri_base.jpg"
 import arcade_ahri from "../../public/assets/image/ahri/arcade_ahri.jpg"
 import challenger_ahri from "../../public/assets/image/ahri/challenger_ahri.jpg"
@@ -27,6 +30,23 @@ import kda_all_out_akali from "../../public/assets/image/akali/kda_all_out_akali
 import silverfang_akali from "../../public/assets/image/akali/silverfang_akali.jpg"
 import star_guardian_akali from "../../public/assets/image/akali/star_guardian_akali.jpg"
 import true_damage_akali from "../../public/assets/image/akali/true_damage_akali.jpg"
+
+/* ASHE */
+import ashe_bg from "../../public/assets/image/ashe/ashe_bg.jpg"
+import ashe_base from "../../public/assets/image/ashe/ashe_base.jpg"
+import amethyst_ashe from "../../public/assets/image/ashe/amethyst_ashe.jpg"
+import championship_ashe from "../../public/assets/image/ashe/championship_ashe.jpg"
+import cosmic_queen_ashe from "../../public/assets/image/ashe/cosmic_queen_ashe.jpg"
+import coven_ashe from "../../public/assets/image/ashe/coven_ashe.jpg"
+import fae_dragon_ashe from "../../public/assets/image/ashe/fae_dragon_ashe.jpg"
+import heartseeker_ashe from "../../public/assets/image/ashe/heartseeker_ashe.jpg"
+import high_noon_ashe from "../../public/assets/image/ashe/high_noon_ashe.jpg"
+import lunar_empress_ashe from "../../public/assets/image/ashe/lunar_empress_ashe.jpg"
+
+/* AURELION SON */
+import aurelion_son_base from "../../public/assets/image/aurelionson/aurelion_son_base.jpg"
+import mecha_aurelion_son from "../../public/assets/image/aurelionson/mecha_aurelion_son.jpg"
+import storm_dragon_aurelion_son from "../../public/assets/image/aurelionson/storm_dragon_aurelion_son.jpg"
 
 /* CAITLYN */
 import caitlyn_base from "../../public/assets/image/caitlyn/caitlyn_base.jpg"
@@ -78,6 +98,7 @@ import dawnbringer_vex from "../../public/assets/image/vex/dawnbringer_vex.jpg"
 import empyrean_vex from "../../public/assets/image/vex/empyrean_vex.jpg"
 
 /* REGION */
+import freljord from "../../public/assets/image/region/freljord.png"
 import ionia from "../../public/assets/image/region/ionia.png"
 import piltover from "../../public/assets/image/region/piltover.png"
 import runeterra from "../../public/assets/image/region/runeterra.png"
@@ -99,6 +120,22 @@ import zaun from "../../public/assets/image/region/zaun.png"
             {
                 title: "aatrox",
                 art: aatrox_base,
+            },
+            {
+                title: "blood moon aatrox",
+                art: blood_moon_aatrox,
+            },
+            {
+                title: "justice aatrox",
+                art: justice_aatrox,
+            },
+            {
+                title: "lunar eclipse aatrox",
+                art: lunar_eclipse_aatrox,
+            },
+            {
+                title: "victorious aatrox",
+                art: victorious_aatrox,
             },
         ],
         bgPosition: "70%"
@@ -204,6 +241,80 @@ import zaun from "../../public/assets/image/region/zaun.png"
             },
         ],
         bgPosition: "center"
+    },
+    {
+        id: "ashe",
+        name: "ASHE",
+        title:"The frost archer",
+        champion_quote: "“One tribe, one people, one Freljord.”",
+        champion_image:ashe_bg ,
+        region:"Runeterra",
+        region_image: freljord,
+        lore:"Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people’s belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands.",
+        splash_art: [
+            {
+                title: "ashe",
+                art: ashe_base,
+            },
+            {
+                title: "amethyst ashe",
+                art: amethyst_ashe,
+            },
+            {
+                title: "championship ashe",
+                art: championship_ashe,
+            },
+            {
+                title: "cosmic queen ashe",
+                art: cosmic_queen_ashe ,
+            },
+            {
+                title: "coven ashe",
+                art: coven_ashe ,
+            },
+            {
+                title: "fae dragon ashe",
+                art: fae_dragon_ashe,
+            },
+            {
+                title: "heartseeker ashe",
+                art: heartseeker_ashe,
+            },
+            {
+                title: "high noon ashe",
+                art: high_noon_ashe,
+            },
+            {
+                title: "lunar empress ashe",
+                art: lunar_empress_ashe,
+            },
+        ],
+        bgPosition: "60%"
+    },
+    {
+        id: "aurelionson",
+        name: "AURELION SON",
+        title:"The star forger",
+        champion_quote: "“Cower. Worship. Marvel. They are all appropriate responses.”",
+        champion_image:aurelion_son_base,
+        region:"Runeterra",
+        region_image: runeterra,
+        lore:"Aurelion Sol once graced the vast emptiness of the celestial realm with wonders of his own devising, but was tricked by the Aspects of Targon into revealing the secrets of a sun that he himself created. His awesome power was channeled into immortal god-warriors to protect the apparently insignificant world of Runeterra—now, desiring a return to his mastery of the cosmos, Aurelion Sol will drag the very stars from the sky, if he must, in order to regain his freedom.",
+        splash_art: [
+            {
+                title: "aurelion son",
+                art: aurelion_son_base,
+            },
+            {
+                title: "mecha aurelion_ on",
+                art: mecha_aurelion_son,
+            },
+            {
+                title: "storm dragon aurelion son",
+                art: storm_dragon_aurelion_son,
+            },
+        ],
+        bgPosition: "60%"
     },
     {
         id: "caitlyn",

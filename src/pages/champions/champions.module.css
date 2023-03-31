@@ -5,7 +5,7 @@
 }
 
 .championBox{
-    background-color: #191716;
+    background-color: #0000008b;
     width: 100%;
     height: 20%;
     position: absolute;
@@ -40,9 +40,6 @@
   }
 
 @media screen and (min-width: 1024px) {
-    .championBox{
-        display: none;
-    }
 
       .championSlider{
         width: 50% !important;
