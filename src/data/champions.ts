@@ -17,6 +17,7 @@ import spirit_blossom_ahri from "../../public/assets/image/ahri/spirit_blossom_a
 import star_guardian_ahri from "../../public/assets/image/ahri/star_guardian_ahri.jpg"
 
 /* AKALI */
+import akali_bg from "../../public/assets/image/akali/akali_bg.jpg"
 import akali_base from "../../public/assets/image/akali/akali_base.jpg"
 import all_star_akali from "../../public/assets/image/akali/all_star_akali.jpg"
 import headhunter_akali from "../../public/assets/image/akali/headhunter_akali.jpg"
@@ -28,14 +29,13 @@ import star_guardian_akali from "../../public/assets/image/akali/star_guardian_a
 import true_damage_akali from "../../public/assets/image/akali/true_damage_akali.jpg"
 
 /* CAITLYN */
-
 import caitlyn_base from "../../public/assets/image/caitlyn/caitlyn_base.jpg"
 import arcade_caitlyn from "../../public/assets/image/caitlyn/arcade_caitlyn.jpg"
 import arcane_caitlyn from "../../public/assets/image/caitlyn/arcane_caitlyn.jpg"
 import arctic_warfare_caitlyn from "../../public/assets/image/caitlyn/arctic_warfare_caitlyn.jpg"
 import battle_academia_caitlyn from "../../public/assets/image/caitlyn/battle_academia_caitlyn.jpg"
 import headhunter_caitlyn from "../../public/assets/image/caitlyn/headhunter_caitlyn.jpg"
-import lunar_wraith_caitlyn from "../../public/assets/image/caitlyn/headhunter_caitlyn.jpg"
+import lunar_wraith_caitlyn from "../../public/assets/image/caitlyn/lunar_wraith_caitlyn.jpg"
 import officer_caitlyn from "../../public/assets/image/caitlyn/officer_caitlyn.jpg"
 import pulsefire_caitlyn from "../../public/assets/image/caitlyn/pulsefire_caitlyn.jpg"
 import resistance_caitlyn from "../../public/assets/image/caitlyn/resistance_caitlyn.jpg"
@@ -72,6 +72,7 @@ import empyrean_ksante from "../../public/assets/image/ksante/empyrean_ksante.jp
 import prestige_empyrean_ksante from "../../public/assets/image/ksante/prestige_empyrean_ksante.jpg"
 
 /* VEX */
+import vex_bg from "../../public/assets/image/vex/vex_bg.jpg"
 import vex_base from "../../public/assets/image/vex/vex_base.jpg"
 import dawnbringer_vex from "../../public/assets/image/vex/dawnbringer_vex.jpg"
 import empyrean_vex from "../../public/assets/image/vex/empyrean_vex.jpg"
@@ -160,7 +161,7 @@ import zaun from "../../public/assets/image/region/zaun.png"
         name: "AKALI",
         title:"The rogue assassin",
         champion_quote: "“If you look dangerous, you better be dangerous.”",
-        champion_image:akali_base ,
+        champion_image:akali_bg ,
         region:"Runeterra",
         region_image: ionia,
         lore:"Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one kill at a time. Akali may strike in silence, but her message will be heard loud and clear: fear the assassin with no master.",
@@ -409,7 +410,7 @@ import zaun from "../../public/assets/image/region/zaun.png"
         name: "VEX",
         title:"The gloomist",
         champion_quote: "“Just... ughhhhh.”",
-        champion_image:vex_base,
+        champion_image:vex_bg,
         region:"Shadow isles",
         region_image: shadow_isles,
         lore:"In the black heart of the Shadow Isles, a lone yordle trudges through the spectral fog, content in its murky misery. With an endless supply of teen angst and a powerful shadow in tow, Vex lives in her own self-made slice of gloom, far from the revolting cheer of the “normie” world. Though she lacks ambition, she is quick to strike down color and happiness, stopping all would-be interlopers with her magical malaise.",

@@ -94,7 +94,7 @@ function ChampionPage() {
           className="w-full flex flex-col items-center"
         >
           <div className="p-8">
-            <h3 className="text-[#c4b998] text-2xl lg:text-5xl">
+            <h3 className="text-2xl lg:text-5xl">
               {activeChampion?.title.toUpperCase()}
             </h3>
           </div>
@@ -104,16 +104,16 @@ function ChampionPage() {
                 <p>{activeChampion?.champion_quote}</p>
               </blockquote>
               <figcaption>
-                <span>~{activeChampion?.name}</span>
+                <span>~ {activeChampion?.name}</span>
               </figcaption>
             </figure>
           </div>
           <div className={style.triangle}></div>
-          <div className="p-8 flex flex-col items-center md:w-[50%]">
+          <div className="p-8 flex flex-col items-center lg:w-[80%]">
             <p className="text-center pb-8">{activeChampion?.lore}</p>
             <CustomButton href="" text="CONTINUE READING" />
           </div>
-          <div className="p-8 w-full flex flex-col items-center md:flex-row">
+          <div className="p-8 w-full flex flex-col items-center md:flex-row lg:w-[80%]">
             <div className="md:w-[50%] flex justify-center">
               <Image
                 src={
@@ -130,13 +130,13 @@ function ChampionPage() {
               <CustomButton href="" text="EXPLORE REGION" />
             </div>
           </div>
-          <div className="relative p-8">
+          <div className="relative w-full md:p-8">
             <div className="pb-8 text-center">
               <h3 className="text-[#c4b998] text-2xl lg:text-5xl">
                 AVAILABLE SKINS
               </h3>
             </div>
-            <div className="relative ">
+            <div className="relative">
               <Swiper
                 speed={1200}
                 effect="fade"
