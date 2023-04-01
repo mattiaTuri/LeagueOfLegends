@@ -10,6 +10,7 @@ import { Autoplay, EffectFade, FreeMode, Navigation, Thumbs } from "swiper";
 import "swiper/swiper-bundle.min.css";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Champion } from "@/models/champion";
 
 const container = {
   initial: {},
@@ -39,12 +40,13 @@ function ChampionPage() {
   const championId = router.query;
   const [thumbsSwiper, setThumbsSwiper] = useState<any>();
   const [windowWidth, setWindowWidth] = useState<Number>(window.innerWidth);
+  const { t } = useTranslation();
 
-  const {t} = useTranslation<string>();
+  let activeChampion: any = champions.find((elem) => elem.id == championId.id);
 
-  const activeChampion = champions.find((elem) => elem.id == championId.id);
+  activeChampion = t("championsList", { returnObjects: true });
 
-  let nameSplit = activeChampion?.name.split("");
+  let nameSplit = activeChampion[0]?.name.split("");
 
   useEffect(() => {
     function WindowResize() {
@@ -69,7 +71,7 @@ function ChampionPage() {
           );
         })}
       </motion.div>
-      <motion.div
+      {/* <motion.div
         className={`h-[500px] ${style.BoxShadow}`}
         initial={{ width: "50%" }}
         animate={{ width: "100%" }}
@@ -79,16 +81,16 @@ function ChampionPage() {
           style={{
             backgroundImage: `url('${
               activeChampion != undefined
-                ? activeChampion.champion_image.src
+                ? activeChampion[0].champion_image.src
                 : ""
             }')`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            backgroundPositionX: activeChampion?.bgPosition,
+            backgroundPositionX: activeChampion[0].bgPosition,
           }}
           className="h-full"
         />
-      </motion.div>
+      </motion.div> */}
       <Container>
         <motion.div
           initial={{ opacity: 0 }}
@@ -98,37 +100,37 @@ function ChampionPage() {
         >
           <div className="p-8">
             <h3 className="text-2xl lg:text-5xl">
-              {activeChampion?.title.toUpperCase()}
+              {activeChampion[0].title.toUpperCase()}
             </h3>
           </div>
           <div className="p-8 flex flex-col items-center">
             <figure className="text-[#c4b998] text-center">
               <blockquote>
-                <p>{t("championsList.champion_quote")}</p>
+                <p>{activeChampion[0].champion_quote}</p>
               </blockquote>
               <figcaption>
-                <span>~ {activeChampion?.name}</span>
+                <span>~ {activeChampion[0].name}</span>
               </figcaption>
             </figure>
           </div>
           <div className={style.triangle}></div>
           <div className="p-8 flex flex-col items-center lg:w-[80%]">
-            <p className="text-center pb-8">{activeChampion?.lore}</p>
+            <p className="text-center pb-8">{activeChampion[0].lore}</p>
             <CustomButton href="" text="CONTINUE READING" />
           </div>
           <div className="p-8 w-full flex flex-col items-center md:flex-row lg:w-[80%]">
             <div className="md:w-[50%] flex justify-center">
-              <Image
+              {/* <Image
                 src={
                   activeChampion != undefined ? activeChampion.region_image : ""
                 }
                 alt=""
-              ></Image>
+              ></Image> */}
             </div>
             <div className="flex flex-col items-center justify-center md:w-[50%]">
               <span>REGION</span>
               <p className="pb-8 text-2xl lg:text-5xl">
-                {activeChampion?.region.toUpperCase()}
+                {activeChampion[0].region.toUpperCase()}
               </p>
               <CustomButton href="" text="EXPLORE REGION" />
             </div>
@@ -139,7 +141,7 @@ function ChampionPage() {
                 AVAILABLE SKINS
               </h3>
             </div>
-            <div className="relative">
+            {/* <div className="relative">
               <Swiper
                 speed={1200}
                 effect="fade"
@@ -152,7 +154,7 @@ function ChampionPage() {
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[Autoplay, EffectFade, FreeMode, Navigation, Thumbs]}
               >
-                {activeChampion?.splash_art.map((elem, index) => {
+                {activeChampion?.splash_art.map((elem: any, index: number) => {
                   return (
                     <SwiperSlide key={index} className={style.artSwiper}>
                       <Image src={elem.art} alt="" className="h-full w-full" />
@@ -170,7 +172,7 @@ function ChampionPage() {
                 modules={[FreeMode, Navigation, Thumbs]}
                 className={`${style.containerSwiper}`}
               >
-                {activeChampion?.splash_art.map((elem, index) => {
+                {activeChampion?.splash_art.map((elem: any, index: number) => {
                   return (
                     <SwiperSlide key={index} className={style.iconSwiper}>
                       <Image
@@ -185,7 +187,7 @@ function ChampionPage() {
                   );
                 })}
               </Swiper>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </Container>
@@ -194,7 +196,6 @@ function ChampionPage() {
 }
 
 export default ChampionPage;
-function useTraslate(): { t: any; } {
+function useTraslate(): { t: any } {
   throw new Error("Function not implemented.");
 }
-

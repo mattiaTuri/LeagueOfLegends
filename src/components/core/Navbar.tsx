@@ -2,18 +2,17 @@ import Link from "next/link";
 import { useState } from "react";
 import Container from "../shared/Container";
 import style from "./navbar.module.css";
-import { Icon } from '@iconify/react';
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 
 function Navbar() {
-  const [ language, setLanguage ] = useState<string>("en");
-  const {t} = useTranslation<string>();
+  const [language, setLanguage] = useState<string>("en");
+  const { t } = useTranslation<string>();
 
   const changeLanguage = () => {
-    language == "en" ? setLanguage("it") : setLanguage("en")
-    i18next.changeLanguage(language)
-  }
+    language == "en" ? setLanguage("it") : setLanguage("en");
+    i18next.changeLanguage(language);
+  };
 
   return (
     <header className="w-full fixed z-10 bg-[#111] border-b border-[#ba8964]">
@@ -24,12 +23,12 @@ function Navbar() {
           </div>
           <div id="hamurgerMenu" className="md:hidden"></div>
           <button onClick={() => changeLanguage()}>
-            <Icon icon="material-symbols:language" />
+            <h1>prova</h1>
           </button>
           <ul className="hidden md:flex">
             <li className={`${style.containerLink} mr-8 relative flex`}>
               <Link href="/" data-link="HOME" className="p-2">
-              {t("home")}
+                {t("home")}
               </Link>
             </li>
             <li className={`${style.containerLink} mr-8 relative flex`}>
@@ -39,7 +38,7 @@ function Navbar() {
             </li>
             <li className={`${style.containerLink} relative flex`}>
               <Link href="/regions" data-link="REGIONS" className="p-2">
-              {t("regions")}
+                {t("regions")}
               </Link>
             </li>
           </ul>
