@@ -22,9 +22,6 @@ function Navbar() {
             <h1>TM</h1>
           </div>
           <div id="hamurgerMenu" className="md:hidden"></div>
-          <button onClick={() => changeLanguage()}>
-            <h1>prova</h1>
-          </button>
           <ul className="hidden md:flex">
             <li className={`${style.containerLink} mr-8 relative flex`}>
               <Link href="/" data-link="HOME" className="p-2">
@@ -42,6 +39,14 @@ function Navbar() {
               </Link>
             </li>
           </ul>
+          <button onClick={() => changeLanguage()}>
+            <div>
+              <span>LANGUAGE</span>
+            </div>
+            <div>
+              <span></span>
+            </div>
+          </button>
         </nav>
       </Container>
     </header>

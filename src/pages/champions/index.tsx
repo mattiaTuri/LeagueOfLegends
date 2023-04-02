@@ -53,7 +53,7 @@ const textMotion = {
 };
 
 function Champions() {
-  const [windowWidth, setWindowWidth] = useState<Number>(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number>(1024);
   const [loading, setLoading] = useState<boolean>(true);
   const [randomChampions, setRandomChampions] = useState<Champion[]>([]);
 
@@ -63,6 +63,11 @@ function Champions() {
     }
     window.addEventListener("resize", WindowResize);
     getRandomChampions(champions, 7);
+    setWindowWidth(window.innerWidth);
+    return () => {
+      console.log("Mattia fa la mezza di Monza");
+      removeEventListener("resize", WindowResize);
+    };
   }, []);
 
   function getRandomChampions(champions: Champion[], championsNumber: number) {

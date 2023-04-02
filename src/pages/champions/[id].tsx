@@ -10,7 +10,6 @@ import { Autoplay, EffectFade, FreeMode, Navigation, Thumbs } from "swiper";
 import "swiper/swiper-bundle.min.css";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Champion } from "@/models/champion";
 
 const container = {
   initial: {},
@@ -39,20 +38,27 @@ function ChampionPage() {
   const router = useRouter();
   const championId = router.query;
   const [thumbsSwiper, setThumbsSwiper] = useState<any>();
-  const [windowWidth, setWindowWidth] = useState<Number>(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<Number>(1024);
   const { t } = useTranslation();
 
   let activeChampion: any = champions.find((elem) => elem.id == championId.id);
 
-  activeChampion = t("championsList", { returnObjects: true });
+  activeChampion = t(`${activeChampion.id}`, {
+    returnObjects: true,
+  });
 
-  let nameSplit = activeChampion[0]?.name.split("");
+  let nameSplit = activeChampion[0]?.name?.split("");
 
   useEffect(() => {
     function WindowResize() {
       setWindowWidth(window.innerWidth);
     }
     window.addEventListener("resize", WindowResize);
+    setWindowWidth(window.innerWidth);
+    return () => {
+      console.log("Mattia fa la mezza di Monza");
+      removeEventListener("resize", WindowResize);
+    };
   }, []);
 
   return (
@@ -100,7 +106,7 @@ function ChampionPage() {
         >
           <div className="p-8">
             <h3 className="text-2xl lg:text-5xl">
-              {activeChampion[0].title.toUpperCase()}
+              {activeChampion[0].title?.toUpperCase()}
             </h3>
           </div>
           <div className="p-8 flex flex-col items-center">
@@ -130,7 +136,7 @@ function ChampionPage() {
             <div className="flex flex-col items-center justify-center md:w-[50%]">
               <span>REGION</span>
               <p className="pb-8 text-2xl lg:text-5xl">
-                {activeChampion[0].region.toUpperCase()}
+                {activeChampion[0].region?.toUpperCase()}
               </p>
               <CustomButton href="" text="EXPLORE REGION" />
             </div>

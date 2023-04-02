@@ -1,23 +1,21 @@
-import i18next from 'i18next';
-import LanguageDetector from "i18next-browser-languagedetector"
-import { initReactI18next } from 'react-i18next';
+import i18next from "i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import { initReactI18next } from "react-i18next";
 
-import en_translation from "../../public/assets/locales/en/menu.json"
-import it_translation from "../../public/assets/locales/it/menu.json"
+import en_translation from "../../public/assets/locales/en/translation.json";
+import it_translation from "../../public/assets/locales/it/translation.json";
 
 const resources = {
-    en:{
-        translation: en_translation
-    },
-    it:{
-        translation: it_translation
-    }
-}
+  en: {
+    translation: en_translation,
+  },
+  it: {
+    translation: it_translation,
+  },
+};
 
 i18next.use(initReactI18next).use(LanguageDetector).init({
-  lng: 'en',
+  lng: "en",
   debug: true,
-  resources
+  resources,
 });
-
-

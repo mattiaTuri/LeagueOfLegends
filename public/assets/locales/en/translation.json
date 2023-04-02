@@ -1,0 +1,354 @@
+{
+  "home": "HOME",
+  "champions": "CHAMPIONS",
+  "regions": "REGIONS",
+  "explore_the_universe_of": "EXPLORE THE UNIVERSE OF",
+  "aatrox": [
+    {
+      "id": "aatrox",
+      "name": "AATROX",
+      "title": "The darkin blade",
+      "champion_quote": "“I must destroy even hope…”",
+      "region": "Runeterra",
+      "lore": "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find freedom once more, corrupting and transforming those foolish enough to try and wield the magical weapon that contained his essence. Now, with stolen flesh, he walks Runeterra in a brutal approximation of his previous form, seeking an apocalyptic and long overdue vengeance.",
+      "splash_art": [
+        {
+          "title": "aatrox"
+        },
+        {
+          "title": "blood moon aatrox"
+        },
+        {
+          "title": "justice aatrox"
+        },
+        {
+          "title": "lunar eclipse aatrox"
+        },
+        {
+          "title": "victorious aatrox"
+        }
+      ]
+    }
+  ],
+  "ahri": [
+    {
+      "id": "ahri",
+      "name": "AHRI",
+      "title": "The nine-tailed fox",
+      "champion_quote": "“Human emotions can be more volatile than even the deepest magic.”",
+      "region": "Ionia",
+      "lore": "Innately connected to the latent power of Runeterra, Ahri is a vastaya who can reshape magic into orbs of raw energy. She revels in toying with her prey by manipulating their emotions before devouring their life essence. Despite her predatory nature, Ahri retains a sense of empathy as she receives flashes of memory from each soul she consumes.",
+      "splash_art": [
+        {
+          "title": "ahri"
+        },
+        {
+          "title": "arcade ahri"
+        },
+        {
+          "title": "challenger ahri"
+        },
+        {
+          "title": "cover ahri"
+        },
+        {
+          "title": "elderwood ahri"
+        },
+        {
+          "title": "foxfire ahri"
+        },
+        {
+          "title": "k/da all out ahri"
+        },
+        {
+          "title": "midnight ahri"
+        },
+        {
+          "title": "spirit blossom ahri"
+        },
+        {
+          "title": "star guardian ahri"
+        }
+      ]
+    }
+  ],
+  "akali": [
+    {
+      "id": "akali",
+      "name": "AKALI",
+      "title": "The rogue assassin",
+      "champion_quote": "“If you look dangerous, you better be dangerous.”",
+      "region": "Runeterra",
+      "lore": "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one kill at a time. Akali may strike in silence, but her message will be heard loud and clear: fear the assassin with no master.",
+      "splash_art": [
+        {
+          "title": "akali"
+        },
+        {
+          "title": "all star akali"
+        },
+        {
+          "title": "infernal akali"
+        },
+        {
+          "title": "headhunter akali "
+        },
+        {
+          "title": "kda akali "
+        },
+        {
+          "title": "kda all out akali "
+        },
+        {
+          "title": "silverfang akali"
+        },
+        {
+          "title": "star guardian akali  "
+        },
+        {
+          "title": "true damage akali "
+        }
+      ]
+    }
+  ],
+  "ashe": [
+    {
+      "id": "ashe",
+      "name": "ASHE",
+      "title": "The frost archer",
+      "champion_quote": "“IOne tribe, one people, one Freljord.””",
+      "region": "Freljord",
+      "lore": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people’s belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands.",
+      "splash_art": [
+        {
+          "title": "ashe"
+        },
+        {
+          "title": "amethyst ashe"
+        },
+        {
+          "title": "championship ashe"
+        },
+        {
+          "title": "cosmic queen ashe"
+        },
+        {
+          "title": "coven ashe"
+        },
+        {
+          "title": "fae dragon ashe"
+        },
+        {
+          "title": "heartseeker ashe"
+        },
+        {
+          "title": "high noon ashe"
+        },
+        {
+          "title": "lunar empress ashe"
+        }
+      ]
+    }
+  ],
+  "aurelionson": [
+    {
+      "id": "aurelionson",
+      "name": "AURELION SON",
+      "title": "The star forger",
+      "champion_quote": "“Cower. Worship. Marvel. They are all appropriate responses.”",
+      "region": "Runeterra",
+      "lore": "Aurelion Sol once graced the vast emptiness of the celestial realm with wonders of his own devising, but was tricked by the Aspects of Targon into revealing the secrets of a sun that he himself created. His awesome power was channeled into immortal god-warriors to protect the apparently insignificant world of Runeterra—now, desiring a return to his mastery of the cosmos, Aurelion Sol will drag the very stars from the sky, if he must, in order to regain his freedom.",
+      "splash_art": [
+        {
+          "title": "aurelion son"
+        },
+        {
+          "title": "mecha aurelion on"
+        },
+        {
+          "title": "storm dragon aurelion son"
+        }
+      ]
+    }
+  ],
+  "caitlyn": [
+    {
+      "id": "caitlyn",
+      "name": "CAITLYN",
+      "title": "The sheriff of Piltover",
+      "champion_quote": "“To be the best hunter, you have to be able to think like your prey.”",
+      "region": "Piltover",
+      "lore": "Renowned as its finest peacekeeper, Caitlyn is also Piltover’s best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner’s more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn’s most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress.",
+      "splash_art": [
+        {
+          "title": "caitlyn"
+        },
+        {
+          "title": "arcade caitlyn"
+        },
+        {
+          "title": "arcane caitlyn"
+        },
+        {
+          "title": "arctic warfare caitlyn"
+        },
+        {
+          "title": "battle academia caitlyn"
+        },
+        {
+          "title": "headhunter caitlyn"
+        },
+        {
+          "title": "lunar wraith caitlyn"
+        },
+        {
+          "title": "officer caitlyn"
+        },
+        {
+          "title": "pulsefire caitlyn"
+        },
+        {
+          "title": "resistance caitlyn"
+        },
+        {
+          "title": "sheriff caitlyn"
+        },
+        {
+          "title": "snow moon caitlyn"
+        }
+      ]
+    }
+  ],
+  "evelynn": [
+    {
+      "id": "evelynn",
+      "name": "EVELYNN",
+      "title": "Agony's embrace",
+      "champion_quote": "“What are you doing tonight? How about we get together and unlock that vast well of torment inside you?”",
+      "region": "Runeterra",
+      "lore": "Within the dark seams of Runeterra, the demon Evelynn searches for her next victim. She lures in prey with the voluptuous façade of a human female, but once a person succumbs to her charms, Evelynn’s true form is unleashed. She then subjects her victim to unspeakable torment, gratifying herself with their pain. To the demon, these liaisons are innocent flings. To the rest of Runeterra, they are ghoulish tales of lust gone awry and horrific reminders of the cost of wanton desire.",
+      "splash_art": [
+        {
+          "title": "evelynn"
+        },
+        {
+          "title": "blood moon evelynn"
+        },
+        {
+          "title": "coven evelynn"
+        },
+        {
+          "title": "kda evelynn"
+        },
+        {
+          "title": "kda all out evelynn"
+        },
+        {
+          "title": "masquerade evelynn"
+        },
+        {
+          "title": "shadow evelynn"
+        },
+        {
+          "title": "spirit blossom evelynn"
+        }
+      ]
+    }
+  ],
+  "gwen": [
+    {
+      "id": "gwen",
+      "name": "GWEN",
+      "title": "The hallowed seamstress",
+      "champion_quote": "“The wind at my back feels so good. I can’t lose this. I won’t.”",
+      "region": "Shadow isles",
+      "lore": "A former doll transformed and brought to life by magic, Gwen wields the very tools that once created her. She carries the weight of her maker’s love with every step, taking nothing for granted. At her command is the Hallowed Mist, an ancient and protective magic that has blessed Gwen’s scissors, needles, and sewing thread. So much is new to her, but Gwen remains joyfully determined to fight for the good that survives in a broken world.",
+      "splash_art": [
+        {
+          "title": "gwen"
+        },
+        {
+          "title": "cafe cuties gwen"
+        },
+        {
+          "title": "space groove gwen"
+        }
+      ]
+    }
+  ],
+  "jinx": [
+    {
+      "id": "jinx",
+      "name": "JINX",
+      "title": "The loose cannon",
+      "champion_quote": "“Volatile explosives are a girl’s best friend!”",
+      "region": "Zaun",
+      "lore": "A manic and impulsive criminal from Zaun, Jinx lives to wreak havoc without care for the consequences. With an arsenal of deadly weapons, she unleashes the loudest blasts and brightest explosions to leave a trail of mayhem and panic in her wake. Jinx despises boredom, and gleefully brings her own chaotic brand of pandemonium wherever she goes.",
+      "splash_art": [
+        {
+          "title": "jinx"
+        },
+        {
+          "title": "arcane jinx"
+        },
+        {
+          "title": "crime city jinx"
+        },
+        {
+          "title": "firecracker jinx"
+        },
+        {
+          "title": "heartseeker jinx"
+        },
+        {
+          "title": "odyssey jinx"
+        },
+        {
+          "title": "star guardian jinx"
+        }
+      ]
+    }
+  ],
+  "ksante": [
+    {
+      "id": "ksante",
+      "name": "K'SANTE",
+      "title": "The pride of Nazumah",
+      "champion_quote": "“No monster greater than pride.”",
+      "region": "Shurima",
+      "lore": "Defiant and courageous, K’Sante battles colossal beasts and ruthless Ascended to protect his home of Nazumah, a coveted oasis amid the sands of Shurima. But after a falling-out with his former partner, K'Sante realizes that in order to become a warrior worthy of leading his city, he must temper his single-minded drive for success. Only then can he avoid falling prey to his own pride and find the wisdom he needs to defeat the vicious monsters threatening his people.",
+      "splash_art": [
+        {
+          "title": "ksante"
+        },
+        {
+          "title": "empyrean ksante"
+        },
+        {
+          "title": "prestige empyrean ksante"
+        }
+      ]
+    }
+  ],
+  "vex": [
+    {
+      "id": "vex",
+      "name": "VEX",
+      "title": "The gloomist",
+      "champion_quote": "“Just... ughhhhh.”",
+      "region": "Shadow isles",
+      "lore": "In the black heart of the Shadow Isles, a lone yordle trudges through the spectral fog, content in its murky misery. With an endless supply of teen angst and a powerful shadow in tow, Vex lives in her own self-made slice of gloom, far from the revolting cheer of the “normie” world. Though she lacks ambition, she is quick to strike down color and happiness, stopping all would-be interlopers with her magical malaise.",
+      "splash_art": [
+        {
+          "title": "vex"
+        },
+        {
+          "title": "dawnbringer vex"
+        },
+        {
+          "title": "empyrean vex"
+        }
+      ]
+    }
+  ]
+}
