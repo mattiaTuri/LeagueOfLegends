@@ -73,6 +73,10 @@ import shadow_evelynn from "../../public/assets/images/evelynn/shadow_evelynn.jp
 import spirit_blossom_evelynn from "../../public/assets/images/evelynn/spirit_blossom_evelynn.jpg";
 
 /* HEIMERDINGER */
+import heimerdinger_base from "../../public/assets/images/heimerdinger/heimerdinger_base.jpg";
+import dragon_trainer_heimerdinger from "../../public/assets/images/heimerdinger/dragon_trainer_heimerdinger.jpg";
+import heimerstinger from "../../public/assets/images/heimerdinger/heimerstinger.jpg";
+import piltover_customs_heimerdinger from "../../public/assets/images/heimerdinger/piltover_customs_heimerdinger.jpg";
 
 /* GWEN */
 import gwen_base from "../../public/assets/images/gwen/gwen_base.jpg";
@@ -93,25 +97,89 @@ import ksante_base from "../../public/assets/images/ksante/ksante_base.jpg";
 import empyrean_ksante from "../../public/assets/images/ksante/empyrean_ksante.jpg";
 import prestige_empyrean_ksante from "../../public/assets/images/ksante/prestige_empyrean_ksante.jpg";
 
+/* MAOKAI */
+import maokai_base from "../../public/assets/images/maokai/maokai_base.jpg";
+import astronaut_maokai from "../../public/assets/images/maokai/astronaut_maokai.jpg";
+import charred_maokai from "../../public/assets/images/maokai/charred_maokai.jpg";
+import totemic_maokai from "../../public/assets/images/maokai/totemic_maokai.jpg";
+import victorious_maokai from "../../public/assets/images/maokai/victorious_maokai.jpg";
+import worldbreaker_maokai from "../../public/assets/images/maokai/worldbreaker_maokai.jpg";
+
 /* MILIO */
+import milio_bg from "../../public/assets/images/milio/milio_bg.jpg";
+import milio_base from "../../public/assets/images/milio/milio_base.jpg";
+import faerie_court_milio from "../../public/assets/images/milio/faerie_court_milio.jpg";
 
 /* MISS FORTUNE */
+import missfortune_base from "../../public/assets/images/missfortune/missfortune_base.jpg";
+import arcade_missfortune from "../../public/assets/images/missfortune/arcade_missfortune.jpg";
+import bewitching_miss_fortune from "../../public/assets/images/missfortune/bewitching_miss_fortune.jpg";
+import broken_covenant_missfortune from "../../public/assets/images/missfortune/broken_covenant_missfortune.jpg";
+import captain_fortune from "../../public/assets/images/missfortune/captain_fortune.jpg";
+import crime_city_missfortune from "../../public/assets/images/missfortune/crime_city_missfortune.jpg";
+import prestige_broken_covenant_missfortune from "../../public/assets/images/missfortune/prestige_broken_covenant_missfortune.jpg";
+import ruined_missfortune from "../../public/assets/images/missfortune/ruined_missfortune.jpg";
+import secret_agent_missfortune from "../../public/assets/images/missfortune/secret_agent_missfortune.jpg";
+import star_guardian_missfortune from "../../public/assets/images/missfortune/star_guardian_missfortune.jpg";
 
 /* SERAPHINE */
+import seraphine_bg from "../../public/assets/images/seraphine/seraphine_bg.jpg";
+import seraphine_base from "../../public/assets/images/seraphine/seraphine_base.jpg";
+import faerie_court_seraphine from "../../public/assets/images/seraphine/faerie_court_seraphine.jpg";
+import graceful_phoenix_seraphine from "../../public/assets/images/seraphine/graceful_phoenix_seraphine.jpg";
+import kda_all_out_seraphine_rising_star from "../../public/assets/images/seraphine/kda_all_out_seraphine_rising_star.jpg";
+import kda_all_out_seraphine_indie from "../../public/assets/images/seraphine/kda_all_out_seraphine_indie.jpg";
+import kda_all_out_seraphine_superstar from "../../public/assets/images/seraphine/kda_all_out_seraphine_superstar.jpg";
+import ocean_song_seraphine from "../../public/assets/images/seraphine/ocean_song_seraphine.jpg";
 
 /* VEX */
 import vex_bg from "../../public/assets/images/vex/vex_bg.jpg";
-import vex_base from "../../public/assets/imimagesage/vex/vex_base.jpg";
+import vex_base from "../../public/assets/images/vex/vex_base.jpg";
 import dawnbringer_vex from "../../public/assets/images/vex/dawnbringer_vex.jpg";
 import empyrean_vex from "../../public/assets/images/vex/empyrean_vex.jpg";
 
+/* YUUMI */
+import yuumi_bg from "../../public/assets/images/yuumi/yuumi_bg.jpg";
+import yuumi_base from "../../public/assets/images/yuumi/yuumi_base.jpg";
+import battle_principal_yuumi from "../../public/assets/images/yuumi/battle_principal_yuumi.jpg";
+import bewitching_yuumi from "../../public/assets/images/yuumi/bewitching_yuumi.jpg";
+import heartseekeer_yuumi from "../../public/assets/images/yuumi/heartseekeer_yuumi.jpg";
+import yuubee from "../../public/assets/images/yuumi/yuubee.jpg";
+
+/* ZERI */
+import zeri_bg from "../../public/assets/images/zeri/zeri_bg.jpg";
+import zeri_base from "../../public/assets/images/zeri/zeri_base.jpg";
+import withered_rose_zeri from "../../public/assets/images/zeri/withered_rose_zeri.jpg";
+
+/* ZIGGS */
+import ziggs_base from "../../public/assets/images/ziggs/ziggs_base.jpg";
+import battle_boss_ziggs from "../../public/assets/images/ziggs/battle_boss_ziggs.jpg";
+import bzzziggs from "../../public/assets/images/ziggs/bzzziggs.jpg";
+import hextech_ziggs from "../../public/assets/images/ziggs/hextech_ziggs.jpg";
+import mad_scientist_ziggs from "../../public/assets/images/ziggs/mad_scientist_ziggs.jpg";
+import major_ziggs from "../../public/assets/images/ziggs/major_ziggs.jpg";
+import master_arcanist_ziggs from "../../public/assets/images/ziggs/master_arcanist_ziggs.jpg";
+import odyssey_ziggs from "../../public/assets/images/ziggs/odyssey_ziggs.jpg";
+import sugar_rush_ziggs from "../../public/assets/images/ziggs/sugar_rush_ziggs.jpg";
+
+/* ZOE */
+import zoe_bg from "../../public/assets/images/zoe/zoe_bg.jpg";
+import zoe_base from "../../public/assets/images/zoe/zoe_base.jpg";
+import arcanist_zoe from "../../public/assets/images/zoe/arcanist_zoe.jpg";
+import cyber_pop_zoe from "../../public/assets/images/zoe/cyber_pop_zoe.jpg";
+import star_guardian_zoe from "../../public/assets/images/zoe/star_guardian_zoe.jpg";
+
 /* REGION */
+import bandle_city from "../../public/assets/images/regions/bandle_city.png";
+import bilgewater from "../../public/assets/images/regions/bilgewater.png";
 import freljord from "../../public/assets/images/regions/freljord.png";
 import ionia from "../../public/assets/images/regions/ionia.png";
+import ixtal from "../../public/assets/images/regions/ixtal.png";
 import piltover from "../../public/assets/images/regions/piltover.png";
 import runeterra from "../../public/assets/images/regions/runeterra.png";
 import shadow_isles from "../../public/assets/images/regions/shadow_isles.png";
 import shurima from "../../public/assets/images/regions/shurima.png";
+import targon from "../../public/assets/images/regions/targon.png";
 import zaun from "../../public/assets/images/regions/zaun.png";
 
 export const champions: Champion[] = [
@@ -123,7 +191,7 @@ export const champions: Champion[] = [
     champion_image: aatrox_base,
     region: "Runeterra",
     region_image: runeterra,
-    lore: "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find freedom once more, corrupting and transforming those foolish enough to try and wield the magical weapon that contained his essence. Now, with stolen flesh, he walks Runeterra in a brutal approximation of his previous form, seeking an apocalyptic and long overdue vengeance.",
+    biography: "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find freedom once more, corrupting and transforming those foolish enough to try and wield the magical weapon that contained his essence. Now, with stolen flesh, he walks Runeterra in a brutal approximation of his previous form, seeking an apocalyptic and long overdue vengeance.",
     splash_art: [
       {
         title: "aatrox",
@@ -156,7 +224,7 @@ export const champions: Champion[] = [
     champion_image: ahri_base,
     region: "Ionia",
     region_image: ionia,
-    lore: "Innately connected to the latent power of Runeterra, Ahri is a vastaya who can reshape magic into orbs of raw energy. She revels in toying with her prey by manipulating their emotions before devouring their life essence. Despite her predatory nature, Ahri retains a sense of empathy as she receives flashes of memory from each soul she consumes.",
+    biography: "Innately connected to the latent power of Runeterra, Ahri is a vastaya who can reshape magic into orbs of raw energy. She revels in toying with her prey by manipulating their emotions before devouring their life essence. Despite her predatory nature, Ahri retains a sense of empathy as she receives flashes of memory from each soul she consumes.",
     splash_art: [
       {
         title: "ahri",
@@ -209,7 +277,7 @@ export const champions: Champion[] = [
     champion_image: akali_bg,
     region: "Runeterra",
     region_image: ionia,
-    lore: "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one kill at a time. Akali may strike in silence, but her message will be heard loud and clear: fear the assassin with no master.",
+    biography: "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one kill at a time. Akali may strike in silence, but her message will be heard loud and clear: fear the assassin with no master.",
     splash_art: [
       {
         title: "akali",
@@ -256,9 +324,9 @@ export const champions: Champion[] = [
     title: "The frost archer",
     quote: "“One tribe, one people, one Freljord.”",
     champion_image: ashe_bg,
-    region: "Runeterra",
+    region: "Freljord",
     region_image: freljord,
-    lore: "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people’s belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands.",
+    biography: "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people’s belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands.",
     splash_art: [
       {
         title: "ashe",
@@ -303,12 +371,11 @@ export const champions: Champion[] = [
     id: "aurelionson",
     name: "AURELION SON",
     title: "The star forger",
-    quote:
-      "“Cower. Worship. Marvel. They are all appropriate responses.”",
+    quote:"“Cower. Worship. Marvel. They are all appropriate responses.”",
     champion_image: aurelion_son_base,
-    region: "Runeterra",
-    region_image: runeterra,
-    lore: "Aurelion Sol once graced the vast emptiness of the celestial realm with wonders of his own devising, but was tricked by the Aspects of Targon into revealing the secrets of a sun that he himself created. His awesome power was channeled into immortal god-warriors to protect the apparently insignificant world of Runeterra—now, desiring a return to his mastery of the cosmos, Aurelion Sol will drag the very stars from the sky, if he must, in order to regain his freedom.",
+    region: "Targon",
+    region_image: targon,
+    biography: "Aurelion Sol once graced the vast emptiness of the celestial realm with wonders of his own devising, but was tricked by the Aspects of Targon into revealing the secrets of a sun that he himself created. His awesome power was channeled into immortal god-warriors to protect the apparently insignificant world of Runeterra—now, desiring a return to his mastery of the cosmos, Aurelion Sol will drag the very stars from the sky, if he must, in order to regain his freedom.",
     splash_art: [
       {
         title: "aurelion son",
@@ -334,7 +401,7 @@ export const champions: Champion[] = [
     champion_image: caitlyn_base,
     region: "Piltover",
     region_image: piltover,
-    lore: "Renowned as its finest peacekeeper, Caitlyn is also Piltover’s best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner’s more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn’s most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress.",
+    biography: "Renowned as its finest peacekeeper, Caitlyn is also Piltover’s best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner’s more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn’s most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress.",
     splash_art: [
       {
         title: "caitlyn",
@@ -391,12 +458,11 @@ export const champions: Champion[] = [
     id: "evelynn",
     name: "EVELYNN",
     title: "Agony's embrace",
-    quote:
-      "“What are you doing tonight? How about we get together and unlock that vast well of torment inside you?”",
+    quote:"“What are you doing tonight? How about we get together and unlock that vast well of torment inside you?”",
     champion_image: evelynn_base,
     region: "Runeterra",
     region_image: runeterra,
-    lore: "Within the dark seams of Runeterra, the demon Evelynn searches for her next victim. She lures in prey with the voluptuous façade of a human female, but once a person succumbs to her charms, Evelynn’s true form is unleashed. She then subjects her victim to unspeakable torment, gratifying herself with their pain. To the demon, these liaisons are innocent flings. To the rest of Runeterra, they are ghoulish tales of lust gone awry and horrific reminders of the cost of wanton desire.",
+    biography: "Within the dark seams of Runeterra, the demon Evelynn searches for her next victim. She lures in prey with the voluptuous façade of a human female, but once a person succumbs to her charms, Evelynn’s true form is unleashed. She then subjects her victim to unspeakable torment, gratifying herself with their pain. To the demon, these liaisons are innocent flings. To the rest of Runeterra, they are ghoulish tales of lust gone awry and horrific reminders of the cost of wanton desire.",
     splash_art: [
       {
         title: "evelynn",
@@ -411,11 +477,11 @@ export const champions: Champion[] = [
         art: coven_evelynn,
       },
       {
-        title: "kda evelynn",
+        title: "k/da evelynn",
         art: kda_evelynn,
       },
       {
-        title: "kda all out evelynn",
+        title: "k/da all out evelynn",
         art: kda_all_out_evelynn,
       },
       {
@@ -434,15 +500,43 @@ export const champions: Champion[] = [
     bgPosition: "center",
   },
   {
+    id: "heimerdinger",
+    name: "HEIMERDINGER",
+    title: "",
+    quote: "",
+    champion_image: heimerdinger_base,
+    region: "Piltover",
+    region_image: piltover,
+    biography: "",
+    splash_art: [
+      {
+        title: "",
+        art: heimerdinger_base,
+      },
+      {
+        title: "",
+        art: dragon_trainer_heimerdinger,
+      },
+      {
+        title: "",
+        art: heimerstinger,
+      },
+      {
+        title: "",
+        art: piltover_customs_heimerdinger,
+      },
+    ],
+    bgPosition: "70%",
+  },
+  {
     id: "gwen",
     name: "GWEN",
     title: "The hallowed seamstress",
-    quote:
-      "“The wind at my back feels so good. I can’t lose this. I won’t.”",
+    quote:"“The wind at my back feels so good. I can’t lose this. I won’t.”",
     champion_image: gwen_base,
     region: "Shadow isles",
     region_image: shadow_isles,
-    lore: "A former doll transformed and brought to life by magic, Gwen wields the very tools that once created her. She carries the weight of her maker’s love with every step, taking nothing for granted. At her command is the Hallowed Mist, an ancient and protective magic that has blessed Gwen’s scissors, needles, and sewing thread. So much is new to her, but Gwen remains joyfully determined to fight for the good that survives in a broken world.",
+    biography: "A former doll transformed and brought to life by magic, Gwen wields the very tools that once created her. She carries the weight of her maker’s love with every step, taking nothing for granted. At her command is the Hallowed Mist, an ancient and protective magic that has blessed Gwen’s scissors, needles, and sewing thread. So much is new to her, but Gwen remains joyfully determined to fight for the good that survives in a broken world.",
     splash_art: [
       {
         title: "gwen",
@@ -467,7 +561,7 @@ export const champions: Champion[] = [
     champion_image: jinx_base,
     region: "Zaun",
     region_image: zaun,
-    lore: "A manic and impulsive criminal from Zaun, Jinx lives to wreak havoc without care for the consequences. With an arsenal of deadly weapons, she unleashes the loudest blasts and brightest explosions to leave a trail of mayhem and panic in her wake. Jinx despises boredom, and gleefully brings her own chaotic brand of pandemonium wherever she goes.",
+    biography: "A manic and impulsive criminal from Zaun, Jinx lives to wreak havoc without care for the consequences. With an arsenal of deadly weapons, she unleashes the loudest blasts and brightest explosions to leave a trail of mayhem and panic in her wake. Jinx despises boredom, and gleefully brings her own chaotic brand of pandemonium wherever she goes.",
     splash_art: [
       {
         title: "jinx",
@@ -508,7 +602,7 @@ export const champions: Champion[] = [
     champion_image: ksante_base,
     region: "Runeterra",
     region_image: shurima,
-    lore: "Defiant and courageous, K’Sante battles colossal beasts and ruthless Ascended to protect his home of Nazumah, a coveted oasis amid the sands of Shurima. But after a falling-out with his former partner, K'Sante realizes that in order to become a warrior worthy of leading his city, he must temper his single-minded drive for success. Only then can he avoid falling prey to his own pride and find the wisdom he needs to defeat the vicious monsters threatening his people.",
+    biography: "Defiant and courageous, K’Sante battles colossal beasts and ruthless Ascended to protect his home of Nazumah, a coveted oasis amid the sands of Shurima. But after a falling-out with his former partner, K'Sante realizes that in order to become a warrior worthy of leading his city, he must temper his single-minded drive for success. Only then can he avoid falling prey to his own pride and find the wisdom he needs to defeat the vicious monsters threatening his people.",
     splash_art: [
       {
         title: "ksante",
@@ -526,6 +620,158 @@ export const champions: Champion[] = [
     bgPosition: "30%",
   },
   {
+    id: "maokai",
+    name: "MAOKAI",
+    title: "",
+    quote: "",
+    champion_image: maokai_base,
+    region: "Shadow isles",
+    region_image: shadow_isles,
+    biography: "",
+    splash_art: [
+      {
+        title: "",
+        art: maokai_base,
+      },
+      {
+        title: "",
+        art: astronaut_maokai,
+      },
+      {
+        title: "",
+        art: charred_maokai,
+      },
+      {
+        title: "",
+        art: totemic_maokai,
+      },
+      {
+        title: "",
+        art: victorious_maokai,
+      },
+      {
+        title: "",
+        art: worldbreaker_maokai,
+      }
+    ],
+    bgPosition: "70%",
+  },
+  {
+    id: "milio",
+    name: "MILIO",
+    title: "",
+    quote: "",
+    champion_image: milio_bg,
+    region: "Ixtal",
+    region_image: ixtal,
+    biography: "",
+    splash_art: [
+      {
+        title: "",
+        art: milio_base,
+      },
+      {
+        title: "",
+        art: faerie_court_milio,
+      }
+    ],
+    bgPosition: "50%",
+  },
+  {
+    id: "missfortune",
+    name: "MISS FORTUNE",
+    title: "",
+    quote: "",
+    champion_image: missfortune_base,
+    region: "Bilgwater",
+    region_image: bilgewater,
+    biography: "",
+    splash_art: [
+      {
+        title: "",
+        art: missfortune_base,
+      },
+      {
+        title: "",
+        art: arcade_missfortune,
+      },
+      {
+        title: "",
+        art: bewitching_miss_fortune,
+      },
+      {
+        title: "",
+        art: broken_covenant_missfortune,
+      },
+      {
+        title: "",
+        art: prestige_broken_covenant_missfortune,
+      },
+      {
+        title: "",
+        art: captain_fortune,
+      },
+      {
+        title: "",
+        art: crime_city_missfortune,
+      },
+      {
+        title: "",
+        art: ruined_missfortune,
+      },
+      {
+        title: "",
+        art: secret_agent_missfortune,
+      },
+      {
+        title: "",
+        art: star_guardian_missfortune,
+      },
+    ],
+    bgPosition: "90%",
+  },
+  {
+    id: "seraphine",
+    name: "SERAPHINE",
+    title: "",
+    quote: "",
+    champion_image: seraphine_bg,
+    region: "Piltover",
+    region_image: piltover,
+    biography: "",
+    splash_art: [
+      {
+        title: "seraphine",
+        art: seraphine_base,
+      },
+      {
+        title: "faerie court seraphine",
+        art: faerie_court_seraphine,
+      },
+      {
+        title: "graceful phoenix seraphine",
+        art: graceful_phoenix_seraphine,
+      },
+      {
+        title: "k/da all out seraphine rising star",
+        art: kda_all_out_seraphine_rising_star,
+      },
+      {
+        title: "k/da all out seraphine indie",
+        art: kda_all_out_seraphine_indie,
+      },
+      {
+        title: "kda all out seraphine superstar",
+        art: kda_all_out_seraphine_superstar,
+      },
+      {
+        title: "ocean song seraphine",
+        art: ocean_song_seraphine,
+      },
+    ],
+    bgPosition: "40%",
+  },
+  {
     id: "vex",
     name: "VEX",
     title: "The gloomist",
@@ -533,7 +779,7 @@ export const champions: Champion[] = [
     champion_image: vex_bg,
     region: "Shadow isles",
     region_image: shadow_isles,
-    lore: "In the black heart of the Shadow Isles, a lone yordle trudges through the spectral fog, content in its murky misery. With an endless supply of teen angst and a powerful shadow in tow, Vex lives in her own self-made slice of gloom, far from the revolting cheer of the “normie” world. Though she lacks ambition, she is quick to strike down color and happiness, stopping all would-be interlopers with her magical malaise.",
+    biography: "In the black heart of the Shadow Isles, a lone yordle trudges through the spectral fog, content in its murky misery. With an endless supply of teen angst and a powerful shadow in tow, Vex lives in her own self-made slice of gloom, far from the revolting cheer of the “normie” world. Though she lacks ambition, she is quick to strike down color and happiness, stopping all would-be interlopers with her magical malaise.",
     splash_art: [
       {
         title: "vex",
@@ -549,5 +795,137 @@ export const champions: Champion[] = [
       },
     ],
     bgPosition: "70%",
+  },
+  {
+    id: "yuumi",
+    name: "YUUMI",
+    title: "",
+    quote: "",
+    champion_image: yuumi_bg,
+    region: "Bandle city",
+    region_image: bandle_city,
+    biography: "",
+    splash_art: [
+      {
+        title: "yuumi",
+        art: yuumi_base,
+      },
+      {
+        title: "battle principal yuumi",
+        art: battle_principal_yuumi,
+      },
+      {
+        title: "bewitching yuumi",
+        art: bewitching_yuumi,
+      },
+      {
+        title: "heartseekeer yuumi",
+        art: heartseekeer_yuumi,
+      },
+      {
+        title: "yuubee",
+        art: yuubee,
+      },
+    ],
+    bgPosition: "30%",
+  },
+  {
+    id: "zeri",
+    name: "ZERI",
+    title: "",
+    quote: "",
+    champion_image: zeri_bg,
+    region: "Zaun",
+    region_image: zaun,
+    biography: "",
+    splash_art: [
+      {
+        title: "zeri",
+        art: zeri_base,
+      },
+      {
+        title: "withered rose zeri",
+        art: withered_rose_zeri,
+      },
+    ],
+    bgPosition: "50%",
+  },
+  {
+    id: "ziggs",
+    name: "ZIGGS",
+    title: "",
+    quote: "",
+    champion_image: ziggs_base,
+    region: "Zaun",
+    region_image: zaun,
+    biography: "",
+    splash_art: [
+      {
+        title: "ziggs",
+        art: ziggs_base,
+      },
+      {
+        title: "battle boss ziggs",
+        art: battle_boss_ziggs,
+      },
+      {
+        title: "bzzziggs",
+        art: bzzziggs,
+      },
+      {
+        title: "hextech ziggs",
+        art: hextech_ziggs,
+      },
+      {
+        title: "mad scientist ziggs",
+        art: mad_scientist_ziggs,
+      },
+      {
+        title: "major ziggs",
+        art: major_ziggs,
+      },
+      {
+        title: "master arcanist ziggs",
+        art: master_arcanist_ziggs,
+      },
+      {
+        title: "odyssey ziggs",
+        art: odyssey_ziggs,
+      },
+      {
+        title: "sugar rush ziggs",
+        art: sugar_rush_ziggs,
+      }
+    ],
+    bgPosition: "right",
+  },
+  {
+    id: "zoe",
+    name: "ZOE",
+    title: "",
+    quote: "",
+    champion_image: zoe_bg,
+    region: "Targon",
+    region_image: targon,
+    biography: "",
+    splash_art: [
+      {
+        title: "zoe",
+        art: zoe_base,
+      },
+      {
+        title: "arcanist zoe",
+        art: arcanist_zoe,
+      },
+      {
+        title: "cyber pop zoe",
+        art: cyber_pop_zoe,
+      },
+      {
+        title: "star guardian zoe",
+        art: star_guardian_zoe,
+      },
+    ],
+    bgPosition: "50%",
   },
 ];

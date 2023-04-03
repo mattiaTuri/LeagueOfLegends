@@ -38,10 +38,11 @@ function ChampionPage() {
   const router = useRouter();
   const championId = router.query;
   const [thumbsSwiper, setThumbsSwiper] = useState<any>();
-  const [windowWidth, setWindowWidth] = useState<Number>(1024);
+  const [windowWidth, setWindowWidth] = useState<number>(1024);
   const { t } = useTranslation();
 
   let activeChampion: any = champions.find((elem) => elem.id == championId.id);
+  const championImages = activeChampion;
 
   activeChampion = t(`${activeChampion.id}`, {
     returnObjects: true,
@@ -77,7 +78,7 @@ function ChampionPage() {
           );
         })}
       </motion.div>
-      {/* <motion.div
+      <motion.div
         className={`h-[500px] ${style.BoxShadow}`}
         initial={{ width: "50%" }}
         animate={{ width: "100%" }}
@@ -86,17 +87,17 @@ function ChampionPage() {
         <div
           style={{
             backgroundImage: `url('${
-              activeChampion != undefined
-                ? activeChampion[0].champion_image.src
+              championImages?.champion_image != undefined
+                ? championImages?.champion_image?.src
                 : ""
             }')`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            backgroundPositionX: activeChampion[0].bgPosition,
+            backgroundPositionX: championImages[0]?.bgPosition,
           }}
           className="h-full"
         />
-      </motion.div> */}
+      </motion.div>
       <Container>
         <motion.div
           initial={{ opacity: 0 }}
@@ -112,7 +113,7 @@ function ChampionPage() {
           <div className="p-8 flex flex-col items-center">
             <figure className="text-[#c4b998] text-center">
               <blockquote>
-                <p>{activeChampion[0].champion_quote}</p>
+                <p>{activeChampion[0].quote}</p>
               </blockquote>
               <figcaption>
                 <span>~ {activeChampion[0].name}</span>
@@ -121,17 +122,17 @@ function ChampionPage() {
           </div>
           <div className={style.triangle}></div>
           <div className="p-8 flex flex-col items-center lg:w-[80%]">
-            <p className="text-center pb-8">{activeChampion[0].lore}</p>
+            <p className="text-center pb-8">{activeChampion[0].biography}</p>
             <CustomButton href="" text={t("continue_reading")} />
           </div>
           <div className="p-8 w-full flex flex-col items-center md:flex-row lg:w-[80%]">
             <div className="flex justify-center md:w-[50%]">
-              {/* <Image
+              <Image
                 src={
-                  activeChampion != undefined ? activeChampion.region_image : ""
+                  championImages != undefined ? championImages.region_image : ""
                 }
                 alt=""
-              ></Image> */}
+              ></Image>
             </div>
             <div className="flex flex-col items-center justify-center md:w-[50%]">
               <span>{t("region")}</span>
@@ -144,10 +145,10 @@ function ChampionPage() {
           <div className="relative w-full md:p-8">
             <div className="pb-8 text-center">
               <h3 className="text-[#c4b998] text-2xl lg:text-5xl">
-              {t("available_skins")}
+                {t("available_skins")}
               </h3>
             </div>
-            {/* <div className="relative">
+            <div className="relative">
               <Swiper
                 speed={1200}
                 effect="fade"
@@ -160,7 +161,7 @@ function ChampionPage() {
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[Autoplay, EffectFade, FreeMode, Navigation, Thumbs]}
               >
-                {activeChampion?.splash_art.map((elem: any, index: number) => {
+                {championImages?.splash_art?.map((elem: any, index: number) => {
                   return (
                     <SwiperSlide key={index} className={style.artSwiper}>
                       <Image src={elem.art} alt="" className="h-full w-full" />
@@ -178,7 +179,7 @@ function ChampionPage() {
                 modules={[FreeMode, Navigation, Thumbs]}
                 className={`${style.containerSwiper}`}
               >
-                {activeChampion?.splash_art.map((elem: any, index: number) => {
+                {championImages?.splash_art?.map((elem: any, index: number) => {
                   return (
                     <SwiperSlide key={index} className={style.iconSwiper}>
                       <Image
@@ -187,13 +188,15 @@ function ChampionPage() {
                         className="w-full h-full lg:w-[70px]"
                       />
                       <span className="hidden lg:block lg:text-sm">
-                        {elem.title.toUpperCase()}
+                        {activeChampion[0].splash_art[
+                          index
+                        ].title.toUpperCase()}
                       </span>
                     </SwiperSlide>
                   );
                 })}
               </Swiper>
-            </div> */}
+            </div>
           </div>
         </motion.div>
       </Container>

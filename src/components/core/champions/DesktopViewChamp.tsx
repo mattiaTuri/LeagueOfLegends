@@ -4,17 +4,21 @@ import { champions } from "../../../data/champions";
 import Container from "@/components/shared/Container";
 import { motion } from "framer-motion";
 
-const championBox = {
-  initial: {
-    scale: 1,
-  },
+const hoverTransition = {
+  duration: 1,
+  ease: [0.25, 1, 0.5, 1],
+};
+
+const championImage = {
+  initial: {},
   hover: {
     scale: 1.1,
-    transition: {
-      duration: 1,
-      ease: [0.25, 1, 0.5, 1],
-    },
   },
+};
+
+const championName = {
+  initial: {},
+  hover: {},
 };
 
 function DesktopViewChamp() {
@@ -26,26 +30,32 @@ function DesktopViewChamp() {
             <Link
               key={index}
               href={`/champions/${champion.id}`}
-              className="p-2 w-[20%] relative"
+              className="p-2 w-[20%] h-96 relative"
             >
               <motion.div
-                className="h-96 relative"
+                className="h-full w-full relative overflow-hidden"
                 whileHover="hover"
-                variants={championBox}
+                initial="initial"
               >
-                <div
+                <motion.div
                   style={{
                     backgroundImage: `url('${champion.champion_image.src}')`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     backgroundPositionX: champion.bgPosition,
                   }}
-                  className="h-full"
+                  variants={championImage}
+                  transition={hoverTransition}
+                  className="h-full w-full relative"
                 />
-                <div className="absolute bottom-0 bg-[#111] opacity-80 w-full h-[20%] flex flex-col justify-center items-center">
+                <motion.div
+                  className="absolute bottom-0 bg-[#111] opacity-80 w-full h-[20%] flex flex-col justify-center items-center"
+                  variants={championName}
+                  transition={hoverTransition}
+                >
                   <span className="text-sm">{champion.name}</span>
                   <span className="text-sm text-white">{champion.region}</span>
-                </div>
+                </motion.div>
               </motion.div>
             </Link>
           );

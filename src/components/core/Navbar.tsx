@@ -40,10 +40,13 @@ function Navbar() {
             </li>
           </ul>
           <div className="flex w-[200px]">
-            <div className="border border-[#ba8964] flex justify-center w-[80%]">
+            <div className="border border-[#ba8964] flex justify-center w-[70%]">
               <span className="text-white p-2">LANGUAGE</span>
             </div>
-            <button className="bg-[#ba8964] flex justify-center w-[20%]" onClick={() => changeLanguage()}>
+            <button
+              className="bg-[#ba8964] flex justify-center w-[30%]"
+              onClick={() => changeLanguage()}
+            >
               <span className="text-black p-2">{language.toUpperCase()}</span>
             </button>
           </div>

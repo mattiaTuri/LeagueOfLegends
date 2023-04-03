@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import SmarphoneViewChamp from "@/components/core/champions/SmartphoneViewChamp";
 import DesktopViewChamp from "@/components/core/champions/DesktopViewChamp";
 import { Champion } from "@/models/champion";
+import { useTranslation } from "react-i18next";
 
 const hoverTransition = {
   duration: 1,
@@ -56,6 +57,7 @@ function Champions() {
   const [windowWidth, setWindowWidth] = useState<number>(1024);
   const [loading, setLoading] = useState<boolean>(true);
   const [randomChampions, setRandomChampions] = useState<Champion[]>([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     function WindowResize() {
@@ -71,11 +73,11 @@ function Champions() {
   }, []);
 
   function getRandomChampions(champions: Champion[], championsNumber: number) {
-    let randomChampions = [];
+    let randomChampions: any = [];
     for (let i = 0; i < championsNumber; i++) {
       const random = Math.floor(Math.random() * champions.length);
       const exist = randomChampions.find(
-        (elem) => elem.id == champions[random].id
+        (elem: any) => elem.id == champions[random].id
       );
       if (!exist) {
         randomChampions.push(champions[random]);
@@ -146,7 +148,7 @@ function Champions() {
                               variants={textMotion}
                               className="text-2xl"
                             >
-                              - {champion.title} -
+                              - {t("title")} -
                             </motion.h3>
                           </motion.div>
                         </motion.div>
@@ -158,7 +160,7 @@ function Champions() {
                         <div className="flex flex-col items-center justify-center">
                           <h2 className="text-[#ba8964]">{champion.name}</h2>
                           <h3 className="text-[#ba8964] text-2xl">
-                            {champion.title}
+                            {t("title")}
                           </h3>
                         </div>
                       </Link>

@@ -8,7 +8,7 @@ export interface Champion{
     champion_image: StaticImageData;
     region: string;
     region_image: StaticImageData
-    lore: string;
+    biography: string;
     splash_art: ChampionSplashArt[];
     bgPosition: string;
 }
