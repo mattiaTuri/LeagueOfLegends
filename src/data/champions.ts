@@ -1,117 +1,125 @@
 import { Champion } from "@/models/champion";
 
 /* AATROX */
-import aatrox_base from "../../public/assets/image/aatrox/aatrox_base.jpg";
-import blood_moon_aatrox from "../../public/assets/image/aatrox/blood_moon_aatrox.jpg";
-import justice_aatrox from "../../public/assets/image/aatrox/justice_aatrox.jpg";
-import lunar_eclipse_aatrox from "../../public/assets/image/aatrox/lunar_eclipse_aatrox.jpg";
-import victorious_aatrox from "../../public/assets/image/aatrox/victorious_aatrox.jpg";
+import aatrox_base from "../../public/assets/images/aatrox/aatrox_base.jpg";
+import blood_moon_aatrox from "../../public/assets/images/aatrox/blood_moon_aatrox.jpg";
+import justice_aatrox from "../../public/assets/images/aatrox/justice_aatrox.jpg";
+import lunar_eclipse_aatrox from "../../public/assets/images/aatrox/lunar_eclipse_aatrox.jpg";
+import victorious_aatrox from "../../public/assets/images/aatrox/victorious_aatrox.jpg";
 
 /* AHRI */
-import ahri_base from "../../public/assets/image/ahri/ahri_base.jpg";
-import arcade_ahri from "../../public/assets/image/ahri/arcade_ahri.jpg";
-import challenger_ahri from "../../public/assets/image/ahri/challenger_ahri.jpg";
-import coven_ahri from "../../public/assets/image/ahri/coven_ahri.jpg";
-import elderwood_ahri from "../../public/assets/image/ahri/elderwood_ahri.jpg";
-import foxfire_ahri from "../../public/assets/image/ahri/foxfire_ahri.jpg";
-import kda_all_out_ahri from "../../public/assets/image/ahri/kda_all_out_ahri.jpg";
-import midnight_ahri from "../../public/assets/image/ahri/midnight_ahri.jpg";
-import spirit_blossom_ahri from "../../public/assets/image/ahri/spirit_blossom_ahri.jpg";
-import star_guardian_ahri from "../../public/assets/image/ahri/star_guardian_ahri.jpg";
+import ahri_base from "../../public/assets/images/ahri/ahri_base.jpg";
+import arcade_ahri from "../../public/assets/images/ahri/arcade_ahri.jpg";
+import challenger_ahri from "../../public/assets/images/ahri/challenger_ahri.jpg";
+import coven_ahri from "../../public/assets/images/ahri/coven_ahri.jpg";
+import elderwood_ahri from "../../public/assets/images/ahri/elderwood_ahri.jpg";
+import foxfire_ahri from "../../public/assets/images/ahri/foxfire_ahri.jpg";
+import kda_all_out_ahri from "../../public/assets/images/ahri/kda_all_out_ahri.jpg";
+import midnight_ahri from "../../public/assets/images/ahri/midnight_ahri.jpg";
+import spirit_blossom_ahri from "../../public/assets/images/ahri/spirit_blossom_ahri.jpg";
+import star_guardian_ahri from "../../public/assets/images/ahri/star_guardian_ahri.jpg";
 
 /* AKALI */
-import akali_bg from "../../public/assets/image/akali/akali_bg.jpg";
-import akali_base from "../../public/assets/image/akali/akali_base.jpg";
-import all_star_akali from "../../public/assets/image/akali/all_star_akali.jpg";
-import headhunter_akali from "../../public/assets/image/akali/headhunter_akali.jpg";
-import infernal_akali from "../../public/assets/image/akali/infernal_akali.jpg";
-import kda_akali from "../../public/assets/image/akali/kda_akali.jpg";
-import kda_all_out_akali from "../../public/assets/image/akali/kda_all_out_akali.jpg";
-import silverfang_akali from "../../public/assets/image/akali/silverfang_akali.jpg";
-import star_guardian_akali from "../../public/assets/image/akali/star_guardian_akali.jpg";
-import true_damage_akali from "../../public/assets/image/akali/true_damage_akali.jpg";
+import akali_bg from "../../public/assets/images/akali/akali_bg.jpg";
+import akali_base from "../../public/assets/images/akali/akali_base.jpg";
+import all_star_akali from "../../public/assets/images/akali/all_star_akali.jpg";
+import headhunter_akali from "../../public/assets/images/akali/headhunter_akali.jpg";
+import infernal_akali from "../../public/assets/images/akali/infernal_akali.jpg";
+import kda_akali from "../../public/assets/images/akali/kda_akali.jpg";
+import kda_all_out_akali from "../../public/assets/images/akali/kda_all_out_akali.jpg";
+import silverfang_akali from "../../public/assets/images/akali/silverfang_akali.jpg";
+import star_guardian_akali from "../../public/assets/images/akali/star_guardian_akali.jpg";
+import true_damage_akali from "../../public/assets/images/akali/true_damage_akali.jpg";
 
 /* ASHE */
-import ashe_bg from "../../public/assets/image/ashe/ashe_bg.jpg";
-import ashe_base from "../../public/assets/image/ashe/ashe_base.jpg";
-import amethyst_ashe from "../../public/assets/image/ashe/amethyst_ashe.jpg";
-import championship_ashe from "../../public/assets/image/ashe/championship_ashe.jpg";
-import cosmic_queen_ashe from "../../public/assets/image/ashe/cosmic_queen_ashe.jpg";
-import coven_ashe from "../../public/assets/image/ashe/coven_ashe.jpg";
-import fae_dragon_ashe from "../../public/assets/image/ashe/fae_dragon_ashe.jpg";
-import heartseeker_ashe from "../../public/assets/image/ashe/heartseeker_ashe.jpg";
-import high_noon_ashe from "../../public/assets/image/ashe/high_noon_ashe.jpg";
-import lunar_empress_ashe from "../../public/assets/image/ashe/lunar_empress_ashe.jpg";
+import ashe_bg from "../../public/assets/images/ashe/ashe_bg.jpg";
+import ashe_base from "../../public/assets/images/ashe/ashe_base.jpg";
+import amethyst_ashe from "../../public/assets/images/ashe/amethyst_ashe.jpg";
+import championship_ashe from "../../public/assets/images/ashe/championship_ashe.jpg";
+import cosmic_queen_ashe from "../../public/assets/images/ashe/cosmic_queen_ashe.jpg";
+import coven_ashe from "../../public/assets/images/ashe/coven_ashe.jpg";
+import fae_dragon_ashe from "../../public/assets/images/ashe/fae_dragon_ashe.jpg";
+import heartseeker_ashe from "../../public/assets/images/ashe/heartseeker_ashe.jpg";
+import high_noon_ashe from "../../public/assets/images/ashe/high_noon_ashe.jpg";
+import lunar_empress_ashe from "../../public/assets/images/ashe/lunar_empress_ashe.jpg";
 
 /* AURELION SON */
-import aurelion_son_base from "../../public/assets/image/aurelionson/aurelion_son_base.jpg";
-import mecha_aurelion_son from "../../public/assets/image/aurelionson/mecha_aurelion_son.jpg";
-import storm_dragon_aurelion_son from "../../public/assets/image/aurelionson/storm_dragon_aurelion_son.jpg";
+import aurelion_son_base from "../../public/assets/images/aurelionson/aurelion_son_base.jpg";
+import mecha_aurelion_son from "../../public/assets/images/aurelionson/mecha_aurelion_son.jpg";
+import storm_dragon_aurelion_son from "../../public/assets/images/aurelionson/storm_dragon_aurelion_son.jpg";
 
 /* CAITLYN */
-import caitlyn_base from "../../public/assets/image/caitlyn/caitlyn_base.jpg";
-import arcade_caitlyn from "../../public/assets/image/caitlyn/arcade_caitlyn.jpg";
-import arcane_caitlyn from "../../public/assets/image/caitlyn/arcane_caitlyn.jpg";
-import arctic_warfare_caitlyn from "../../public/assets/image/caitlyn/arctic_warfare_caitlyn.jpg";
-import battle_academia_caitlyn from "../../public/assets/image/caitlyn/battle_academia_caitlyn.jpg";
-import headhunter_caitlyn from "../../public/assets/image/caitlyn/headhunter_caitlyn.jpg";
-import lunar_wraith_caitlyn from "../../public/assets/image/caitlyn/lunar_wraith_caitlyn.jpg";
-import officer_caitlyn from "../../public/assets/image/caitlyn/officer_caitlyn.jpg";
-import pulsefire_caitlyn from "../../public/assets/image/caitlyn/pulsefire_caitlyn.jpg";
-import resistance_caitlyn from "../../public/assets/image/caitlyn/resistance_caitlyn.jpg";
-import sheriff_caitlyn from "../../public/assets/image/caitlyn/sheriff_caitlyn.jpg";
-import snow_moon_caitlyn from "../../public/assets/image/caitlyn/snow_moon_caitlyn.jpg";
+import caitlyn_base from "../../public/assets/images/caitlyn/caitlyn_base.jpg";
+import arcade_caitlyn from "../../public/assets/images/caitlyn/arcade_caitlyn.jpg";
+import arcane_caitlyn from "../../public/assets/images/caitlyn/arcane_caitlyn.jpg";
+import arctic_warfare_caitlyn from "../../public/assets/images/caitlyn/arctic_warfare_caitlyn.jpg";
+import battle_academia_caitlyn from "../../public/assets/images/caitlyn/battle_academia_caitlyn.jpg";
+import headhunter_caitlyn from "../../public/assets/images/caitlyn/headhunter_caitlyn.jpg";
+import lunar_wraith_caitlyn from "../../public/assets/images/caitlyn/lunar_wraith_caitlyn.jpg";
+import officer_caitlyn from "../../public/assets/images/caitlyn/officer_caitlyn.jpg";
+import pulsefire_caitlyn from "../../public/assets/images/caitlyn/pulsefire_caitlyn.jpg";
+import resistance_caitlyn from "../../public/assets/images/caitlyn/resistance_caitlyn.jpg";
+import sheriff_caitlyn from "../../public/assets/images/caitlyn/sheriff_caitlyn.jpg";
+import snow_moon_caitlyn from "../../public/assets/images/caitlyn/snow_moon_caitlyn.jpg";
 
 /* EVELYNN */
-import evelynn_base from "../../public/assets/image/evelynn/evelynn_base.jpg";
-import blood_moon_evelynn from "../../public/assets/image/evelynn/blood_moon_evelynn.jpg";
-import coven_evelynn from "../../public/assets/image/evelynn/coven_evelynn.jpg";
-import kda_evelynn from "../../public/assets/image/evelynn/kda_evelynn.jpg";
-import kda_all_out_evelynn from "../../public/assets/image/evelynn/kda_all_out_evelynn.jpg";
-import masquerade_evelynn from "../../public/assets/image/evelynn/masquerade_evelynn.jpg";
-import shadow_evelynn from "../../public/assets/image/evelynn/shadow_evelynn.jpg";
-import spirit_blossom_evelynn from "../../public/assets/image/evelynn/spirit_blossom_evelynn.jpg";
+import evelynn_base from "../../public/assets/images/evelynn/evelynn_base.jpg";
+import blood_moon_evelynn from "../../public/assets/images/evelynn/blood_moon_evelynn.jpg";
+import coven_evelynn from "../../public/assets/images/evelynn/coven_evelynn.jpg";
+import kda_evelynn from "../../public/assets/images/evelynn/kda_evelynn.jpg";
+import kda_all_out_evelynn from "../../public/assets/images/evelynn/kda_all_out_evelynn.jpg";
+import masquerade_evelynn from "../../public/assets/images/evelynn/masquerade_evelynn.jpg";
+import shadow_evelynn from "../../public/assets/images/evelynn/shadow_evelynn.jpg";
+import spirit_blossom_evelynn from "../../public/assets/images/evelynn/spirit_blossom_evelynn.jpg";
+
+/* HEIMERDINGER */
 
 /* GWEN */
-import gwen_base from "../../public/assets/image/gwen/gwen_base.jpg";
-import cafe_cuties_gwen from "../../public/assets/image/gwen/cafe_cuties_gwen.jpg";
-import space_groove_gwen from "../../public/assets/image/gwen/space_groove_gwen.jpg";
+import gwen_base from "../../public/assets/images/gwen/gwen_base.jpg";
+import cafe_cuties_gwen from "../../public/assets/images/gwen/cafe_cuties_gwen.jpg";
+import space_groove_gwen from "../../public/assets/images/gwen/space_groove_gwen.jpg";
 
 /* JINX */
-import jinx_base from "../../public/assets/image/jinx/jinx_base.jpg";
-import arcane_jinx from "../../public/assets/image/jinx/arcane_jinx.jpg";
-import crime_city_jinx from "../../public/assets/image/jinx/crime_city_jinx.jpg";
-import firecracker_jinx from "../../public/assets/image/jinx/firecracker_jinx.jpg";
-import heartseeker_jinx from "../../public/assets/image/jinx/heartseeker_jinx.jpg";
-import odyssey_jinx from "../../public/assets/image/jinx/odyssey_jinx.jpg";
-import star_guardian_jinx from "../../public/assets/image/jinx/star_guardian_jinx.jpg";
+import jinx_base from "../../public/assets/images/jinx/jinx_base.jpg";
+import arcane_jinx from "../../public/assets/images/jinx/arcane_jinx.jpg";
+import crime_city_jinx from "../../public/assets/images/jinx/crime_city_jinx.jpg";
+import firecracker_jinx from "../../public/assets/images/jinx/firecracker_jinx.jpg";
+import heartseeker_jinx from "../../public/assets/images/jinx/heartseeker_jinx.jpg";
+import odyssey_jinx from "../../public/assets/images/jinx/odyssey_jinx.jpg";
+import star_guardian_jinx from "../../public/assets/images/jinx/star_guardian_jinx.jpg";
 
 /* KSANTE */
-import ksante_base from "../../public/assets/image/ksante/ksante_base.jpg";
-import empyrean_ksante from "../../public/assets/image/ksante/empyrean_ksante.jpg";
-import prestige_empyrean_ksante from "../../public/assets/image/ksante/prestige_empyrean_ksante.jpg";
+import ksante_base from "../../public/assets/images/ksante/ksante_base.jpg";
+import empyrean_ksante from "../../public/assets/images/ksante/empyrean_ksante.jpg";
+import prestige_empyrean_ksante from "../../public/assets/images/ksante/prestige_empyrean_ksante.jpg";
+
+/* MILIO */
+
+/* MISS FORTUNE */
+
+/* SERAPHINE */
 
 /* VEX */
-import vex_bg from "../../public/assets/image/vex/vex_bg.jpg";
-import vex_base from "../../public/assets/image/vex/vex_base.jpg";
-import dawnbringer_vex from "../../public/assets/image/vex/dawnbringer_vex.jpg";
-import empyrean_vex from "../../public/assets/image/vex/empyrean_vex.jpg";
+import vex_bg from "../../public/assets/images/vex/vex_bg.jpg";
+import vex_base from "../../public/assets/imimagesage/vex/vex_base.jpg";
+import dawnbringer_vex from "../../public/assets/images/vex/dawnbringer_vex.jpg";
+import empyrean_vex from "../../public/assets/images/vex/empyrean_vex.jpg";
 
 /* REGION */
-import freljord from "../../public/assets/image/region/freljord.png";
-import ionia from "../../public/assets/image/region/ionia.png";
-import piltover from "../../public/assets/image/region/piltover.png";
-import runeterra from "../../public/assets/image/region/runeterra.png";
-import shadow_isles from "../../public/assets/image/region/shadow_isles.png";
-import shurima from "../../public/assets/image/region/shurima.png";
-import zaun from "../../public/assets/image/region/zaun.png";
+import freljord from "../../public/assets/images/regions/freljord.png";
+import ionia from "../../public/assets/images/regions/ionia.png";
+import piltover from "../../public/assets/images/regions/piltover.png";
+import runeterra from "../../public/assets/images/regions/runeterra.png";
+import shadow_isles from "../../public/assets/images/regions/shadow_isles.png";
+import shurima from "../../public/assets/images/regions/shurima.png";
+import zaun from "../../public/assets/images/regions/zaun.png";
 
 export const champions: Champion[] = [
   {
     id: "aatrox",
     name: "AATROX",
     title: "The darkin blade",
-    champion_quote: "“I must destroy even hope…”",
+    quote: "“I must destroy even hope…”",
     champion_image: aatrox_base,
     region: "Runeterra",
     region_image: runeterra,
@@ -144,8 +152,7 @@ export const champions: Champion[] = [
     id: "ahri",
     name: "AHRI",
     title: "The nine-tailed fox",
-    champion_quote:
-      "“Human emotions can be more volatile than even the deepest magic.”",
+    quote:"“Human emotions can be more volatile than even the deepest magic.”",
     champion_image: ahri_base,
     region: "Ionia",
     region_image: ionia,
@@ -198,7 +205,7 @@ export const champions: Champion[] = [
     id: "akali",
     name: "AKALI",
     title: "The rogue assassin",
-    champion_quote: "“If you look dangerous, you better be dangerous.”",
+    quote: "“If you look dangerous, you better be dangerous.”",
     champion_image: akali_bg,
     region: "Runeterra",
     region_image: ionia,
@@ -247,7 +254,7 @@ export const champions: Champion[] = [
     id: "ashe",
     name: "ASHE",
     title: "The frost archer",
-    champion_quote: "“One tribe, one people, one Freljord.”",
+    quote: "“One tribe, one people, one Freljord.”",
     champion_image: ashe_bg,
     region: "Runeterra",
     region_image: freljord,
@@ -296,7 +303,7 @@ export const champions: Champion[] = [
     id: "aurelionson",
     name: "AURELION SON",
     title: "The star forger",
-    champion_quote:
+    quote:
       "“Cower. Worship. Marvel. They are all appropriate responses.”",
     champion_image: aurelion_son_base,
     region: "Runeterra",
@@ -322,7 +329,7 @@ export const champions: Champion[] = [
     id: "caitlyn",
     name: "CAITLYN",
     title: "The sheriff of Piltover",
-    champion_quote:
+    quote:
       "“To be the best hunter, you have to be able to think like your prey.”",
     champion_image: caitlyn_base,
     region: "Piltover",
@@ -384,7 +391,7 @@ export const champions: Champion[] = [
     id: "evelynn",
     name: "EVELYNN",
     title: "Agony's embrace",
-    champion_quote:
+    quote:
       "“What are you doing tonight? How about we get together and unlock that vast well of torment inside you?”",
     champion_image: evelynn_base,
     region: "Runeterra",
@@ -430,7 +437,7 @@ export const champions: Champion[] = [
     id: "gwen",
     name: "GWEN",
     title: "The hallowed seamstress",
-    champion_quote:
+    quote:
       "“The wind at my back feels so good. I can’t lose this. I won’t.”",
     champion_image: gwen_base,
     region: "Shadow isles",
@@ -456,7 +463,7 @@ export const champions: Champion[] = [
     id: "jinx",
     name: "JINX",
     title: "The loose cannon",
-    champion_quote: "“Volatile explosives are a girl’s best friend!”",
+    quote: "“Volatile explosives are a girl’s best friend!”",
     champion_image: jinx_base,
     region: "Zaun",
     region_image: zaun,
@@ -497,7 +504,7 @@ export const champions: Champion[] = [
     id: "ksante",
     name: "K'SANTE",
     title: "The pride of Nazumah",
-    champion_quote: "“No monster greater than pride.”",
+    quote: "“No monster greater than pride.”",
     champion_image: ksante_base,
     region: "Runeterra",
     region_image: shurima,
@@ -522,7 +529,7 @@ export const champions: Champion[] = [
     id: "vex",
     name: "VEX",
     title: "The gloomist",
-    champion_quote: "“Just... ughhhhh.”",
+    quote: "“Just... ughhhhh.”",
     champion_image: vex_bg,
     region: "Shadow isles",
     region_image: shadow_isles,

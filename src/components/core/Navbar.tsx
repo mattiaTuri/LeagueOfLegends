@@ -39,14 +39,14 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          <button onClick={() => changeLanguage()}>
-            <div>
-              <span>LANGUAGE</span>
+          <div className="flex w-[200px]">
+            <div className="border border-[#ba8964] flex justify-center w-[80%]">
+              <span className="text-white p-2">LANGUAGE</span>
             </div>
-            <div>
-              <span></span>
-            </div>
-          </button>
+            <button className="bg-[#ba8964] flex justify-center w-[20%]" onClick={() => changeLanguage()}>
+              <span className="text-black p-2">{language.toUpperCase()}</span>
+            </button>
+          </div>
         </nav>
       </Container>
     </header>

@@ -4,7 +4,7 @@ export interface Champion{
     id: string,
     name: string;
     title: string;
-    champion_quote: string;
+    quote: string;
     champion_image: StaticImageData;
     region: string;
     region_image: StaticImageData

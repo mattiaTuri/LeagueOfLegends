@@ -1,0 +1,446 @@
+{
+  "home": "HOME",
+  "champions": "CAMPIONI",
+  "regions": "REGIONI",
+  "region": "REGIONE",
+  "language" : "LINGUA",
+  "explore_the_universe_of": "ESPLORA L'UNIVERSO DI",
+  "available_skins" : "AVAILABLE SKINS",
+  "explore_region" : "ESPLORA REGIONE",
+  "continue_reading": "CONTINUA A LEGGERE",
+  "aatrox": [
+    {
+      "id": "aatrox",
+      "name": "AATROX",
+      "title": "La lama dei darkin",
+      "quote": "“Distruggerò anche la speranza...”",
+      "region": "Runeterra",
+      "lore": "Un tempo onorati difensori di Shurima contro il Vuoto, Aatrox e i suoi compagni finirono per diventare una minaccia ancora maggiore per Runeterra, e vennero sconfitti solo da una subdola stregoneria dei mortali. Ma dopo secoli di prigionia, Aatrox fu il primo a ritrovare la libertà, corrompendo e trasformando chi si dimostrava abbastanza folle da brandire l'arma magica che conteneva la sua essenza. Ora, con un corpo rubato, vaga per Runeterra con un brutale simulacro della sua vecchia forma, alla ricerca di un'apocalittica e tanto desiderata vendetta.",
+      "splash_art": [
+        {
+          "title": "aatrox"
+        },
+        {
+          "title": "aatrox luna di sangue"
+        },
+        {
+          "title": "aatrox giustiziere"
+        },
+        {
+          "title": "aatrox eclissi lunare"
+        },
+        {
+          "title": "aatrox vittorioso"
+        }
+      ]
+    }
+  ],
+  "ahri": [
+    {
+      "id": "ahri",
+      "name": "AHRI",
+      "title": "La volpe a nove code",
+      "quote": "“Le emozioni umane possono essere molto più instabili della magia più profonda.”",
+      "region": "Ionia",
+      "lore": "Legata alla magia del regno spirituale fin dalla sua nascita, Ahri è una misteriosa vastaya dalle fattezze di volpe, in grado di manipolare le emozioni delle sue prede e di consumarne l'essenza vitale. Quando lo fa, percepisce sprazzi dei ricordi e delle idee delle vittime. Un tempo era una potente ma capricciosa predatrice, ma ora viaggia nel mondo alla ricerca dei resti dei suoi antenati, cercando al tempo stesso di sostituire i ricordi rubati con i suoi.",
+      "splash_art": [
+        {
+          "title": "ahri"
+        },
+        {
+          "title": "ahri arcade"
+        },
+        {
+          "title": "ahri impavida"
+        },
+        {
+          "title": "ahri della congrega"
+        },
+        {
+          "title": "ahri del bosco antico"
+        },
+        {
+          "title": "ahri volpe di fuoco"
+        },
+        {
+          "title": "ahri k/da"
+        },
+        {
+          "title": "ahri k/da all out "
+        },
+        {
+          "title": "ahri di mezzanotte"
+        },
+        {
+          "title": "ahri fiore spirituale"
+        },
+        {
+          "title": "ahri guardiana stellare"
+        }
+      ]
+    }
+  ],
+  "akali": [
+    {
+      "id": "akali",
+      "name": "AKALI",
+      "title": "L'assassina solitaria",
+      "quote": "“Se sembri pericoloso, è meglio che tu sia pericoloso.”",
+      "region": "Runeterra",
+      "lore": "Dopo aver abbandonato l'Ordine Kinkou e il suo titolo di pugno dell'ombra, Akali combatte da sola, pronta ad essere l'arma letale di cui la gente ha bisogno. Non ha dimenticato nulla di quanto appreso dal suo maestro Shen, ma ha giurato di difendere Ionia dai suoi nemici... eliminandoli uno alla volta. Akali colpisce in silenzio, ma il suo messaggio è forte e chiaro: temi l'assassina senza padrone.",
+      "splash_art": [
+        {
+          "title": "akali"
+        },
+        {
+          "title": "akali all star"
+        },
+        {
+          "title": "akali infernale"
+        },
+        {
+          "title": "akali cacciatrice di teste"
+        },
+        {
+          "title": "akali kda"
+        },
+        {
+          "title": "akali kda all out"
+        },
+        {
+          "title": "akali zanna d'argento"
+        },
+        {
+          "title": "akali guardiana stellare"
+        },
+        {
+          "title": "akali true damage"
+        }
+      ]
+    }
+  ],
+  "ashe": [
+    {
+      "id": "ashe",
+      "name": "ASHE",
+      "title": "L'arciera dei ghiacci",
+      "quote": "“Una tribù, un popolo, un solo Freljord.”",
+      "region": "Freljord",
+      "lore": "Ashe è la madre guerriera, figlia del gelo, della tribù degli Avarosani, che comanda l'orda più popolosa del nord. Stoica, intelligente e idealista, ma al tempo stesso inquieta nel suo ruolo di leader, sfrutta la magia arcana della sua stirpe per brandire un arco di Vero Ghiaccio. Ritenuta la reincarnazione della mitologica Avarosa dal suo popolo, Ashe spera di riunire il Freljord riconquistando le antiche terre tribali.",
+       "splash_art": [
+        {
+          "title": "ashe"
+        },
+        {
+          "title": "amethyst ashe"
+        },
+        {
+          "title": "championship ashe"
+        },
+        {
+          "title": "cosmic queen ashe"
+        },
+        {
+          "title": "coven ashe"
+        },
+        {
+          "title": "fae dragon ashe"
+        },
+        {
+          "title": "heartseeker ashe"
+        },
+        {
+          "title": "high noon ashe"
+        },
+        {
+          "title": "lunar empress ashe"
+        }
+      ]
+    }
+  ],
+  "aurelionson": [
+    {
+      "id": "aurelionson",
+      "name": "AURELION SON",
+      "title": "Il forgiatore di stelle",
+      "quote": "“Adulazione. Venerazione. Meraviglia. Sono tutte risposte valide.”",
+      "region": "Runeterra",
+      "lore": "Un tempo Aurelion Sol omaggiò il grande vuoto del cosmo del reame celestiale con meraviglie da lui stesso concepite, ma fu ingannato dalle Incarnazioni di Targon, che lo costrinsero a rivelare i segreti di un sole che aveva creato. Il suo incredibile potere fu canalizzato negli dei-guerrieri immortali per proteggere Runeterra, quello che ai suoi occhi era un mondo insignificante. Con un forte desiderio di tornare a plasmare il cosmo, se sarà costretto, Aurelion Sol strapperà via le stelle dal cielo pur di riottenere la sua libertà.",
+      "splash_art": [
+        {
+          "title": "aurelion son"
+        },
+        {
+          "title": "mecha aurelion on"
+        },
+        {
+          "title": "storm dragon aurelion son"
+        }
+      ]
+    }
+  ],
+  "caitlyn": [
+    {
+      "id": "caitlyn",
+      "name": "CAITLYN",
+      "title": "Lo sceriffo di Piltover",
+      "quote": "“Per essere la migliore delle cacciatrici, devi pensare come le tue prede.”",
+      "region": "Piltover",
+      "lore": "Caitlyn, nota come la migliore agente di Piltover, è anche la migliore opportunità che ha la città di liberarsi dai suoi sfuggenti criminali. Spesso è in coppia con Vi, come contrappunto alla natura impetuosa della sua partner. Anche se ha un fucile hextech unico al mondo, la vera arma segreta di Caitlyn è un intelletto superiore, che le permette di tendere elaborati tranelli ai criminali così stolti da agire nella città del progresso.",
+      "splash_art": [
+        {
+          "title": "caitlyn"
+        },
+        {
+          "title": "arcade caitlyn"
+        },
+        {
+          "title": "arcane caitlyn"
+        },
+        {
+          "title": "arctic warfare caitlyn"
+        },
+        {
+          "title": "battle academia caitlyn"
+        },
+        {
+          "title": "headhunter caitlyn"
+        },
+        {
+          "title": "lunar wraith caitlyn"
+        },
+        {
+          "title": "officer caitlyn"
+        },
+        {
+          "title": "pulsefire caitlyn"
+        },
+        {
+          "title": "resistance caitlyn"
+        },
+        {
+          "title": "sheriff caitlyn"
+        },
+        {
+          "title": "snow moon caitlyn"
+        }
+      ]
+    }
+  ],
+  "evelynn": [
+    {
+      "id": "evelynn",
+      "name": "EVELYNN",
+      "title": "Abbraccio agonizzante",
+      "quote": "“Cosa fai stasera? Ti va di uscire insieme e attingere a quel profondo abisso di dolore che ti porti dentro?”",
+      "region": "Runeterra",
+      "lore": "Negli angoli più oscuri di Runeterra, il demone Evelynn cerca la sua prossima vittima. Attira le sue prede con l'aspetto di una sensuale donna umana, ma nel momento in cui una persona soccombe al suo fascino lei scatena la sua vera forma, provocando inimmaginabili tormenti sulla sua vittima e traendo piacere dal suo dolore. Per il demone, queste relazioni sono poco più che avventure di una notte. Per il resto di Runeterra sono macabri racconti sulla passione senza controllo, terribile memento di quanto costi veramente il desiderio più libertino.",
+      "splash_art": [
+        {
+          "title": "evelynn"
+        },
+        {
+          "title": "blood moon evelynn"
+        },
+        {
+          "title": "coven evelynn"
+        },
+        {
+          "title": "kda evelynn"
+        },
+        {
+          "title": "kda all out evelynn"
+        },
+        {
+          "title": "masquerade evelynn"
+        },
+        {
+          "title": "shadow evelynn"
+        },
+        {
+          "title": "spirit blossom evelynn"
+        }
+      ]
+    }
+  ],
+  "heimerdinger": [
+    {
+      "id": "heimerdinger",
+      "name": "HEIMERDINGER",
+      "title": "Il riverito inventore",
+      "quote": "“Impossibile, dite? Assurdo. Aspettate di vedere i miei calcoli!”",
+      "region": "Piltover",
+      "lore": "Il professor Cecil B. Heimerdinger è uno scienziato tanto brillante quanto eccentrico, celebre per essere una delle menti più creative e uno degli inventori più acclamati che Piltover abbia mai visto. Dedito al suo lavoro al punto da diventarne quasi ossessionato, punta a svelare i segreti più impenetrabili dell'universo. Nonostante le sue teorie appaiano spesso vaghe ed esoteriche, Heimerdinger ha creato alcune delle macchine più miracolose (e letali) di Piltover. Lavora costantemente per migliorare le sue invenzioni e renderle ancora più efficienti.",
+      "splash_art": [
+        {
+          "title": "gwen"
+        },
+        {
+          "title": "cafe cuties gwen"
+        },
+        {
+          "title": "space groove gwen"
+        }
+      ]
+    }
+  ],
+  "gwen": [
+    {
+      "id": "gwen",
+      "name": "GWEN",
+      "title": "La sacra ricamatrice",
+      "quote": "“E come il vento odo stormir... io non perderò. Mai.”",
+      "region": "Isole ombra",
+      "lore": "Gwen era una bambola, ora portata in vita dalla magia, che brandisce gli strumenti che l'hanno creata. Porta con sé il peso dell'amore della sua creatrice e non dà nulla per scontato. A lei obbedisce la Sacra Nebbia, un'antica magia protettiva che ha benedetto le sue forbici, gli aghi e i fili. Tutto è nuovo per lei, ma Gwen è decisa a lottare con gioia per il bene sopravvissuto in un mondo in frantumi.",
+      "splash_art": [
+        {
+          "title": "gwen"
+        },
+        {
+          "title": "cafe cuties gwen"
+        },
+        {
+          "title": "space groove gwen"
+        }
+      ]
+    }
+  ],
+  "jinx": [
+    {
+      "id": "jinx",
+      "name": "JINX",
+      "title": "La mina vagante",
+      "quote": "“Gli esplosivi sono i migliori amici delle ragazze!”",
+      "region": "Zaun",
+      "lore": "Jinx è una criminale impulsiva e maniacale di Zaun, che vive per seminare il panico senza pensare alle conseguenze. Con un arsenale di armi letali, scatena le esplosioni più forti e spettacolari per poi lasciarsi alle spalle una scia di caos. Jinx odia la noia e porta felicemente con sé il suo pandemonio personale, ovunque vada.",
+      "splash_art": [
+        {
+          "title": "jinx"
+        },
+        {
+          "title": "arcane jinx"
+        },
+        {
+          "title": "crime city jinx"
+        },
+        {
+          "title": "firecracker jinx"
+        },
+        {
+          "title": "heartseeker jinx"
+        },
+        {
+          "title": "odyssey jinx"
+        },
+        {
+          "title": "star guardian jinx"
+        }
+      ]
+    }
+  ],
+  "ksante": [
+    {
+      "id": "ksante",
+      "name": "K'SANTE",
+      "title": "L'orgoglio di Nazumah",
+      "quote": "“Nessun mostro è più grande dell'orgoglio.”",
+      "region": "Shurima",
+      "lore": "Sprezzante e coraggioso, K'Sante affronta mostri colossali e gli spietati Ascesi per proteggere la sua patria, Nazumah, un'ambitissima oasi tra le sabbie di Shurima. Dopo essersi separato dal suo compagno, K'Sante capisce che per diventare un guerriero degno di guidare la sua città deve prima porre freno al suo ego affamato di successo. Solo così potrà evitare la trappola dell'orgoglio, trovando la saggezza necessaria per sconfiggere i mostri che minacciano il suo popolo.",
+      "splash_art": [
+        {
+          "title": "ksante"
+        },
+        {
+          "title": "empyrean ksante"
+        },
+        {
+          "title": "prestige empyrean ksante"
+        }
+      ]
+    }
+  ],
+  "milio": [
+    {
+      "id": "milio",
+      "name": "MILIO",
+      "title": "La fiamma gentile",
+      "quote": "“È la luce che è in noi, la fiamma interiore, che alimenta il mio fuoco.”",
+      "region": "Ixtal",
+      "lore": "Milio è un amichevole ragazzo di Ixtal che, nonostante la giovane età, ha padroneggiato l'Assioma del fuoco e ha scoperto qualcosa di nuovo: il fuoco rassicurante. Grazie a questo nuovo potere, Milio vuole aiutare la sua famiglia a concludere il suo esilio unendosi agli Yun Tal come fece un tempo sua nonna. Dopo aver attraversato le giungle di Ixtal fino alla capitale di Ixaocan, ora Milio si prepara ad affrontare il Vidalion e a unirsi agli Yun Tal, ignaro delle prove, e dei pericoli, che lo attendono.",
+       "splash_art": [
+        {
+          "title": "gwen"
+        },
+        {
+          "title": "cafe cuties gwen"
+        },
+        {
+          "title": "space groove gwen"
+        }
+      ]
+    }
+  ],
+  "missfortune": [
+    {
+      "id": "missfortune",
+      "name": "MISS FORTUNE",
+      "title": "La cacciatrice di taglie",
+      "quote": "“Più grande il rischio, più grande il bottino.”",
+      "region": "Bilgewater",
+      "lore": "Sarah Fortune, una spietata capitana di Bilgewater nota per la sua bellezza e per la sua determinazione, si staglia in mezzo ai criminali che popolano la città portuale. Da bambina ha visto il re dei pirati Gangplank massacrare la sua famiglia, un atto che avrebbe vendicato anni dopo, facendo saltare la sua nave mentre lui era ancora a bordo. Chi la sottovaluta è destinato a trovarsi davanti a un nemico pericoloso e imprevedibile... e con tutta probabilità a un paio di proiettili nello stomaco.",
+      "splash_art": [
+        {
+          "title": "gwen"
+        },
+        {
+          "title": "cafe cuties gwen"
+        },
+        {
+          "title": "space groove gwen"
+        }
+      ]
+    }
+  ],
+  "seraphine": [
+    {
+      "id": "seraphine",
+      "name": "SERAPHINE",
+      "title": "La cantante sognatrice",
+      "quote": "“Questo è per voi!”",
+      "region": "Piltover",
+      "lore": "Nata a Piltover da genitori di Zaun, Seraphine sente le anime altrui. Il mondo canta per lei, e lei canta in risposta. Nella sua giovinezza venne travolta da quei suoni che ora le sono d'ispirazione, trasformando il caos in una sinfonia. Si esibisce per le città sorelle per ricordare ai loro abitanti che non sono soli, che insieme sono più forti e che, ai suoi occhi, hanno un potenziale illimitato.",
+      "splash_art": [
+        {
+          "title": "vex"
+        },
+        {
+          "title": "dawnbringer vex"
+        },
+        {
+          "title": "empyrean vex"
+        }
+      ]
+    }
+  ],
+  "vex": [
+    {
+      "id": "vex",
+      "name": "VEX",
+      "title": "L'ombramante",
+      "quote": "“Uuuugh... Che rottura.”",
+      "region": "Shadow isles",
+      "lore": "Nelle più nere profondità delle Isole Ombra, una yordle solitaria passeggia tra la nebbia spettrale assaporandone la cupa miseria. Armata di un'inesauribile riserva di disagio e di una potentissima ombra, Vex vive nel suo piccolo angolo di tristezza, lontano dalla rivoltante felicità del mondo e dagli \"sfigati\" che vi abitano. Pur non avendo ambizioni, non esita ad agire per cancellare sorrisi e felicità, abbattendo qualsiasi scocciatore col potere della sua angoscia.",
+      "splash_art": [
+        {
+          "title": "vex"
+        },
+        {
+          "title": "dawnbringer vex"
+        },
+        {
+          "title": "empyrean vex"
+        }
+      ]
+    }
+  ]
+}

@@ -5,23 +5,3 @@
     cursor: pointer;
 }
 
-.containerLink > a{
-    height: 100%;
-    width: 100%;
-}
-
-.containerLink::before{
-    content: "";
-    background-color: #C3A06A;
-    transform-origin: bottom;
-    width: 150%;
-    height: 150%;
-    position: absolute;
-    left: -25%;
-    top: -20%;
-    border-radius: 50%;
-    transform: scaleY(0);
-    transition: 0.5s cubic-bezier(0.1, 0, 0.3, 1);
-}
-
-

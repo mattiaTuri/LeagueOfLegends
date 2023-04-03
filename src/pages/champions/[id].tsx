@@ -122,10 +122,10 @@ function ChampionPage() {
           <div className={style.triangle}></div>
           <div className="p-8 flex flex-col items-center lg:w-[80%]">
             <p className="text-center pb-8">{activeChampion[0].lore}</p>
-            <CustomButton href="" text="CONTINUE READING" />
+            <CustomButton href="" text={t("continue_reading")} />
           </div>
           <div className="p-8 w-full flex flex-col items-center md:flex-row lg:w-[80%]">
-            <div className="md:w-[50%] flex justify-center">
+            <div className="flex justify-center md:w-[50%]">
               {/* <Image
                 src={
                   activeChampion != undefined ? activeChampion.region_image : ""
@@ -134,17 +134,17 @@ function ChampionPage() {
               ></Image> */}
             </div>
             <div className="flex flex-col items-center justify-center md:w-[50%]">
-              <span>REGION</span>
+              <span>{t("region")}</span>
               <p className="pb-8 text-2xl lg:text-5xl">
-                {activeChampion[0].region?.toUpperCase()}
+                {activeChampion[0].region.toUpperCase()}
               </p>
-              <CustomButton href="" text="EXPLORE REGION" />
+              <CustomButton href="" text={t("explore_region")} />
             </div>
           </div>
           <div className="relative w-full md:p-8">
             <div className="pb-8 text-center">
               <h3 className="text-[#c4b998] text-2xl lg:text-5xl">
-                AVAILABLE SKINS
+              {t("available_skins")}
               </h3>
             </div>
             {/* <div className="relative">
@@ -202,6 +202,3 @@ function ChampionPage() {
 }
 
 export default ChampionPage;
-function useTraslate(): { t: any } {
-  throw new Error("Function not implemented.");
-}
