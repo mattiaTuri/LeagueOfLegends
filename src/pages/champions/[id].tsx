@@ -35,27 +35,38 @@ const item = {
   },
 };
 
-export const getStaticProps = async ({ locale }: any) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["champions", "common"])),
-  },
-});
+export async function getStaticPaths() {
+  const paths = champions.map((champion) => ({
+    params: {
+      id: champion.id,
+    },
+  }));
 
-export const getStaticPaths = async () => {
   return {
-    paths: [],
+    paths,
     fallback: true,
   };
-};
+}
 
-function ChampionPage() {
+export async function getStaticProps({ params, locale }: any) {
+  const activeChampion: any = champions.find((elem) => elem.id == params.id);
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["champions", "common"])),
+      activeChampion,
+    },
+  };
+}
+
+function ChampionPage({ locale, activeChampion }: any) {
   const router = useRouter();
   const championId = router.query.id;
   const [thumbsSwiper, setThumbsSwiper] = useState<any>();
   const [windowWidth, setWindowWidth] = useState<number>(1024);
   const { t } = useTranslation();
 
-  let activeChampion: any = champions.find((elem) => elem.id == championId);
+  //let activeChampion: any = champions.find((elem) => elem.id == championId);
 
   let nameSplit = activeChampion?.name?.split("");
 
