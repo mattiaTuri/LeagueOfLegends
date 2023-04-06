@@ -55,52 +55,73 @@ const textMotion = {
 };
 
 export async function getStaticProps({ locale }: any) {
-  const randomChampions = await getRandomChampions(champions, 7);
+  //const randomChampions = await getRandomChampions(champions, 7);
 
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common", "champions"])),
-      randomChampions,
-      champions,
+      //randomChampions,
+      //champions,
     },
   };
 }
 
-function getRandomChampions(champions: Champion[], championsNumber: number) {
-  let randomChampions: any = [];
-  for (let i = 0; i < championsNumber; i++) {
-    const random = Math.floor(Math.random() * champions.length);
-    const exist = randomChampions.find(
-      (elem: any) => elem.id == champions[random].id
-    );
-    if (!exist) {
-      randomChampions.push(champions[random]);
-    } else {
-      i = i - 1;
-    }
-  }
+// function getRandomChampions(champions: Champion[], championsNumber: number) {
+//   let randomChampions: any = [];
+//   for (let i = 0; i < championsNumber; i++) {
+//     const random = Math.floor(Math.random() * champions.length);
+//     const exist = randomChampions.find(
+//       (elem: any) => elem.id == champions[random].id
+//     );
+//     if (!exist) {
+//       randomChampions.push(champions[random]);
+//     } else {
+//       i = i - 1;
+//     }
+//   }
 
-  return randomChampions;
-  // setRandomChampions(randomChampions);
-  // setLoading(false);
-}
+//   return randomChampions;
+//   // setRandomChampions(randomChampions);
+//   // setLoading(false);
+// }
 
-function Champions({ randomChampions, champions }: any) {
+function Champions() {
   const [windowWidth, setWindowWidth] = useState<number>(1024);
   const [loading, setLoading] = useState<boolean>(true);
+  const [randomChampions, setRandomChampions] = useState<any>([]);
   const { t } = useTranslation();
 
   useEffect(() => {
     function WindowResize() {
       setWindowWidth(window.innerWidth);
     }
+    getRandomChampions(champions, 7);
     window.addEventListener("resize", WindowResize);
     setWindowWidth(window.innerWidth);
     setLoading(false);
     return () => {
       removeEventListener("resize", WindowResize);
     };
-  });
+  }, []);
+
+  function getRandomChampions(champions: Champion[], championsNumber: number) {
+    let randomChampions: any = [];
+    for (let i = 0; i < championsNumber; i++) {
+      const random = Math.floor(Math.random() * champions.length);
+      const exist = randomChampions.find(
+        (elem: any) => elem.id == champions[random].id
+      );
+      if (!exist) {
+        randomChampions.push(champions[random]);
+      } else {
+        i = i - 1;
+      }
+    }
+
+    setRandomChampions(randomChampions);
+    setLoading(false);
+    return randomChampions;
+  }
 
   if (!loading)
     return (

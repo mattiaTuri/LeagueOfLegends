@@ -43,7 +43,7 @@ export const getStaticProps = async ({ locale }: any) => ({
 
 export const getStaticPaths = async () => {
   return {
-    paths: [`/champions/id`],
+    paths: [],
     fallback: true,
   };
 };
