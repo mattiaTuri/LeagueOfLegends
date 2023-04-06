@@ -43,7 +43,7 @@ function DesktopViewChamp({ champions }: any) {
                     backgroundImage: `url('${champion.champion_image.src}')`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
-                    backgroundPositionX: champion.bgPosition,
+                    backgroundPosition: champion.bgPosition,
                   }}
                   variants={championImage}
                   transition={hoverTransition}

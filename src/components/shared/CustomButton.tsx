@@ -9,7 +9,6 @@ interface CustomButtonProperties {
 const button = {
   initial: {},
   hover: {
-    width: "16rem",
     transition: {
       duration: 1,
       ease: [0.25, 1, 0.5, 1],
@@ -30,9 +29,9 @@ const buttonText = {
 
 function CustomButton({ href, text }: CustomButtonProperties) {
   return (
-    <Link href={href}>
+    <Link href={href} className="">
       <motion.button
-        className={`border border-[#C3A06A] w-48 h-16`}
+        className={`border border-[#C3A06A] p-4`}
         type="button"
         whileHover="hover"
         variants={button}

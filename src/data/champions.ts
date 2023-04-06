@@ -205,7 +205,7 @@ export const champions: Champion[] = [
       splash_art_img: victorious_aatrox,
     },
     ],
-    bgPosition: "70%",
+    bgPosition: "70% 10%",
   },
   {
     id: "ahri",
@@ -244,7 +244,7 @@ export const champions: Champion[] = [
         splash_art_img: star_guardian_ahri,
       },
     ],
-    bgPosition: "60%",
+    bgPosition: "60% 10%",
   },
   {
     id: "akali",
@@ -280,7 +280,7 @@ export const champions: Champion[] = [
         splash_art_img: true_damage_akali,
       },
     ],
-    bgPosition: "center",
+    bgPosition: "center 10%",
   },
   {
     id: "ashe",
@@ -317,7 +317,7 @@ export const champions: Champion[] = [
         splash_art_img: lunar_empress_ashe,
       },
     ],
-    bgPosition: "60%",
+    bgPosition: "60% 10%",
   },
   {
     id: "aurelionson",
@@ -335,7 +335,7 @@ export const champions: Champion[] = [
       splash_art_img: storm_dragon_aurelion_son,
     },
     ],
-    bgPosition: "60%",
+    bgPosition: "60% 10%",
   },
   {
     id: "caitlyn",
@@ -380,7 +380,7 @@ export const champions: Champion[] = [
         splash_art_img: snow_moon_caitlyn,
       },
     ],
-    bgPosition: "80%",
+    bgPosition: "80% 10%",
   },
   {
     id: "evelynn",
@@ -413,7 +413,7 @@ export const champions: Champion[] = [
         splash_art_img: spirit_blossom_evelynn,
       },
     ],
-    bgPosition: "center",
+    bgPosition: "center 10%",
   },
   {
     id: "heimerdinger",
@@ -434,7 +434,7 @@ export const champions: Champion[] = [
         splash_art_img: piltover_customs_heimerdinger,
       },
     ],
-    bgPosition: "70%",
+    bgPosition: "70% 40%",
   },
   {
     id: "gwen",
@@ -452,7 +452,7 @@ export const champions: Champion[] = [
         splash_art_img: space_groove_gwen,
       },
     ],
-    bgPosition: "center",
+    bgPosition: "center 10%",
   },
   {
     id: "jinx",
@@ -482,7 +482,7 @@ export const champions: Champion[] = [
         splash_art_img: star_guardian_jinx,
       },
     ],
-    bgPosition: "70%",
+    bgPosition: "70% 10%",
   },
   {
     id: "ksante",
@@ -500,7 +500,7 @@ export const champions: Champion[] = [
         splash_art_img: prestige_empyrean_ksante,
       },
     ],
-    bgPosition: "30%",
+    bgPosition: "30% 10%",
   },
   {
     id: "maokai",
@@ -527,7 +527,7 @@ export const champions: Champion[] = [
         splash_art_img: worldbreaker_maokai,
       }
     ],
-    bgPosition: "70%",
+    bgPosition: "70% 20%",
   },
   {
     id: "milio",
@@ -542,7 +542,7 @@ export const champions: Champion[] = [
         splash_art_img: faerie_court_milio,
       }
     ],
-    bgPosition: "50%",
+    bgPosition: "50% 10%",
   },
   {
     id: "missfortune",
@@ -581,7 +581,7 @@ export const champions: Champion[] = [
         splash_art_img: star_guardian_missfortune,
       },
     ],
-    bgPosition: "80%",
+    bgPosition: "80% 20%",
   },
   {
     id: "seraphine",
@@ -611,7 +611,7 @@ export const champions: Champion[] = [
         splash_art_img: ocean_song_seraphine,
       },
     ],
-    bgPosition: "40%",
+    bgPosition: "40% 10%",
   },
   {
     id: "vex",
@@ -629,7 +629,7 @@ export const champions: Champion[] = [
         splash_art_img: empyrean_vex,
       },
     ],
-    bgPosition: "70%",
+    bgPosition: "70% 10%",
   },
   {
     id: "yuumi",
@@ -653,7 +653,7 @@ export const champions: Champion[] = [
         splash_art_img: yuubee,
       },
     ],
-    bgPosition: "40%",
+    bgPosition: "40% 10%",
   },
   {
     id: "zeri",
@@ -668,7 +668,7 @@ export const champions: Champion[] = [
         splash_art_img: withered_rose_zeri,
       },
     ],
-    bgPosition: "50%",
+    bgPosition: "50% 10%",
   },
   {
     id: "ziggs",
@@ -704,7 +704,7 @@ export const champions: Champion[] = [
         splash_art_img: sugar_rush_ziggs,
       }
     ],
-    bgPosition: "80%",
+    bgPosition: "80% 30%",
   },
   {
     id: "zoe",
@@ -725,6 +725,6 @@ export const champions: Champion[] = [
         splash_art_img: star_guardian_zoe,
       },
     ],
-    bgPosition: "50%",
+    bgPosition: "50% 10%",
   },
 ];

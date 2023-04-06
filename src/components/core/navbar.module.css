@@ -1,10 +1,14 @@
-.containerLink{
-    font-family: "Atami-Bold" ;
-    
-    cursor: pointer;
+.linkStyle{
+    color:#ba8964;
+    font-family: "Atami-Bold" ;  
+}
+
+.linkStyle:hover{
+   transition: 0.5s;
 }
 
 .activeLink{
     color:black;
+    transition: 1s;
 }
 

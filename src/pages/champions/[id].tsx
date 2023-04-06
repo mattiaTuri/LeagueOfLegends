@@ -69,8 +69,6 @@ function ChampionPage({ locale, activeChampion }: any) {
   const [windowWidth, setWindowWidth] = useState<number>(1024);
   const { t } = useTranslation();
 
-  //let activeChampion: any = champions.find((elem) => elem.id == championId);
-
   let nameSplit = activeChampion?.name?.split("");
 
   useEffect(() => {
@@ -115,7 +113,7 @@ function ChampionPage({ locale, activeChampion }: any) {
             }')`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            backgroundPositionX: activeChampion?.bgPosition,
+            backgroundPosition: activeChampion?.bgPosition,
           }}
           className="h-full"
         />
@@ -127,12 +125,12 @@ function ChampionPage({ locale, activeChampion }: any) {
           transition={{ duration: 0.5, delay: 2 }}
           className="w-full flex flex-col items-center"
         >
-          <div className="p-8">
+          <div className="p-8 w-full text-center">
             <h3 className="text-2xl lg:text-5xl">
               {t(`champions:${activeChampion?.id}.title`).toUpperCase()}
             </h3>
           </div>
-          <div className="p-8 flex flex-col items-center">
+          <div className="p-8 w-full flex flex-col items-center lg:w-[80%]">
             <figure className="text-[#c4b998] text-center">
               <blockquote>
                 <p>{t(`champions:${activeChampion?.id}.quote`)}</p>
@@ -143,13 +141,13 @@ function ChampionPage({ locale, activeChampion }: any) {
             </figure>
           </div>
           <div className={style.triangle}></div>
-          <div className="p-8 flex flex-col items-center lg:w-[80%]">
+          <div className="p-8 w-full flex flex-col items-center lg:w-[80%]">
             <p className="text-center pb-8">
               {t(`champions:${activeChampion?.id}.biography`)}
             </p>
             <CustomButton href="" text={t("continue_reading")} />
           </div>
-          <div className="p-8 w-full flex flex-col items-center md:flex-row lg:w-[80%]">
+          <div className="pt-20 p-8 w-full flex flex-col items-center md:flex-row lg:w-[80%]">
             <div className="flex justify-center md:w-[50%]">
               <Image
                 src={
@@ -160,13 +158,13 @@ function ChampionPage({ locale, activeChampion }: any) {
             </div>
             <div className="flex flex-col items-center justify-center md:w-[50%]">
               <span>{t("region")}</span>
-              <p className="pb-8 text-2xl lg:text-5xl">
+              <p className="pb-8 text-2xl lg:text-4xl">
                 {t(`champions:${activeChampion?.id}.region`).toUpperCase()}
               </p>
               <CustomButton href="" text={t("explore_region")} />
             </div>
           </div>
-          <div className="relative w-full md:p-8">
+          <div className="pt-20 relative w-full">
             <div className="pb-8 text-center">
               <h3 className="text-[#c4b998] text-2xl lg:text-5xl">
                 {t("available_skins")}
