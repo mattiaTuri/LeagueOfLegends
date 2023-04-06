@@ -11,7 +11,14 @@ function Navbar() {
   const router = useRouter();
 
   useEffect(() => {
-    const url_path = router.pathname;
+    let url_path: string = router.asPath;
+    if (url_path == "/") {
+      url_path = url_path.replace("/", "home");
+    } else {
+      const splittedPath: string[] = url_path.split("/");
+      url_path = splittedPath[1];
+    }
+
     changeActionMenu(url_path);
   }, []);
 
@@ -30,7 +37,7 @@ function Navbar() {
       elem.classList.remove(style.activeLink);
     });
 
-    if (path == "/") path = path.replace("/", "home");
+    path = t(`${path}`).toLowerCase();
 
     const menu_slider: HTMLElement = document.getElementById("menu-slider")!;
     const link: HTMLElement = document.getElementById(path)!;
@@ -71,38 +78,34 @@ function Navbar() {
           </div>
           <div id="hamurgerMenu" className="md:hidden"></div>
           <ul id="menuLink" className="hidden md:flex relative">
-            <li
-              className={`${style.containerLink} mr-8 z-10 flex justify-center`}
-            >
+            <li className={`${style.containerLink} mr-8 z-10 w-[150px] flex`}>
               <Link
                 id={t("home").toLowerCase()}
                 href="/"
                 data-link="HOME"
-                className="p-2"
+                className="w-full p-2 flex justify-center items-center"
                 onClick={() => changeActionMenu(t("home").toLowerCase())}
               >
                 {t("home")}
               </Link>
             </li>
-            <li
-              className={`${style.containerLink} mr-8 z-10 flex justify-center`}
-            >
+            <li className={`${style.containerLink} mr-8 z-10 w-[150px] flex`}>
               <Link
                 id={t("champions").toLowerCase()}
                 href="/champions"
                 data-link="CHAMPIONS"
-                className="p-2"
+                className="w-full p-2 flex justify-center items-center"
                 onClick={() => changeActionMenu(t("champions").toLowerCase())}
               >
                 {t("champions")}
               </Link>
             </li>
-            <li className={`${style.containerLink} z-10 flex justify-center`}>
+            <li className={`${style.containerLink} z-10 w-[150px] flex`}>
               <Link
                 id={t("regions").toLowerCase()}
                 href="/regions"
                 data-link="REGIONS"
-                className="p-2"
+                className="w-full p-2 flex justify-center items-center"
                 onClick={() => changeActionMenu(t("regions").toLowerCase())}
               >
                 {t("regions")}

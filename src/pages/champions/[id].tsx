@@ -43,19 +43,19 @@ export const getStaticProps = async ({ locale }: any) => ({
 
 export const getStaticPaths = async () => {
   return {
-    paths: ["/champions/[id]"],
+    paths: [`/champions/id`],
     fallback: true,
   };
 };
 
 function ChampionPage() {
   const router = useRouter();
-  const championId = router.query;
+  const championId = router.query.id;
   const [thumbsSwiper, setThumbsSwiper] = useState<any>();
   const [windowWidth, setWindowWidth] = useState<number>(1024);
   const { t } = useTranslation();
 
-  let activeChampion: any = champions.find((elem) => elem.id == championId.id);
+  let activeChampion: any = champions.find((elem) => elem.id == championId);
 
   let nameSplit = activeChampion?.name?.split("");
 
@@ -115,13 +115,13 @@ function ChampionPage() {
         >
           <div className="p-8">
             <h3 className="text-2xl lg:text-5xl">
-              {t(`champions:${activeChampion.id}.title`).toUpperCase()}
+              {t(`champions:${activeChampion?.id}.title`).toUpperCase()}
             </h3>
           </div>
           <div className="p-8 flex flex-col items-center">
             <figure className="text-[#c4b998] text-center">
               <blockquote>
-                <p>{t(`champions:${activeChampion.id}.quote`)}</p>
+                <p>{t(`champions:${activeChampion?.id}.quote`)}</p>
               </blockquote>
               <figcaption>
                 <span>~ {activeChampion?.name}</span>
@@ -131,7 +131,7 @@ function ChampionPage() {
           <div className={style.triangle}></div>
           <div className="p-8 flex flex-col items-center lg:w-[80%]">
             <p className="text-center pb-8">
-              {t(`champions:${activeChampion.id}.biography`)}
+              {t(`champions:${activeChampion?.id}.biography`)}
             </p>
             <CustomButton href="" text={t("continue_reading")} />
           </div>
@@ -141,13 +141,13 @@ function ChampionPage() {
                 src={
                   activeChampion != undefined ? activeChampion.region_image : ""
                 }
-                alt=""
+                alt={t(`champions:${activeChampion?.id}.region`)}
               ></Image>
             </div>
             <div className="flex flex-col items-center justify-center md:w-[50%]">
               <span>{t("region")}</span>
               <p className="pb-8 text-2xl lg:text-5xl">
-                {t(`champions:${activeChampion.id}.region`).toUpperCase()}
+                {t(`champions:${activeChampion?.id}.region`).toUpperCase()}
               </p>
               <CustomButton href="" text={t("explore_region")} />
             </div>
