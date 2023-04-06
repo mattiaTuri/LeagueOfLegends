@@ -35,16 +35,21 @@ const item = {
   },
 };
 
-export async function getStaticPaths() {
-  const paths = champions.map((champion) => ({
-    params: {
-      id: champion.id,
-    },
-  }));
+export async function getStaticPaths({ locales }: any) {
+  const paths = champions
+    .map((champion) =>
+      locales.map((locale: any) => ({
+        params: {
+          id: champion.id,
+        },
+        locale,
+      }))
+    )
+    .flat();
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
@@ -60,8 +65,6 @@ export async function getStaticProps({ params, locale }: any) {
 }
 
 function ChampionPage({ locale, activeChampion }: any) {
-  const router = useRouter();
-  const championId = router.query.id;
   const [thumbsSwiper, setThumbsSwiper] = useState<any>();
   const [windowWidth, setWindowWidth] = useState<number>(1024);
   const { t } = useTranslation();
