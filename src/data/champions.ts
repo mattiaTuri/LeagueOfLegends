@@ -169,7 +169,7 @@ import arcanist_zoe from "../../public/assets/images/zoe/arcanist_zoe.jpg";
 import cyber_pop_zoe from "../../public/assets/images/zoe/cyber_pop_zoe.jpg";
 import star_guardian_zoe from "../../public/assets/images/zoe/star_guardian_zoe.jpg";
 
-/* REGION */
+/* REGIONS */
 import bandle_city from "../../public/assets/images/regions/bandle_city.png";
 import bilgewater from "../../public/assets/images/regions/bilgewater.png";
 import freljord from "../../public/assets/images/regions/freljord.png";
@@ -182,36 +182,59 @@ import shurima from "../../public/assets/images/regions/shurima.png";
 import targon from "../../public/assets/images/regions/targon.png";
 import zaun from "../../public/assets/images/regions/zaun.png";
 
+/* STORIES */
+import aatrox_splash_story from "../../public/assets/images/stories/aatrox_splash_story.jpg"
+import ahri_splash_story from "../../public/assets/images/stories/ahri_splash_story.jpg"
+import akali_splash_story from "../../public/assets/images/stories/akali_splash_story.jpg"
+import ashe_splash_story from "../../public/assets/images/stories/ashe_splash_story.jpg"
+import aurelionson_splash_story from "../../public/assets/images/stories/aurelionson_splash_story.jpg"
+import caitlyn_splash_story from "../../public/assets/images/stories/caitlyn_splash_story.jpg"
+import evelynn_splash_story from "../../public/assets/images/stories/evelynn_splash_story.jpg"
+import gwen_splash_story from "../../public/assets/images/stories/gwen_splash_story.jpg"
+import heimerdinger_splash_story from "../../public/assets/images/stories/heimerdinger_splash_story.jpg"
+import jinx_spash_story from "../../public/assets/images/stories/jinx_spash_story.jpg"
+import ksante_splash_story from "../../public/assets/images/stories/ksante_splash_story.jpg"
+import maokai_splash_story from "../../public/assets/images/stories/maokai_splash_story.jpg"
+import milio_splash_story from "../../public/assets/images/stories/milio_splash_story.jpg"
+import missfortune_splash_story from "../../public/assets/images/stories/missfortune_splash_story.jpg"
+import seraphine_splash_story from "../../public/assets/images/stories/seraphine_splash_story.jpg"
+import vex_splash_story from "../../public/assets/images/stories/vex_splash_story.jpg"
+import yuumi_splash_story from "../../public/assets/images/stories/yuumi_splash_story.jpg"
+import zeri_splash_story from "../../public/assets/images/stories/zeri_splash_story.jpg"
+import ziggs_splash_story from "../../public/assets/images/stories/ziggs_splash_story.jpg"
+import zoe_splash_story from "../../public/assets/images/stories/zoe_splash_story.png"
+
 export const champions: Champion[] = [
   {
     id: "aatrox",
     name: "AATROX",
-    champion_image: aatrox_base,
-    region_image: runeterra,
+    champion_img: aatrox_base,
+    region_img: runeterra,
     splash_art: [
-    {
-      splash_art_img: aatrox_base,
-    },
-    {
-      splash_art_img: blood_moon_aatrox,
-    },
-    {
-      splash_art_img: justice_aatrox,
-    },
-    {
-      splash_art_img: lunar_eclipse_aatrox,
-    },
-    {
-      splash_art_img: victorious_aatrox,
-    },
+      {
+        splash_art_img: aatrox_base,
+      },
+      {
+        splash_art_img: blood_moon_aatrox,
+      },
+      {
+        splash_art_img: justice_aatrox,
+      },
+      {
+        splash_art_img: lunar_eclipse_aatrox,
+      },
+      {
+        splash_art_img: victorious_aatrox,
+      },
     ],
+    story_img : aatrox_splash_story,
     bgPosition: "70% 10%",
   },
   {
     id: "ahri",
     name: "AHRI",
-    champion_image: ahri_base,
-    region_image: ionia,
+    champion_img: ahri_base,
+    region_img: ionia,
     splash_art: [
       {
         splash_art_img: ahri_base,
@@ -244,13 +267,14 @@ export const champions: Champion[] = [
         splash_art_img: star_guardian_ahri,
       },
     ],
+    story_img : ahri_splash_story,
     bgPosition: "60% 10%",
   },
   {
     id: "akali",
     name: "AKALI",
-    champion_image: akali_bg,
-    region_image: ionia,
+    champion_img: akali_bg,
+    region_img: ionia,
     splash_art: [
       {
         splash_art_img: akali_base,
@@ -280,13 +304,14 @@ export const champions: Champion[] = [
         splash_art_img: true_damage_akali,
       },
     ],
+    story_img : akali_splash_story,
     bgPosition: "center 10%",
   },
   {
     id: "ashe",
     name: "ASHE",
-    champion_image: ashe_bg,
-    region_image: freljord,
+    champion_img: ashe_bg,
+    region_img: freljord,
     splash_art: [
       {
         splash_art_img: ashe_base,
@@ -317,13 +342,14 @@ export const champions: Champion[] = [
         splash_art_img: lunar_empress_ashe,
       },
     ],
+    story_img : ashe_splash_story,
     bgPosition: "60% 10%",
   },
   {
     id: "aurelionson",
     name: "AURELION SON",
-    champion_image: aurelion_son_base,
-    region_image: targon,
+    champion_img: aurelion_son_base,
+    region_img: targon,
     splash_art: [
     {
       splash_art_img: aurelion_son_base,
@@ -335,13 +361,14 @@ export const champions: Champion[] = [
       splash_art_img: storm_dragon_aurelion_son,
     },
     ],
+    story_img : aurelionson_splash_story,
     bgPosition: "60% 10%",
   },
   {
     id: "caitlyn",
     name: "CAITLYN",
-    champion_image: caitlyn_base,
-    region_image: piltover,
+    champion_img: caitlyn_base,
+    region_img: piltover,
     splash_art: [
       {
         splash_art_img: caitlyn_base,
@@ -380,13 +407,14 @@ export const champions: Champion[] = [
         splash_art_img: snow_moon_caitlyn,
       },
     ],
+    story_img : caitlyn_splash_story,
     bgPosition: "80% 10%",
   },
   {
     id: "evelynn",
     name: "EVELYNN",
-    champion_image: evelynn_base,
-    region_image: runeterra,
+    champion_img: evelynn_base,
+    region_img: runeterra,
     splash_art: [
       {
         splash_art_img: evelynn_base,
@@ -413,13 +441,14 @@ export const champions: Champion[] = [
         splash_art_img: spirit_blossom_evelynn,
       },
     ],
+    story_img : evelynn_splash_story,
     bgPosition: "center 10%",
   },
   {
     id: "heimerdinger",
     name: "HEIMERDINGER",
-    champion_image: heimerdinger_base,
-    region_image: piltover,
+    champion_img: heimerdinger_base,
+    region_img: piltover,
     splash_art: [
       {
         splash_art_img: heimerdinger_base,
@@ -434,13 +463,14 @@ export const champions: Champion[] = [
         splash_art_img: piltover_customs_heimerdinger,
       },
     ],
+    story_img : heimerdinger_splash_story,
     bgPosition: "70% 40%",
   },
   {
     id: "gwen",
     name: "GWEN",
-    champion_image: gwen_base,
-    region_image: shadow_isles,
+    champion_img: gwen_base,
+    region_img: shadow_isles,
     splash_art: [
       {
         splash_art_img: gwen_base,
@@ -452,13 +482,14 @@ export const champions: Champion[] = [
         splash_art_img: space_groove_gwen,
       },
     ],
+    story_img : gwen_splash_story,
     bgPosition: "center 10%",
   },
   {
     id: "jinx",
     name: "JINX",
-    champion_image: jinx_base,
-    region_image: zaun,
+    champion_img: jinx_base,
+    region_img: zaun,
     splash_art: [
       {
         splash_art_img: jinx_base,
@@ -482,13 +513,14 @@ export const champions: Champion[] = [
         splash_art_img: star_guardian_jinx,
       },
     ],
+    story_img : jinx_spash_story,
     bgPosition: "70% 10%",
   },
   {
     id: "ksante",
     name: "K'SANTE",
-    champion_image: ksante_base,
-    region_image: shurima,
+    champion_img: ksante_base,
+    region_img: shurima,
     splash_art: [
       {
         splash_art_img: ksante_base,
@@ -500,13 +532,14 @@ export const champions: Champion[] = [
         splash_art_img: prestige_empyrean_ksante,
       },
     ],
+    story_img : ksante_splash_story,
     bgPosition: "30% 10%",
   },
   {
     id: "maokai",
     name: "MAOKAI",
-    champion_image: maokai_base,
-    region_image: shadow_isles,
+    champion_img: maokai_base,
+    region_img: shadow_isles,
     splash_art: [
       {
         splash_art_img: maokai_base,
@@ -527,13 +560,14 @@ export const champions: Champion[] = [
         splash_art_img: worldbreaker_maokai,
       }
     ],
+    story_img : maokai_splash_story,
     bgPosition: "70% 20%",
   },
   {
     id: "milio",
     name: "MILIO",
-    champion_image: milio_bg,
-    region_image: ixtal,
+    champion_img: milio_bg,
+    region_img: ixtal,
     splash_art: [
       {
         splash_art_img: milio_base,
@@ -542,13 +576,14 @@ export const champions: Champion[] = [
         splash_art_img: faerie_court_milio,
       }
     ],
+    story_img : milio_splash_story,
     bgPosition: "50% 10%",
   },
   {
     id: "missfortune",
     name: "MISS FORTUNE",
-    champion_image: missfortune_base,
-    region_image: bilgewater,
+    champion_img: missfortune_base,
+    region_img: bilgewater,
     splash_art: [
       {
         splash_art_img: missfortune_base,
@@ -581,13 +616,14 @@ export const champions: Champion[] = [
         splash_art_img: star_guardian_missfortune,
       },
     ],
+    story_img : missfortune_splash_story,
     bgPosition: "80% 20%",
   },
   {
     id: "seraphine",
     name: "SERAPHINE",
-    champion_image: seraphine_bg,
-    region_image: piltover,
+    champion_img: seraphine_bg,
+    region_img: piltover,
     splash_art: [
       {
         splash_art_img: seraphine_base,
@@ -611,13 +647,14 @@ export const champions: Champion[] = [
         splash_art_img: ocean_song_seraphine,
       },
     ],
+    story_img : seraphine_splash_story,
     bgPosition: "40% 10%",
   },
   {
     id: "vex",
     name: "VEX",
-    champion_image: vex_bg,
-    region_image: shadow_isles,
+    champion_img: vex_bg,
+    region_img: shadow_isles,
     splash_art: [
       {
         splash_art_img: vex_base,
@@ -629,13 +666,14 @@ export const champions: Champion[] = [
         splash_art_img: empyrean_vex,
       },
     ],
+    story_img : vex_splash_story,
     bgPosition: "70% 10%",
   },
   {
     id: "yuumi",
     name: "YUUMI",
-    champion_image: yuumi_bg,
-    region_image: bandle_city,
+    champion_img: yuumi_bg,
+    region_img: bandle_city,
     splash_art: [
       {
         splash_art_img: yuumi_base,
@@ -653,13 +691,14 @@ export const champions: Champion[] = [
         splash_art_img: yuubee,
       },
     ],
+    story_img : yuumi_splash_story,
     bgPosition: "40% 10%",
   },
   {
     id: "zeri",
     name: "ZERI",
-    champion_image: zeri_bg,
-    region_image: zaun,
+    champion_img: zeri_bg,
+    region_img: zaun,
     splash_art: [
       {
         splash_art_img: zeri_base,
@@ -668,13 +707,14 @@ export const champions: Champion[] = [
         splash_art_img: withered_rose_zeri,
       },
     ],
+    story_img : zeri_splash_story,
     bgPosition: "50% 10%",
   },
   {
     id: "ziggs",
     name: "ZIGGS",
-    champion_image: ziggs_base,
-    region_image: zaun,
+    champion_img: ziggs_base,
+    region_img: zaun,
     splash_art: [
       {
         splash_art_img: ziggs_base,
@@ -704,13 +744,14 @@ export const champions: Champion[] = [
         splash_art_img: sugar_rush_ziggs,
       }
     ],
+    story_img : ziggs_splash_story,
     bgPosition: "80% 30%",
   },
   {
     id: "zoe",
     name: "ZOE",
-    champion_image: zoe_bg,
-    region_image: targon,
+    champion_img: zoe_bg,
+    region_img: targon,
     splash_art: [
       {
         splash_art_img: zoe_base,
@@ -725,6 +766,7 @@ export const champions: Champion[] = [
         splash_art_img: star_guardian_zoe,
       },
     ],
+    story_img : zoe_splash_story,
     bgPosition: "50% 10%",
   },
 ];

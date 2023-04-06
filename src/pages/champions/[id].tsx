@@ -1,5 +1,4 @@
 import Container from "@/components/shared/Container";
-import { useRouter } from "next/router";
 import { champions } from "../../data/champions";
 import Image from "next/image";
 import style from "./id.module.css";
@@ -107,8 +106,8 @@ function ChampionPage({ locale, activeChampion }: any) {
         <div
           style={{
             backgroundImage: `url('${
-              activeChampion?.champion_image != undefined
-                ? activeChampion?.champion_image?.src
+              activeChampion?.champion_img != undefined
+                ? activeChampion?.champion_img?.src
                 : ""
             }')`,
             backgroundRepeat: "no-repeat",
@@ -125,7 +124,7 @@ function ChampionPage({ locale, activeChampion }: any) {
           transition={{ duration: 0.5, delay: 2 }}
           className="w-full flex flex-col items-center"
         >
-          <div className="p-8 w-full text-center">
+          <div className="p-8 pt-20 w-full text-center">
             <h3 className="text-2xl lg:text-5xl">
               {t(`champions:${activeChampion?.id}.title`).toUpperCase()}
             </h3>
@@ -151,7 +150,7 @@ function ChampionPage({ locale, activeChampion }: any) {
             <div className="flex justify-center md:w-[50%]">
               <Image
                 src={
-                  activeChampion != undefined ? activeChampion.region_image : ""
+                  activeChampion != undefined ? activeChampion.region_img : ""
                 }
                 alt={t(`champions:${activeChampion?.id}.region`)}
               ></Image>
@@ -164,72 +163,108 @@ function ChampionPage({ locale, activeChampion }: any) {
               <CustomButton href="" text={t("explore_region")} />
             </div>
           </div>
-          <div className="pt-20 relative w-full">
-            <div className="pb-8 text-center">
-              <h3 className="text-[#c4b998] text-2xl lg:text-5xl">
-                {t("available_skins")}
+        </motion.div>
+      </Container>
+      <div className="pt-20 w-full">
+        <div className="w-full h-[500px] relative">
+          <div
+            style={{
+              backgroundImage: `url('${
+                activeChampion?.story_img != undefined
+                  ? activeChampion?.story_img?.src
+                  : ""
+              }')`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPositionY: "30%",
+            }}
+            className="h-full w-full opacity-40"
+          />
+          <div className="absolute top-0 w-full h-full flex justify-center items-center">
+            <div className="w-[80%] h-[80%] flex flex-col justify-evenly items-center md:w-[50%] lg:w-[40%]">
+              <span className="text-sm lg:text-base">{t("tale")}</span>
+              <h3 className="text-3xl lg:text-5xl text-center">
+                {t(`champions:${activeChampion?.id}.tale_title`).toUpperCase()}
               </h3>
-            </div>
-            <div className="relative">
-              <Swiper
-                speed={1200}
-                effect="fade"
-                loop={true}
-                spaceBetween={30}
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }}
-                thumbs={{
-                  swiper:
-                    thumbsSwiper && !thumbsSwiper.destroyed
-                      ? thumbsSwiper
-                      : null,
-                }}
-                modules={[Autoplay, EffectFade, FreeMode, Navigation, Thumbs]}
-              >
-                {activeChampion?.splash_art.map((elem: any, index: number) => {
-                  return (
-                    <SwiperSlide key={index} className={style.artSwiper}>
-                      <Image
-                        src={elem.splash_art_img}
-                        alt=""
-                        className="h-full w-full"
-                      />
-                    </SwiperSlide>
-                  );
-                })}
-              </Swiper>
-              <Swiper
-                onSwiper={setThumbsSwiper}
-                direction={windowWidth > 1024 ? "vertical" : "horizontal"}
-                spaceBetween={60}
-                slidesPerView={"auto"}
-                freeMode={true}
-                watchSlidesProgress={true}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className={`${style.containerSwiper}`}
-              >
-                {activeChampion?.splash_art.map((elem: any, index: number) => {
-                  return (
-                    <SwiperSlide key={index} className={style.iconSwiper}>
-                      <Image
-                        src={elem.splash_art_img}
-                        alt=""
-                        className="w-full h-full lg:w-[70px]"
-                      />
-                      <span className="hidden lg:block lg:text-sm">
-                        {t(
-                          `champions:${activeChampion.id}.splash_art.${index}.title`
-                        ).toUpperCase()}
-                      </span>
-                    </SwiperSlide>
-                  );
-                })}
-              </Swiper>
+              {t(`champions:${activeChampion?.id}.tale_author`) && (
+                <span className="text-sm lg:text-base">
+                  {t(
+                    `champions:${activeChampion?.id}.tale_author`
+                  ).toUpperCase()}
+                </span>
+              )}
+              <p className="text-sm lg:text-base">
+                {t(`champions:${activeChampion?.id}.tale_preview`)}
+              </p>
+              <CustomButton href="" text={t("cooming_soon")} />
             </div>
           </div>
-        </motion.div>
+        </div>
+      </div>
+      <Container>
+        <div className="pt-20 pb-8 relative w-full">
+          <div className="pb-8 text-center">
+            <h3 className="text-[#c4b998] text-2xl lg:text-5xl">
+              {t("available_skins")}
+            </h3>
+          </div>
+          <div className="relative">
+            <Swiper
+              speed={1200}
+              effect="fade"
+              loop={true}
+              spaceBetween={30}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              thumbs={{
+                swiper:
+                  thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+              }}
+              modules={[Autoplay, EffectFade, FreeMode, Navigation, Thumbs]}
+            >
+              {activeChampion?.splash_art.map((elem: any, index: number) => {
+                return (
+                  <SwiperSlide key={index} className={style.artSwiper}>
+                    <Image
+                      src={elem.splash_art_img}
+                      alt=""
+                      className="h-full w-full"
+                    />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              direction={windowWidth > 1024 ? "vertical" : "horizontal"}
+              spaceBetween={60}
+              slidesPerView={"auto"}
+              freeMode={true}
+              watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className={`${style.containerSwiper}`}
+            >
+              {activeChampion?.splash_art.map((elem: any, index: number) => {
+                return (
+                  <SwiperSlide key={index} className={style.iconSwiper}>
+                    <Image
+                      src={elem.splash_art_img}
+                      alt=""
+                      className="w-full h-full lg:w-[70px]"
+                    />
+                    <span className="hidden lg:block lg:text-sm">
+                      {t(
+                        `champions:${activeChampion.id}.splash_art.${index}.title`
+                      ).toUpperCase()}
+                    </span>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
+        </div>
       </Container>
     </div>
   );

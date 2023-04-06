@@ -15,7 +15,7 @@ function SmarphoneViewChamp() {
             <div className="flex">
               <Image
                 className="w-[250px]"
-                src={champion.champion_image}
+                src={champion.champion_img}
                 alt=""
               ></Image>
             </div>

@@ -1,11 +1,12 @@
 import { StaticImageData } from "next/image";
 
 export interface Champion{
-    id: string,
-    name:string,
-    champion_image: StaticImageData;
-    region_image: StaticImageData
+    id: string;
+    name:string;
+    champion_img: StaticImageData;
+    region_img: StaticImageData;
     splash_art: ChampionSplashArt[];
+    story_img:StaticImageData;
     bgPosition: string;
 }
 

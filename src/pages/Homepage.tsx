@@ -27,7 +27,7 @@ function Homepage() {
               <h1 className="text-5xl md:text-8xl">LEGENDS</h1>
             </div>
             <div className="hidden lg:flex absolute bottom-10 right-0 px-8">
-              <div className="w-96 h-48">
+              <div className="w-80 h-40 xl:w-96 xl:h-48">
                 <Link
                   href="/arcane"
                   className={`w-full h-full flex justify-center items-center border border-[#ba8964] ${style.link}`}

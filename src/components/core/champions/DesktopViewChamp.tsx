@@ -40,7 +40,7 @@ function DesktopViewChamp({ champions }: any) {
               >
                 <motion.div
                   style={{
-                    backgroundImage: `url('${champion.champion_image.src}')`,
+                    backgroundImage: `url('${champion.champion_img.src}')`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     backgroundPosition: champion.bgPosition,

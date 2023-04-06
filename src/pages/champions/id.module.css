@@ -1,8 +1,3 @@
-.championImg{
-    /* object-position: center -50px; */
-    object-position: center;
-}
-
 .BoxShadow{
     box-shadow: inset 0 50px 10px -20px #000, inset 0 -50px 10px -20px #000;
     /* box-shadow: inset 0 -50px 10px -20px #000; */
@@ -39,10 +34,6 @@
 }
 
 @media screen and (min-width:1024px) {
-    .championImg{
-        object-position: top;
-    }
-
     .containerSwiper{
         position: absolute !important;
         top: 0;

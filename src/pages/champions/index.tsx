@@ -103,9 +103,9 @@ function Champions({ randomChampions, champions }: any) {
     return (
       <>
         <div className="text-white pt-[6.6rem]">
-          <div className="h-full flex flex-col items-center">
+          <div className="h-full pb-8 flex flex-col items-center">
             <div className="p-8 w-full flex justify-center items-center">
-              <h1 className="text-2xl md:text-5xl underline">
+              <h1 className="text-2xl md:text-5xl">
                 {t("champions_showcase")}
               </h1>
             </div>
@@ -141,7 +141,7 @@ function Champions({ randomChampions, champions }: any) {
                             transition={hoverTransition}
                           >
                             <Image
-                              src={champion.champion_image}
+                              src={champion.champion_img}
                               alt={champion.name}
                               className={style.image}
                               style={{ objectPosition: champion.bgPosition }}
@@ -208,9 +208,7 @@ function Champions({ randomChampions, champions }: any) {
               </div>
             </Swiper>
             <div className="pt-8">
-              <h1 className="text-2xl md:text-5xl underline">
-                {t("champions")}
-              </h1>
+              <h1 className="text-2xl md:text-5xl">{t("champions")}</h1>
             </div>
             {windowWidth > 767 ? (
               <DesktopViewChamp champions={champions} />

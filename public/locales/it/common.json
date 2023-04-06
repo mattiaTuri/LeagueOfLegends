@@ -5,8 +5,11 @@
   "region": "REGIONE",
   "language" : "LINGUA",
   "explore_the_universe_of": "ESPLORA L'UNIVERSO DI",
-  "available_skins" : "SKIN DISPONIBILI",
+  "available_skins" : "ASPETTI DISPONIBILI",
   "explore_region" : "ESPLORA REGIONE",
   "continue_reading": "CONTINUA A LEGGERE",
-  "champions_showcase": "CAMPIONI IN VETRINA"
+  "champions_showcase": "CAMPIONI IN VETRINA",
+  "read_story": "LEGGI LA STORIA",
+  "tale" : "RACCONTO",
+  "cooming_soon" : "PRESTO DISPONIBILE"
 }
