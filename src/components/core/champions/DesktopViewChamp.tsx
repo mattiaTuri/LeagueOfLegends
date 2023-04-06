@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { champions } from "../../../data/champions";
+
 import Container from "@/components/shared/Container";
 import { motion } from "framer-motion";
+import { Champion } from "@/models/champion";
 
 const hoverTransition = {
   duration: 1,
@@ -21,11 +22,11 @@ const championName = {
   hover: {},
 };
 
-function DesktopViewChamp() {
+function DesktopViewChamp({ champions }: any) {
   return (
     <Container>
       <div className="p-8 flex flex-wrap w-full">
-        {champions.map((champion, index) => {
+        {champions.map((champion: any, index: number) => {
           return (
             <Link
               key={index}
@@ -54,7 +55,6 @@ function DesktopViewChamp() {
                   transition={hoverTransition}
                 >
                   <span className="text-sm">{champion.name}</span>
-                  <span className="text-sm text-white">{champion.region}</span>
                 </motion.div>
               </motion.div>
             </Link>

@@ -1,7 +1,10 @@
 .containerLink{
     font-family: "Atami-Bold" ;
-    border: 1px solid #C3A06A;
-    overflow: hidden;
+    
     cursor: pointer;
+}
+
+.activeLink{
+    color:black;
 }
 

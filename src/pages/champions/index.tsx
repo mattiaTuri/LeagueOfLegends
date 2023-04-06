@@ -12,7 +12,8 @@ import { motion } from "framer-motion";
 import SmarphoneViewChamp from "@/components/core/champions/SmartphoneViewChamp";
 import DesktopViewChamp from "@/components/core/champions/DesktopViewChamp";
 import { Champion } from "@/models/champion";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const hoverTransition = {
   duration: 1,
@@ -53,10 +54,40 @@ const textMotion = {
   },
 };
 
-function Champions() {
+export async function getStaticProps({ locale }: any) {
+  const randomChampions = await getRandomChampions(champions, 7);
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "champions"])),
+      randomChampions,
+      champions,
+    },
+  };
+}
+
+function getRandomChampions(champions: Champion[], championsNumber: number) {
+  let randomChampions: any = [];
+  for (let i = 0; i < championsNumber; i++) {
+    const random = Math.floor(Math.random() * champions.length);
+    const exist = randomChampions.find(
+      (elem: any) => elem.id == champions[random].id
+    );
+    if (!exist) {
+      randomChampions.push(champions[random]);
+    } else {
+      i = i - 1;
+    }
+  }
+
+  return randomChampions;
+  // setRandomChampions(randomChampions);
+  // setLoading(false);
+}
+
+function Champions({ randomChampions, champions }: any) {
   const [windowWidth, setWindowWidth] = useState<number>(1024);
   const [loading, setLoading] = useState<boolean>(true);
-  const [randomChampions, setRandomChampions] = useState<Champion[]>([]);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -64,30 +95,12 @@ function Champions() {
       setWindowWidth(window.innerWidth);
     }
     window.addEventListener("resize", WindowResize);
-    getRandomChampions(champions, 7);
     setWindowWidth(window.innerWidth);
+    setLoading(false);
     return () => {
-      console.log("Mattia fa la mezza di Monza");
       removeEventListener("resize", WindowResize);
     };
-  }, []);
-
-  function getRandomChampions(champions: Champion[], championsNumber: number) {
-    let randomChampions: any = [];
-    for (let i = 0; i < championsNumber; i++) {
-      const random = Math.floor(Math.random() * champions.length);
-      const exist = randomChampions.find(
-        (elem: any) => elem.id == champions[random].id
-      );
-      if (!exist) {
-        randomChampions.push(champions[random]);
-      } else {
-        i = i - 1;
-      }
-    }
-    setRandomChampions(randomChampions);
-    setLoading(false);
-  }
+  });
 
   if (!loading)
     return (
@@ -95,7 +108,9 @@ function Champions() {
         <div className="text-white pt-[6.6rem]">
           <div className="h-full flex flex-col items-center">
             <div className="p-8 w-full flex justify-center items-center">
-              <h1 className="text-5xl underline">CHAMPIONS SHOWCASE</h1>
+              <h1 className="text-2xl md:text-5xl underline">
+                {t("champions_showcase")}
+              </h1>
             </div>
             <Swiper
               speed={1200}
@@ -114,7 +129,7 @@ function Champions() {
               modules={[EffectCoverflow, Navigation]}
             >
               {randomChampions != undefined &&
-                randomChampions.map((champion, index) => {
+                randomChampions.map((champion: any, index: number) => {
                   return (
                     <SwiperSlide key={index} className={style.championSlider}>
                       <Link href={`/champions/${champion.id}`}>
@@ -132,6 +147,7 @@ function Champions() {
                               src={champion.champion_image}
                               alt={champion.name}
                               className={style.image}
+                              style={{ objectPosition: champion.bgPosition }}
                             />
                           </motion.div>
                           <motion.div
@@ -148,7 +164,7 @@ function Champions() {
                               variants={textMotion}
                               className="text-2xl"
                             >
-                              - {t("title")} -
+                              - {t(`champions:${champion.id}.title`)} -
                             </motion.h3>
                           </motion.div>
                         </motion.div>
@@ -159,8 +175,8 @@ function Champions() {
                       >
                         <div className="flex flex-col items-center justify-center">
                           <h2 className="text-[#ba8964]">{champion.name}</h2>
-                          <h3 className="text-[#ba8964] text-2xl">
-                            {t("title")}
+                          <h3 className="text-[#ba8964] text-base">
+                            {t(`champions:${champion.id}.title`)}
                           </h3>
                         </div>
                       </Link>
@@ -195,9 +211,15 @@ function Champions() {
               </div>
             </Swiper>
             <div className="pt-8">
-              <h1 className="text-5xl underline">CHAMPIONS</h1>
+              <h1 className="text-2xl md:text-5xl underline">
+                {t("champions")}
+              </h1>
             </div>
-            {windowWidth > 767 ? <DesktopViewChamp /> : <SmarphoneViewChamp />}
+            {windowWidth > 767 ? (
+              <DesktopViewChamp champions={champions} />
+            ) : (
+              <SmarphoneViewChamp />
+            )}
           </div>
         </div>
       </>

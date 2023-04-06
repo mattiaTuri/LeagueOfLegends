@@ -1,13 +1,13 @@
 import Container from "@/components/shared/Container";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import arcaneClip from "../../public/assets/video/arcaneClip.mp4";
 import style from "./homepage.module.css";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 function Homepage() {
-
-  const {t} = useTranslation<string>();
+  const { t } = useTranslation<string>();
 
   return (
     <>

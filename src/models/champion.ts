@@ -2,18 +2,13 @@ import { StaticImageData } from "next/image";
 
 export interface Champion{
     id: string,
-    name: string;
-    title: string;
-    quote: string;
+    name:string,
     champion_image: StaticImageData;
-    region: string;
     region_image: StaticImageData
-    biography: string;
     splash_art: ChampionSplashArt[];
     bgPosition: string;
 }
 
 export interface ChampionSplashArt{
-    title: string;
-    art: StaticImageData
+    splash_art_img: StaticImageData
 }

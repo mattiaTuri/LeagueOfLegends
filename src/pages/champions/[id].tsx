@@ -9,7 +9,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, FreeMode, Navigation, Thumbs } from "swiper";
 import "swiper/swiper-bundle.min.css";
 import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const container = {
   initial: {},
@@ -34,6 +35,19 @@ const item = {
   },
 };
 
+export const getStaticProps = async ({ locale }: any) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["champions", "common"])),
+  },
+});
+
+export const getStaticPaths = async () => {
+  return {
+    paths: ["/champions/[id]"],
+    fallback: true,
+  };
+};
+
 function ChampionPage() {
   const router = useRouter();
   const championId = router.query;
@@ -42,13 +56,8 @@ function ChampionPage() {
   const { t } = useTranslation();
 
   let activeChampion: any = champions.find((elem) => elem.id == championId.id);
-  const championImages = activeChampion;
 
-  activeChampion = t(`${activeChampion.id}`, {
-    returnObjects: true,
-  });
-
-  let nameSplit = activeChampion[0]?.name?.split("");
+  let nameSplit = activeChampion?.name?.split("");
 
   useEffect(() => {
     function WindowResize() {
@@ -57,7 +66,6 @@ function ChampionPage() {
     window.addEventListener("resize", WindowResize);
     setWindowWidth(window.innerWidth);
     return () => {
-      console.log("Mattia fa la mezza di Monza");
       removeEventListener("resize", WindowResize);
     };
   }, []);
@@ -87,13 +95,13 @@ function ChampionPage() {
         <div
           style={{
             backgroundImage: `url('${
-              championImages?.champion_image != undefined
-                ? championImages?.champion_image?.src
+              activeChampion?.champion_image != undefined
+                ? activeChampion?.champion_image?.src
                 : ""
             }')`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            backgroundPositionX: championImages[0]?.bgPosition,
+            backgroundPositionX: activeChampion?.bgPosition,
           }}
           className="h-full"
         />
@@ -107,29 +115,31 @@ function ChampionPage() {
         >
           <div className="p-8">
             <h3 className="text-2xl lg:text-5xl">
-              {activeChampion[0].title?.toUpperCase()}
+              {t(`champions:${activeChampion.id}.title`).toUpperCase()}
             </h3>
           </div>
           <div className="p-8 flex flex-col items-center">
             <figure className="text-[#c4b998] text-center">
               <blockquote>
-                <p>{activeChampion[0].quote}</p>
+                <p>{t(`champions:${activeChampion.id}.quote`)}</p>
               </blockquote>
               <figcaption>
-                <span>~ {activeChampion[0].name}</span>
+                <span>~ {activeChampion?.name}</span>
               </figcaption>
             </figure>
           </div>
           <div className={style.triangle}></div>
           <div className="p-8 flex flex-col items-center lg:w-[80%]">
-            <p className="text-center pb-8">{activeChampion[0].biography}</p>
+            <p className="text-center pb-8">
+              {t(`champions:${activeChampion.id}.biography`)}
+            </p>
             <CustomButton href="" text={t("continue_reading")} />
           </div>
           <div className="p-8 w-full flex flex-col items-center md:flex-row lg:w-[80%]">
             <div className="flex justify-center md:w-[50%]">
               <Image
                 src={
-                  championImages != undefined ? championImages.region_image : ""
+                  activeChampion != undefined ? activeChampion.region_image : ""
                 }
                 alt=""
               ></Image>
@@ -137,7 +147,7 @@ function ChampionPage() {
             <div className="flex flex-col items-center justify-center md:w-[50%]">
               <span>{t("region")}</span>
               <p className="pb-8 text-2xl lg:text-5xl">
-                {activeChampion[0].region.toUpperCase()}
+                {t(`champions:${activeChampion.id}.region`).toUpperCase()}
               </p>
               <CustomButton href="" text={t("explore_region")} />
             </div>
@@ -158,13 +168,22 @@ function ChampionPage() {
                   delay: 2500,
                   disableOnInteraction: false,
                 }}
-                thumbs={{ swiper: thumbsSwiper }}
+                thumbs={{
+                  swiper:
+                    thumbsSwiper && !thumbsSwiper.destroyed
+                      ? thumbsSwiper
+                      : null,
+                }}
                 modules={[Autoplay, EffectFade, FreeMode, Navigation, Thumbs]}
               >
-                {championImages?.splash_art?.map((elem: any, index: number) => {
+                {activeChampion?.splash_art.map((elem: any, index: number) => {
                   return (
                     <SwiperSlide key={index} className={style.artSwiper}>
-                      <Image src={elem.art} alt="" className="h-full w-full" />
+                      <Image
+                        src={elem.splash_art_img}
+                        alt=""
+                        className="h-full w-full"
+                      />
                     </SwiperSlide>
                   );
                 })}
@@ -179,18 +198,18 @@ function ChampionPage() {
                 modules={[FreeMode, Navigation, Thumbs]}
                 className={`${style.containerSwiper}`}
               >
-                {championImages?.splash_art?.map((elem: any, index: number) => {
+                {activeChampion?.splash_art.map((elem: any, index: number) => {
                   return (
                     <SwiperSlide key={index} className={style.iconSwiper}>
                       <Image
-                        src={elem.art}
+                        src={elem.splash_art_img}
                         alt=""
                         className="w-full h-full lg:w-[70px]"
                       />
                       <span className="hidden lg:block lg:text-sm">
-                        {activeChampion[0].splash_art[
-                          index
-                        ].title.toUpperCase()}
+                        {t(
+                          `champions:${activeChampion.id}.splash_art.${index}.title`
+                        ).toUpperCase()}
                       </span>
                     </SwiperSlide>
                   );

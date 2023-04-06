@@ -22,7 +22,6 @@ function SmarphoneViewChamp() {
             <div className="w-full flex justify-between">
               <div className="flex flex-col justify-center pl-4">
                 <span className="text-sm">{champion.name}</span>
-                <span className="text-sm text-white">{champion.region}</span>
               </div>
               <div className="pr-4 flex justify-center items-center">
                 <span className="text-sm tracking-widest">EXPLORE</span>

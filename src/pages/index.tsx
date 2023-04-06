@@ -1,7 +1,16 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Homepage from "./Homepage";
-import "../language/i18n";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 const inter = Inter({ subsets: ["latin"] });
 
