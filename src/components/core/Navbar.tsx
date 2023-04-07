@@ -68,7 +68,7 @@ function Navbar() {
   };
 
   return (
-    <header className="w-full fixed z-10 bg-[#111] border-b border-[#ba8964]">
+    <header className="w-full h-[80px] fixed z-10 bg-[#111] border-b border-[#ba8964]">
       <Container>
         <nav className="w-full flex items-center justify-between text-white p-8">
           <div className="hidden md:flex justify-between w-[250px]">

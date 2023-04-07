@@ -3,13 +3,13 @@
   "champions": "CAMPIONI",
   "regions": "REGIONI",
   "region": "REGIONE",
-  "language" : "LINGUA",
+  "language": "LINGUA",
   "explore_the_universe_of": "ESPLORA L'UNIVERSO DI",
-  "available_skins" : "ASPETTI DISPONIBILI",
-  "explore_region" : "ESPLORA REGIONE",
+  "available_skins": "ASPETTI DISPONIBILI",
+  "explore_region": "ESPLORA REGIONE",
   "continue_reading": "CONTINUA A LEGGERE",
   "champions_showcase": "CAMPIONI IN VETRINA",
   "read_story": "LEGGI LA STORIA",
-  "tale" : "RACCONTO",
-  "cooming_soon" : "PRESTO DISPONIBILE"
+  "read_tale": "LEGGI IL RACCONTO",
+  "tale": "RACCONTO"
 }

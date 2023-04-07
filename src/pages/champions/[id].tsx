@@ -63,12 +63,12 @@ export async function getStaticProps({ params, locale }: any) {
   };
 }
 
-function ChampionPage({ locale, activeChampion }: any) {
+function ChampionPage({ activeChampion }: any) {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>();
   const [windowWidth, setWindowWidth] = useState<number>(1024);
   const { t } = useTranslation();
 
-  let nameSplit = activeChampion?.name?.split("");
+  let nameSplit = activeChampion?.name?.toUpperCase().split("");
 
   useEffect(() => {
     function WindowResize() {
@@ -82,7 +82,7 @@ function ChampionPage({ locale, activeChampion }: any) {
   }, []);
 
   return (
-    <div className="h-full w-full flex flex-col items-center justify-center pt-[6.6rem]">
+    <div className="h-full w-full flex flex-col items-center justify-center pt-[80px]">
       <motion.div
         className="w-full flex justify-center items-center p-8"
         variants={container}
@@ -153,7 +153,7 @@ function ChampionPage({ locale, activeChampion }: any) {
                   activeChampion != undefined ? activeChampion.region_img : ""
                 }
                 alt={t(`champions:${activeChampion?.id}.region`)}
-              ></Image>
+              />
             </div>
             <div className="flex flex-col items-center justify-center md:w-[50%]">
               <span>{t("region")}</span>
@@ -166,21 +166,9 @@ function ChampionPage({ locale, activeChampion }: any) {
         </motion.div>
       </Container>
       <div className="pt-20 w-full">
-        <div className="w-full h-[500px] relative">
-          <div
-            style={{
-              backgroundImage: `url('${
-                activeChampion?.story_img != undefined
-                  ? activeChampion?.story_img?.src
-                  : ""
-              }')`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPositionY: "30%",
-            }}
-            className="h-full w-full opacity-40"
-          />
-          <div className="absolute top-0 w-full h-full flex justify-center items-center">
+        <div className="h-[500px] relative">
+        <Image alt={t("tale")} src={activeChampion?.tale_img} className="opacity-40 object-cover h-full" style={{objectPosition:"center 30%"}}/>
+        <div className="absolute top-0 w-full h-full flex justify-center items-center">
             <div className="w-[80%] h-[80%] flex flex-col justify-evenly items-center md:w-[50%] lg:w-[40%]">
               <span className="text-sm lg:text-base">{t("tale")}</span>
               <h3 className="text-3xl lg:text-5xl text-center">
@@ -188,7 +176,7 @@ function ChampionPage({ locale, activeChampion }: any) {
               </h3>
               {t(`champions:${activeChampion?.id}.tale_author`) && (
                 <span className="text-sm lg:text-base">
-                  {t(
+                  by {t(
                     `champions:${activeChampion?.id}.tale_author`
                   ).toUpperCase()}
                 </span>
@@ -196,10 +184,10 @@ function ChampionPage({ locale, activeChampion }: any) {
               <p className="text-sm lg:text-base">
                 {t(`champions:${activeChampion?.id}.tale_preview`)}
               </p>
-              <CustomButton href="" text={t("cooming_soon")} />
+              <CustomButton href={`/champions/tale/${activeChampion?.tale}`} text={t("read_tale")} />
             </div>
           </div>
-        </div>
+        </div>              
       </div>
       <Container>
         <div className="pt-20 pb-8 relative w-full">

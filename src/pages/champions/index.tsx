@@ -102,7 +102,7 @@ function Champions({ randomChampions, champions }: any) {
   if (!loading)
     return (
       <>
-        <div className="text-white pt-[6.6rem]">
+        <div className="pt-[80px]">
           <div className="h-full pb-8 flex flex-col items-center">
             <div className="p-8 w-full flex justify-center items-center">
               <h1 className="text-2xl md:text-5xl">
