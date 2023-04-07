@@ -29,17 +29,16 @@ const buttonText = {
 
 function CustomButton({ href, text }: CustomButtonProperties) {
   return (
-      <motion.button
-        className={`border border-[#C3A06A] p-4 cursor-pointer opacity-50`}
-        type="button"
-        whileHover="hover"
-        variants={button}
-      >
-          <Link href={href}>
-            <motion.span variants={buttonText}>{text}</motion.span>
-          </Link>
-      </motion.button>
-    
+    <motion.button
+      className={`border border-[#C3A06A] p-4 cursor-pointer`}
+      type="button"
+      whileHover="hover"
+      variants={button}
+    >
+      <Link href={href}>
+        <motion.span variants={buttonText}>{text}</motion.span>
+      </Link>
+    </motion.button>
   );
 }
 

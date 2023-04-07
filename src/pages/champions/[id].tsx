@@ -167,8 +167,13 @@ function ChampionPage({ activeChampion }: any) {
       </Container>
       <div className="pt-20 w-full">
         <div className="h-[500px] relative">
-        <Image alt={t("tale")} src={activeChampion?.tale_img} className="opacity-40 object-cover h-full" style={{objectPosition:"center 30%"}}/>
-        <div className="absolute top-0 w-full h-full flex justify-center items-center">
+          <Image
+            alt={t("tale")}
+            src={activeChampion?.tale_img}
+            className="opacity-40 object-cover h-full w-full"
+            style={{ objectPosition: activeChampion.taleArtPosition }}
+          />
+          <div className="absolute top-0 w-full h-full flex justify-center items-center">
             <div className="w-[80%] h-[80%] flex flex-col justify-evenly items-center md:w-[50%] lg:w-[40%]">
               <span className="text-sm lg:text-base">{t("tale")}</span>
               <h3 className="text-3xl lg:text-5xl text-center">
@@ -176,7 +181,8 @@ function ChampionPage({ activeChampion }: any) {
               </h3>
               {t(`champions:${activeChampion?.id}.tale_author`) && (
                 <span className="text-sm lg:text-base">
-                  by {t(
+                  by{" "}
+                  {t(
                     `champions:${activeChampion?.id}.tale_author`
                   ).toUpperCase()}
                 </span>
@@ -184,10 +190,13 @@ function ChampionPage({ activeChampion }: any) {
               <p className="text-sm lg:text-base">
                 {t(`champions:${activeChampion?.id}.tale_preview`)}
               </p>
-              <CustomButton href={`/champions/tale/${activeChampion?.tale}`} text={t("read_tale")} />
+              <CustomButton
+                href={`/champions/tale/${activeChampion?.tale}`}
+                text={t("read_tale")}
+              />
             </div>
           </div>
-        </div>              
+        </div>
       </div>
       <Container>
         <div className="pt-20 pb-8 relative w-full">

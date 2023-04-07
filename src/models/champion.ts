@@ -9,7 +9,7 @@ export interface Champion{
     splash_art: ChampionSplashArt[];
     tale_img:StaticImageData;
     bgPosition: string;
-    taleBgPosition: string;
+    taleArtPosition: string;
 }
 
 export interface ChampionSplashArt{

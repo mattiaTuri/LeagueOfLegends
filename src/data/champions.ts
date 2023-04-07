@@ -230,7 +230,7 @@ export const champions: Champion[] = [
     ],
     tale_img : aatrox_splash_story,
     bgPosition: "70% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center"
   },
   {
     id: "ahri",
@@ -272,7 +272,7 @@ export const champions: Champion[] = [
     ],
     tale_img : ahri_splash_story,
     bgPosition: "60% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center 30%"
   },
   {
     id: "akali",
@@ -311,7 +311,7 @@ export const champions: Champion[] = [
     ],
     tale_img : akali_splash_story,
     bgPosition: "center 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center 10%"
   },
   {
     id: "ashe",
@@ -351,7 +351,7 @@ export const champions: Champion[] = [
     ],
     tale_img : ashe_splash_story,
     bgPosition: "60% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center top"
   },
   {
     id: "aurelionson",
@@ -372,11 +372,11 @@ export const champions: Champion[] = [
     ],
     tale_img : aurelionson_splash_story,
     bgPosition: "60% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center"
   },
   {
     id: "caitlyn",
-    name: "CAITLYN",
+    name: "Caitlyn",
     tale: "Progress day",
     champion_img: caitlyn_base,
     region_img: piltover,
@@ -420,7 +420,7 @@ export const champions: Champion[] = [
     ],
     tale_img : caitlyn_splash_story,
     bgPosition: "80% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center"
   },
   {
     id: "evelynn",
@@ -456,7 +456,7 @@ export const champions: Champion[] = [
     ],
     tale_img : evelynn_splash_story,
     bgPosition: "center 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center 20%"
   },
   {
     id: "heimerdinger",
@@ -480,7 +480,7 @@ export const champions: Champion[] = [
     ],
     tale_img : heimerdinger_splash_story,
     bgPosition: "70% 40%",
-    taleBgPosition: "center"
+    taleArtPosition: "center"
   },
   {
     id: "gwen",
@@ -501,7 +501,7 @@ export const champions: Champion[] = [
     ],
     tale_img : gwen_splash_story,
     bgPosition: "center 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center"
   },
   {
     id: "jinx",
@@ -534,7 +534,7 @@ export const champions: Champion[] = [
     ],
     tale_img : jinx_spash_story,
     bgPosition: "70% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center center"
   },
   {
     id: "ksante",
@@ -555,7 +555,7 @@ export const champions: Champion[] = [
     ],
     tale_img : ksante_splash_story,
     bgPosition: "30% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center 10%"
   },
   {
     id: "maokai",
@@ -585,7 +585,7 @@ export const champions: Champion[] = [
     ],
     tale_img : maokai_splash_story,
     bgPosition: "70% 20%",
-    taleBgPosition: "center"
+    taleArtPosition: "center"
   },
   {
     id: "milio",
@@ -603,7 +603,7 @@ export const champions: Champion[] = [
     ],
     tale_img : milio_splash_story,
     bgPosition: "50% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center"
   },
   {
     id: "missfortune",
@@ -645,7 +645,7 @@ export const champions: Champion[] = [
     ],
     tale_img : missfortune_splash_story,
     bgPosition: "80% 20%",
-    taleBgPosition: "center"
+    taleArtPosition: "center"
   },
   {
     id: "seraphine",
@@ -678,7 +678,7 @@ export const champions: Champion[] = [
     ],
     tale_img : seraphine_splash_story,
     bgPosition: "40% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center 20%"
   },
   {
     id: "vex",
@@ -699,7 +699,7 @@ export const champions: Champion[] = [
     ],
     tale_img : vex_splash_story,
     bgPosition: "70% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center"
   },
   {
     id: "yuumi",
@@ -726,7 +726,7 @@ export const champions: Champion[] = [
     ],
     tale_img : yuumi_splash_story,
     bgPosition: "40% 10%",
-    taleBgPosition: "left"
+    taleArtPosition: "left"
   },
   {
     id: "zeri",
@@ -744,7 +744,7 @@ export const champions: Champion[] = [
     ],
     tale_img : zeri_splash_story,
     bgPosition: "50% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center 10%"
   },
   {
     id: "ziggs",
@@ -783,7 +783,7 @@ export const champions: Champion[] = [
     ],
     tale_img : ziggs_splash_story,
     bgPosition: "80% 30%",
-    taleBgPosition: "center"
+    taleArtPosition: "center 10%"
   },
   {
     id: "zoe",
@@ -807,6 +807,6 @@ export const champions: Champion[] = [
     ],
     tale_img : zoe_splash_story,
     bgPosition: "50% 10%",
-    taleBgPosition: "center"
+    taleArtPosition: "center"
   },
 ];
