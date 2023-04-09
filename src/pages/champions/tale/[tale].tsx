@@ -160,8 +160,12 @@ function Tale({ activeChampion }: any) {
         <Container>
           <div className="p-8 flex flex-col items-center">
             <div className="lg:w-[50%]">
-              {tale_first_part.map((paragraph: string) => {
-                return <p className="p-4">{paragraph}</p>;
+              {tale_first_part.map((paragraph: string, index: number) => {
+                return (
+                  <p key={index} className="p-4">
+                    {paragraph}
+                  </p>
+                );
               })}
             </div>
             <div className="py-16 w-[50%]">
@@ -169,8 +173,12 @@ function Tale({ activeChampion }: any) {
             </div>
             {tale_second_part.length != 0 && (
               <div className="lg:w-[50%]">
-                {tale_second_part.map((paragraph: string) => {
-                  return <p className="p-4">{paragraph}</p>;
+                {tale_second_part.map((paragraph: string, index: number) => {
+                  return (
+                    <p key={index} className="p-4">
+                      {paragraph}
+                    </p>
+                  );
                 })}
               </div>
             )}
