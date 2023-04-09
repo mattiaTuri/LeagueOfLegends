@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import Container from "@/components/shared/Container";
 import style from "./tale.module.css";
 import { easeInOut, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import CustomButton from "@/components/shared/CustomButton";
 
 const title = {
   initial: { y: 100, opacity: 0 },
@@ -88,56 +90,100 @@ export async function getStaticProps({ params, locale }: any) {
 
 function Tale({ activeChampion }: any) {
   const { t } = useTranslation();
-  return (
-    <div className="">
-      <div className={`h-[100vh] relative ${style.boxShadow}`}>
-        <Image
-          alt=""
-          src={activeChampion.tale_img}
-          className={`absolute top-0 h-full object-cover z-[-1]`}
-          style={{ objectPosition: activeChampion.taleBgPosition }}
-        />
-        <Container>
-          <div className="relative w-full flex flex-col justify-center items-center p-8">
-            <motion.div
-              variants={name}
-              initial="initial"
-              animate="animate"
-              className="absolute top-1/4 left-0 p-8"
-            >
-              <div className="border border-[#C3A06A] inline p-2">
-                <span className="text-base lg:text-2xl">
-                  {activeChampion.name}
-                </span>
-              </div>
-            </motion.div>
-            <motion.div initial="initial" animate="animate">
-              <motion.span
-                variants={text}
-                className="text-sm lg:text-base block text-center lg:text-left"
-              >
-                A league of legends story
-              </motion.span>
-              <motion.h1
-                variants={title}
-                className="text-5xl lg:text-7xl text-[#c4b998] text-center"
-              >
-                {t(`champions:${activeChampion.id}.tale_title`).toUpperCase()}
-              </motion.h1>
-              {t(`champions:${activeChampion?.id}.tale_author`) && (
-                <motion.span
-                  variants={author}
-                  className="text-sm lg:text-base block text-center lg:text-right"
+  const [loadingTransaltion, setLoadingTranslation] = useState<boolean>(false);
+
+  useEffect(() => {
+    setLoadingTranslation(true);
+  });
+
+  const tale_first_part: any[] = t(
+    `champions:${activeChampion.id}.tale_first_part`,
+    {
+      returnObjects: true,
+    }
+  );
+
+  const tale_second_part: any[] = t(
+    `champions:${activeChampion.id}.tale_second_part`,
+    {
+      returnObjects: true,
+    }
+  );
+
+  if (loadingTransaltion)
+    return (
+      <div className="">
+        <div className={`h-[100vh] relative ${style.imgGradient}`}>
+          <Image
+            alt=""
+            src={activeChampion.tale_img}
+            className={`absolute top-0 h-full object-cover z-[-1]`}
+            style={{ objectPosition: activeChampion.taleBgPosition }}
+          />
+          <Container>
+            <div className="relative w-full flex flex-col justify-end items-center bottom-40 p-8">
+              <motion.div initial="initial" animate="animate">
+                <motion.div
+                  variants={name}
+                  className="py-8 text-center lg:text-left"
                 >
-                  by {t(`champions:${activeChampion.id}.tale_author`)}
+                  <div className="border border-[#C3A06A] inline p-2">
+                    <span className="text-base lg:text-2xl">
+                      {activeChampion.name}
+                    </span>
+                  </div>
+                </motion.div>
+                <motion.span
+                  variants={text}
+                  className="text-sm lg:text-base block text-center lg:text-left"
+                >
+                  {t("league_of_legend_story")}
                 </motion.span>
-              )}
-            </motion.div>
+                <motion.h1
+                  variants={title}
+                  className="text-5xl lg:text-7xl text-[#c4b998] text-center"
+                >
+                  {t(`champions:${activeChampion.id}.tale_title`).toUpperCase()}
+                </motion.h1>
+                {t(`champions:${activeChampion?.id}.tale_author`) && (
+                  <motion.span
+                    variants={author}
+                    className="text-sm lg:text-base block text-center lg:text-right"
+                  >
+                    by {t(`champions:${activeChampion.id}.tale_author`)}
+                  </motion.span>
+                )}
+              </motion.div>
+            </div>
+          </Container>
+        </div>
+        <Container>
+          <div className="p-8 flex flex-col items-center">
+            <div className="lg:w-[50%]">
+              {tale_first_part.map((paragraph: string) => {
+                return <p className="p-4">{paragraph}</p>;
+              })}
+            </div>
+            <div className="py-16 w-[50%]">
+              <span className="border border-[#C3A06A] w-full block"></span>
+            </div>
+            {tale_second_part.length != 0 && (
+              <div className="lg:w-[50%]">
+                {tale_second_part.map((paragraph: string) => {
+                  return <p className="p-4">{paragraph}</p>;
+                })}
+              </div>
+            )}
+            <div className="pt-8">
+              <CustomButton
+                href={`/champions/${activeChampion.id}`}
+                text={`Back to ${activeChampion.name.toUpperCase()}`}
+              />
+            </div>
           </div>
         </Container>
       </div>
-    </div>
-  );
+    );
 }
 
 export default Tale;

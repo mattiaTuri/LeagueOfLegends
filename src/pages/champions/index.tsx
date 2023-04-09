@@ -105,7 +105,7 @@ function Champions({ randomChampions, champions }: any) {
         <div className="pt-[80px]">
           <div className="h-full pb-8 flex flex-col items-center">
             <div className="p-8 w-full flex justify-center items-center">
-              <h1 className="text-2xl md:text-5xl">
+              <h1 className="text-2xl text-center md:text-5xl">
                 {t("champions_showcase")}
               </h1>
             </div>
@@ -208,7 +208,9 @@ function Champions({ randomChampions, champions }: any) {
               </div>
             </Swiper>
             <div className="pt-8">
-              <h1 className="text-2xl md:text-5xl">{t("champions")}</h1>
+              <h1 className="text-2xl text-center md:text-5xl">
+                {t("champions")}
+              </h1>
             </div>
             {windowWidth > 767 ? (
               <DesktopViewChamp champions={champions} />

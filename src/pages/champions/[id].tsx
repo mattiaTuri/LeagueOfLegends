@@ -144,7 +144,7 @@ function ChampionPage({ activeChampion }: any) {
             <p className="text-center pb-8">
               {t(`champions:${activeChampion?.id}.biography`)}
             </p>
-            <CustomButton href="" text={t("continue_reading")} />
+            <CustomButton href="" text={t("read_biography")} />
           </div>
           <div className="pt-20 p-8 w-full flex flex-col items-center md:flex-row lg:w-[80%]">
             <div className="flex justify-center md:w-[50%]">

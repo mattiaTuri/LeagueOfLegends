@@ -20,7 +20,7 @@
     left:-100%;
     width: 100vw;
     height: 100vh;
-    background-color: #000000d1;
+    background-color: #000000f1;
     color:#C3A06A;
     display: flex;
     flex-direction: column;
@@ -65,4 +65,8 @@
     transform-origin: top right;
     transform: rotate(45deg);
     transition: 0.3s;
+}
+
+.activeLink{
+    text-decoration: underline;
 }

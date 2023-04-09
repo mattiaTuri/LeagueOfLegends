@@ -1,3 +1,4 @@
-.boxShadow{ 
+.imgGradient{ 
     /* box-shadow: inset 0 -10px 10px 0px #000000; */
+    background: linear-gradient(180deg,rgba(1,10,19,0) 25%,rgba(1,10,19,.9));
 }

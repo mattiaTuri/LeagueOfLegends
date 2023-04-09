@@ -85,7 +85,7 @@ function Navbar() {
           <nav className="w-full p-8 flex items-center justify-between">
             <div className="flex justify-between w-[250px]">
               <div className="border border-[#ba8964] flex justify-center w-[50%]">
-                <span className="text-white text-sm p-2">{t("language")}</span>
+                <span className="text-sm p-2">{t("language")}</span>
               </div>
               <div id="menuLanguage" className="w-[50%] flex relative">
                 <button
