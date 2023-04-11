@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import style from "./hamburgerMenu.module.css";
+import style from "./navbar.module.css";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
@@ -10,7 +10,7 @@ function HamburgerMenu() {
   const router = useRouter();
 
   useEffect(() => {
-    const { locale, asPath }: any = router;
+    const { locale }: any = router;
 
     changeLanguage(locale);
   }, []);
@@ -24,15 +24,16 @@ function HamburgerMenu() {
     router.push({ pathname, query }, asPath, { locale: lng });
 
     document.querySelectorAll("#menuLanguage button").forEach((elem) => {
-      elem.classList.remove(style.activeLink);
+      elem.classList.remove(style.langActiveLink);
     });
 
     const lang_button: HTMLElement = document.getElementById(lng)!;
-    lang_button.classList.add(style.activeLink);
+    lang_button.classList.add(style.langActiveLink);
   };
 
   return (
     <nav className="flex justify-end items-center p-8">
+      <h1>LEAGUE OF LEGENDS</h1>
       <button
         className={style.hamburgerIcon}
         onClick={() => openHamburgerMenu()}

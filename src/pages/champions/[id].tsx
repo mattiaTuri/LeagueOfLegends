@@ -142,7 +142,7 @@ function ChampionPage({ activeChampion }: any) {
           <div className={style.triangle}></div>
           <div className="p-8 w-full flex flex-col items-center lg:w-[80%]">
             <p className="text-center pb-8">
-              {t(`champions:${activeChampion?.id}.biography`)}
+              {t(`champions:${activeChampion?.id}.biography_preview`)}
             </p>
             <CustomButton href="" text={t("read_biography")} />
           </div>

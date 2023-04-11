@@ -12,5 +12,9 @@
   "read_biography": "LEGGI LA BIOGRAFIA",
   "read_tale": "LEGGI IL RACCONTO",
   "tale": "RACCONTO",
-  "league_of_legend_story":"Un racconto di league of legends"
+  "league_of_legend_story":"Un racconto di league of legends",
+  "chapter_one": "Capitolo uno",
+  "chapter_two": "Capitolo due",
+  "chapter_three": "Capitolo tre",
+  "chapter_four": "Capitolo quattro"
 }
