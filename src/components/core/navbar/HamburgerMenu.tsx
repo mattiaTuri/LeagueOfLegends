@@ -32,7 +32,7 @@ function HamburgerMenu() {
   };
 
   return (
-    <nav className="flex justify-end items-center p-8">
+    <nav className="flex justify-between items-center p-8">
       <h1>LEAGUE OF LEGENDS</h1>
       <button
         className={style.hamburgerIcon}

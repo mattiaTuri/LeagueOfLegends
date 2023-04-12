@@ -90,7 +90,6 @@ export async function getStaticProps({ params, locale }: any) {
 }
 
 function Tale({ activeChampion }: any) {
-  const [scroll, setScroll] = useState<number>(816)
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -104,12 +103,13 @@ function Tale({ activeChampion }: any) {
     
   const scrollProgress = () => {
     const progressBar = document.getElementById("progressBar")!;
-    if(window.scrollY > scroll){  
+    if(window.scrollY > 816){  
       const value = window.scrollY - 876
       progressBar.style.transform = `translateY(${value}px)`;
-    }else{
-      progressBar.style.transform = `translateY(${0}px)`;
     }
+    // else{
+    //   progressBar.style.transform = `translateY(${0}px)`;
+    // }
 
   }
     setLoadingTranslation(true);
@@ -167,13 +167,12 @@ function Tale({ activeChampion }: any) {
             style={{ objectPosition: activeChampion.taleBgPosition }}
           />
           <Container>
-            <div className="relative w-full flex flex-col justify-end items-center bottom-40 p-8">
-              <motion.div initial="initial" animate="animate">
+            <motion.div className="relative w-full flex flex-col justify-end items-center bottom-40 p-8" initial="initial" animate="animate">            
                 <motion.div
                   variants={name}
-                  className="py-8 text-center lg:text-left"
+                  className="py-8"
                 >
-                  <div className="border border-[#C3A06A] inline p-2">
+                  <div className="border border-[#C3A06A] p-2 flex">
                     <span className="text-base lg:text-2xl">
                       {activeChampion.name}
                     </span>
@@ -181,32 +180,32 @@ function Tale({ activeChampion }: any) {
                 </motion.div>
                 <motion.span
                   variants={text}
-                  className="text-sm lg:text-base block text-center lg:text-left"
+                  className="text-sm lg:text-base"
                 >
                   {t("league_of_legend_story")}
                 </motion.span>
                 <motion.h1
                   variants={title}
-                  className="text-5xl lg:text-7xl text-[#c4b998] text-center"
+                  className="text-3xl md:text-5xl lg:text-7xl text-[#c4b998] text-center"
                 >
                   {t(`champions:${activeChampion.id}.tale_title`).toUpperCase()}
                 </motion.h1>
                 {t(`champions:${activeChampion?.id}.tale_author`) && (
                   <motion.span
                     variants={author}
-                    className="text-sm lg:text-base block text-center lg:text-right"
+                    className="text-sm lg:text-base block text-center"
                   >
                     by {t(`champions:${activeChampion.id}.tale_author`)}
                   </motion.span>
                 )}
+              
               </motion.div>
-            </div>
           </Container>
         </div>
         <Container>
           <div id="tale" className="p-8 flex flex-col items-center relative">
-            <div id="progressBar" className="hidden md:block absolute left-0 p-8 top-0">          
-              <div className="flex flex-col pt-4">
+            <div id="progressBar" className="hidden lg:block absolute left-0 p-8 top-10">          
+              <div className="flex flex-col pt-4 w-[200px]">
                 <div>
                   <span className="border border-[#C3A06A] p-2">{activeChampion.name.toUpperCase()}</span>     
                 </div>
