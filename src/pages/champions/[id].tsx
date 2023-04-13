@@ -75,7 +75,6 @@ function ChampionPage({ activeChampion }: any) {
       setWindowWidth(window.innerWidth);
     }
     window.addEventListener("resize", WindowResize);
-    setWindowWidth(window.innerWidth);
     return () => {
       removeEventListener("resize", WindowResize);
     };
@@ -98,7 +97,7 @@ function ChampionPage({ activeChampion }: any) {
         })}
       </motion.div>
       <motion.div
-        className={`h-[500px] ${style.BoxShadow}`}
+        className="h-[500px]"
         initial={{ width: "50%" }}
         animate={{ width: "100%" }}
         transition={{ duration: 1, ease: [0.65, 0, 0.35, 1] }}

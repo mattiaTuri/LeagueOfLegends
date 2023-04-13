@@ -12,10 +12,14 @@
   "read_biography": "READ BIOGRAPHY",
   "read_tale": "READ TALE",
   "tale": "TALE",
+  "back_to_champion": "BACK TO",
   "league_of_legend_story":"A league of legends story",
   "chapter_one": "Chapter one",
   "chapter_two": "Chapter two",
   "chapter_three": "Chapter three",
   "chapter_four": "Chapter four",
-  "chapter_five": "Chapter five"
+  "chapter_five": "Chapter five",
+  "chapter_six": "Chapter six",
+  "chapter_seven": "Chapter seven",
+  "chapter_eight": "Chapter eight"
 }

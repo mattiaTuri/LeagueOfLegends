@@ -11,8 +11,6 @@ export async function getStaticProps({ locale }: any) {
   };
 }
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   return (
     <>

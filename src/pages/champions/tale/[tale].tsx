@@ -90,36 +90,33 @@ export async function getStaticProps({ params, locale }: any) {
 }
 
 function Tale({ activeChampion }: any) {
-  const { scrollYProgress } = useScroll()
+  const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
-  })
+    restDelta: 0.001,
+  });
   const { t } = useTranslation();
   const [loadingTranslation, setLoadingTranslation] = useState<boolean>(false);
 
   useEffect(() => {
-    
-  const scrollProgress = () => {
-    const progressBar = document.getElementById("progressBar")!;
-    if(window.scrollY > 816){  
-      const value = window.scrollY - 876
-      progressBar.style.transform = `translateY(${value}px)`;
-    }
-    // else{
-    //   progressBar.style.transform = `translateY(${0}px)`;
-    // }
-
-  }
+    const scrollProgress = () => {
+      const progressBar = document.getElementById("progressBar")!;
+      if (window.scrollY > 816) {
+        const value = window.scrollY - 816;
+        progressBar.style.transform = `translateY(${value}px)`;
+      } else {
+        progressBar.style.transform = `translateY(${0}px)`;
+      }
+    };
     setLoadingTranslation(true);
-    window.addEventListener('scroll', scrollProgress);
+    window.addEventListener("scroll", scrollProgress);
 
     return () => {
-      window.removeEventListener('scroll', scrollProgress);
+      window.removeEventListener("scroll", scrollProgress);
     };
   });
-  
+
   const tale_chapter_one: string[] = t(
     `champions:${activeChampion.id}.tale_chapter_one`,
     {
@@ -155,6 +152,26 @@ function Tale({ activeChampion }: any) {
     }
   );
 
+  const tale_chapter_six: string[] = t(
+    `champions:${activeChampion.id}.tale_chapter_six`,
+    {
+      returnObjects: true,
+    }
+  );
+
+  const tale_chapter_seven: string[] = t(
+    `champions:${activeChampion.id}.tale_chapter_seven`,
+    {
+      returnObjects: true,
+    }
+  );
+
+  const tale_chapter_eight: string[] = t(
+    `champions:${activeChampion.id}.tale_chapter_eight`,
+    {
+      returnObjects: true,
+    }
+  );
 
   if (loadingTranslation)
     return (
@@ -167,63 +184,103 @@ function Tale({ activeChampion }: any) {
             style={{ objectPosition: activeChampion.taleBgPosition }}
           />
           <Container>
-            <motion.div className="relative w-full flex flex-col justify-end items-center bottom-40 p-8" initial="initial" animate="animate">            
-                <motion.div
-                  variants={name}
-                  className="py-8"
-                >
-                  <div className="border border-[#C3A06A] p-2 flex">
-                    <span className="text-base lg:text-2xl">
-                      {activeChampion.name}
-                    </span>
-                  </div>
-                </motion.div>
+            <motion.div
+              className="relative w-full flex flex-col justify-end items-center bottom-40 p-8"
+              initial="initial"
+              animate="animate"
+            >
+              <motion.div variants={name} className="py-8">
+                <div className="border border-[#C3A06A] p-2 flex">
+                  <span className="text-base lg:text-2xl">
+                    {activeChampion.name}
+                  </span>
+                </div>
+              </motion.div>
+              <div>
                 <motion.span
                   variants={text}
-                  className="text-sm lg:text-base"
+                  className="text-sm lg:text-base block text-center lg:text-left"
                 >
                   {t("league_of_legend_story")}
                 </motion.span>
                 <motion.h1
                   variants={title}
-                  className="text-3xl md:text-5xl lg:text-7xl text-[#c4b998] text-center"
+                  className="text-3xl md:text-5xl text-[#c4b998] text-center"
                 >
                   {t(`champions:${activeChampion.id}.tale_title`).toUpperCase()}
                 </motion.h1>
                 {t(`champions:${activeChampion?.id}.tale_author`) && (
                   <motion.span
                     variants={author}
-                    className="text-sm lg:text-base block text-center"
+                    className="text-sm lg:text-base block text-center lg:text-right"
                   >
                     by {t(`champions:${activeChampion.id}.tale_author`)}
                   </motion.span>
                 )}
-              
-              </motion.div>
+              </div>
+            </motion.div>
           </Container>
         </div>
         <Container>
           <div id="tale" className="p-8 flex flex-col items-center relative">
-            <div id="progressBar" className="hidden lg:block absolute left-0 p-8 top-10">          
-              <div className="flex flex-col pt-4 w-[200px]">
-                <div>
-                  <span className="border border-[#C3A06A] p-2">{activeChampion.name.toUpperCase()}</span>     
+            <div
+              id="progressBar"
+              className="hidden lg:block absolute left-0 p-8 top-10"
+            >
+              <div className="flex flex-col w-[200px]">
+                <div className="border border-[#C3A06A] p-2 flex max-w-max">
+                  <span className="text-base">
+                    {activeChampion.name.toUpperCase()}
+                  </span>
                 </div>
-                <span className="py-2">{t(`champions:${activeChampion.id}.tale_title`)}</span>
+                <span className="py-4">
+                  {t(`champions:${activeChampion.id}.tale_title`)}
+                </span>
                 <div className="bg-[#111] ">
-                  <motion.div className="sticky bg-[#C3A06A] h-[5px] origin-left" style={{ scaleX }}></motion.div>
-                </div>  
+                  <motion.div
+                    className="sticky bg-[#C3A06A] h-[5px] origin-left"
+                    style={{ scaleX }}
+                  ></motion.div>
+                </div>
               </div>
-            </div>     
-            <Paragraph tale={tale_chapter_one} chapter={t("chapter_one")}/>
-            {tale_chapter_two.length != 0 && <Paragraph tale={tale_chapter_two} chapter={t("chapter_two")}/>}
-            {tale_chapter_three.length != 0 && <Paragraph tale={tale_chapter_three} chapter={t("chapter_three")}/>}
-            {tale_chapter_four.length != 0 && <Paragraph tale={tale_chapter_four} chapter={t("chapter_four")}/>}
-            {tale_chapter_five.length != 0 && <Paragraph tale={tale_chapter_five} chapter={t("chapter_five")}/>}            
+            </div>
+            <Paragraph tale={tale_chapter_one} chapter={t("chapter_one")} />
+            {tale_chapter_two.length != 0 && (
+              <Paragraph tale={tale_chapter_two} chapter={t("chapter_two")} />
+            )}
+            {tale_chapter_three.length != 0 && (
+              <Paragraph
+                tale={tale_chapter_three}
+                chapter={t("chapter_three")}
+              />
+            )}
+            {tale_chapter_four.length != 0 && (
+              <Paragraph tale={tale_chapter_four} chapter={t("chapter_four")} />
+            )}
+            {tale_chapter_five.length != 0 && (
+              <Paragraph tale={tale_chapter_five} chapter={t("chapter_five")} />
+            )}
+            {tale_chapter_six.length != 0 && (
+              <Paragraph tale={tale_chapter_six} chapter={t("chapter_six")} />
+            )}
+            {tale_chapter_seven.length != 0 && (
+              <Paragraph
+                tale={tale_chapter_seven}
+                chapter={t("chapter_seven")}
+              />
+            )}
+            {tale_chapter_eight.length != 0 && (
+              <Paragraph
+                tale={tale_chapter_eight}
+                chapter={t("chapter_eight")}
+              />
+            )}
             <div className="pt-8">
               <CustomButton
                 href={`/champions/${activeChampion.id}`}
-                text={`Back to ${activeChampion.name.toUpperCase()}`}
+                text={`${t(
+                  "back_to_champion"
+                )} ${activeChampion.name.toUpperCase()}`}
               />
             </div>
           </div>

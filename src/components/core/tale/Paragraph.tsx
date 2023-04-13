@@ -1,12 +1,14 @@
-interface taleParagraph{
-    tale:string[]
-    chapter:string
+interface taleParagraph {
+  tale: string[];
+  chapter: string;
 }
 
-function Paragraph({tale, chapter} : taleParagraph){
+function Paragraph({ tale, chapter }: taleParagraph) {
   return (
-    <div className="lg:w-[50%] border-b border-[#C3A06A]">
-      <h3 className="p-4 text-center lg:text-2xl">{chapter.toUpperCase()}</h3>
+    <div className="lg:w-[50%] pt-10">
+      <span className="p-4 block text-center lg:text-2xl">
+        {chapter.toUpperCase()}
+      </span>
       {tale.map((paragraph: string, index: number) => {
         return (
           <p key={index} className="p-4 text-sm lg:text-base">
@@ -15,7 +17,7 @@ function Paragraph({tale, chapter} : taleParagraph){
         );
       })}
     </div>
-  )
+  );
 }
 
-export default Paragraph
+export default Paragraph;

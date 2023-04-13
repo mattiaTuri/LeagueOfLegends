@@ -55,12 +55,12 @@ const textMotion = {
 };
 
 export async function getStaticProps({ locale }: any) {
-  const randomChampions = await getRandomChampions(champions, 7);
+  //let randomChampions = getRandomChampions(champions, 7);
 
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common", "champions"])),
-      randomChampions,
+      randomChampions: getRandomChampions(champions, 7),
       champions,
     },
   };
@@ -70,10 +70,10 @@ function getRandomChampions(champions: Champion[], championsNumber: number) {
   let randomChampions: any = [];
   for (let i = 0; i < championsNumber; i++) {
     const random = Math.floor(Math.random() * champions.length);
-    const exist = randomChampions.find(
+    const champExist = randomChampions.find(
       (elem: any) => elem.id == champions[random].id
     );
-    if (!exist) {
+    if (!champExist) {
       randomChampions.push(champions[random]);
     } else {
       i = i - 1;
@@ -92,12 +92,12 @@ function Champions({ randomChampions, champions }: any) {
       setWindowWidth(window.innerWidth);
     }
     window.addEventListener("resize", WindowResize);
-    setWindowWidth(window.innerWidth);
+    setWindowWidth(innerWidth);
     setLoading(false);
     return () => {
       removeEventListener("resize", WindowResize);
     };
-  });
+  }, []);
 
   if (!loading)
     return (
@@ -155,7 +155,7 @@ function Champions({ randomChampions, champions }: any) {
                               variants={textMotion}
                               className="text-5xl lg:text-5xl"
                             >
-                              {champion.name}
+                              {champion.name.toUpperCase()}
                             </motion.h2>
                             <motion.h3
                               variants={textMotion}

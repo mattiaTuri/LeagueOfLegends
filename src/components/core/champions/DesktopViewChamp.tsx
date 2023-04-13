@@ -54,7 +54,7 @@ function DesktopViewChamp({ champions }: any) {
                   variants={championName}
                   transition={hoverTransition}
                 >
-                  <span className="text-sm">{champion.name}</span>
+                  <span className="text-sm">{champion.name.toUpperCase()}</span>
                 </motion.div>
               </motion.div>
             </Link>
