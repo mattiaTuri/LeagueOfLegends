@@ -74,6 +74,7 @@ function ChampionPage({ activeChampion }: any) {
     function WindowResize() {
       setWindowWidth(window.innerWidth);
     }
+    setWindowWidth(window.innerWidth);
     window.addEventListener("resize", WindowResize);
     return () => {
       removeEventListener("resize", WindowResize);

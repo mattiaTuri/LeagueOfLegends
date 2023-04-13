@@ -115,7 +115,7 @@ function Tale({ activeChampion }: any) {
     return () => {
       window.removeEventListener("scroll", scrollProgress);
     };
-  });
+  }, []);
 
   const tale_chapter_one: string[] = t(
     `champions:${activeChampion.id}.tale_chapter_one`,

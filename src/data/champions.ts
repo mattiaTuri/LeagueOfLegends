@@ -810,3 +810,22 @@ export const champions: Champion[] = [
     taleArtPosition: "center"
   },
 ];
+
+
+export const randomChampions = getRandomChampions(champions, 7);
+
+function getRandomChampions(champions: Champion[], championsNumber: number) {
+  let randomChampions: any = [];
+  for (let i = 0; i < championsNumber; i++) {
+    const random = Math.floor(Math.random() * champions.length);
+    const champExist = randomChampions.find(
+      (elem: any) => elem.id == champions[random].id
+    );
+    if (!champExist) {
+      randomChampions.push(champions[random]);
+    } else {
+      i = i - 1;
+    }
+  }
+  return randomChampions;
+}

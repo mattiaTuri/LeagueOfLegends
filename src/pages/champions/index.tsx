@@ -1,6 +1,6 @@
 import Container from "@/components/shared/Container";
 import style from "./champions.module.css";
-import { champions } from "../../data/champions";
+import { champions, randomChampions } from "../../data/champions";
 import Image, { StaticImageData } from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper";
@@ -55,31 +55,13 @@ const textMotion = {
 };
 
 export async function getStaticProps({ locale }: any) {
-  //let randomChampions = getRandomChampions(champions, 7);
-
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common", "champions"])),
-      randomChampions: getRandomChampions(champions, 7),
+      randomChampions,
       champions,
     },
   };
-}
-
-function getRandomChampions(champions: Champion[], championsNumber: number) {
-  let randomChampions: any = [];
-  for (let i = 0; i < championsNumber; i++) {
-    const random = Math.floor(Math.random() * champions.length);
-    const champExist = randomChampions.find(
-      (elem: any) => elem.id == champions[random].id
-    );
-    if (!champExist) {
-      randomChampions.push(champions[random]);
-    } else {
-      i = i - 1;
-    }
-  }
-  return randomChampions;
 }
 
 function Champions({ randomChampions, champions }: any) {
