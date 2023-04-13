@@ -58,13 +58,12 @@ export async function getStaticProps({ locale }: any) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common", "champions"])),
-      randomChampions,
       champions,
     },
   };
 }
 
-function Champions({ randomChampions, champions }: any) {
+function Champions({ champions }: any) {
   const [windowWidth, setWindowWidth] = useState<number>(1024);
   const [loading, setLoading] = useState<boolean>(true);
   const { t } = useTranslation();
