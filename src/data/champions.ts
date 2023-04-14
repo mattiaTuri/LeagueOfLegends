@@ -170,17 +170,17 @@ import cyber_pop_zoe from "../../public/assets/images/zoe/cyber_pop_zoe.jpg";
 import star_guardian_zoe from "../../public/assets/images/zoe/star_guardian_zoe.jpg";
 
 /* REGIONS */
-import bandle_city from "../../public/assets/images/regions/bandle_city.png";
-import bilgewater from "../../public/assets/images/regions/bilgewater.png";
-import freljord from "../../public/assets/images/regions/freljord.png";
-import ionia from "../../public/assets/images/regions/ionia.png";
-import ixtal from "../../public/assets/images/regions/ixtal.png";
-import piltover from "../../public/assets/images/regions/piltover.png";
-import runeterra from "../../public/assets/images/regions/runeterra.png";
-import shadow_isles from "../../public/assets/images/regions/shadow_isles.png";
-import shurima from "../../public/assets/images/regions/shurima.png";
-import targon from "../../public/assets/images/regions/targon.png";
-import zaun from "../../public/assets/images/regions/zaun.png";
+import bandle_city from "../../public/assets/images/regions/emblem/bandle_city.png";
+import bilgewater from "../../public/assets/images/regions/emblem/bilgewater.png";
+import freljord from "../../public/assets/images/regions/emblem/freljord.png";
+import ionia from "../../public/assets/images/regions/emblem/ionia.png";
+import ixtal from "../../public/assets/images/regions/emblem/ixtal.png";
+import piltover from "../../public/assets/images/regions/emblem/piltover.png";
+import runeterra from "../../public/assets/images/regions/emblem/runeterra.png";
+import shadow_isles from "../../public/assets/images/regions/emblem/shadow_isles.png";
+import shurima from "../../public/assets/images/regions/emblem/shurima.png";
+import targon from "../../public/assets/images/regions/emblem/targon.png";
+import zaun from "../../public/assets/images/regions/emblem/zaun.png";
 
 /* STORIES */
 import aatrox_splash_story from "../../public/assets/images/stories/aatrox_splash_story.jpg"
