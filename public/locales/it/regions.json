@@ -1,5 +1,6 @@
 {
     "bundle_city":{
+        "name": "Bundle city",
         "description": [
             "L'esatta ubicazione della patria degli yordle è ancora oggetto di discussione, nonostante alcuni mortali affermino di aver viaggiato lungo vie nascoste che conducono in una landa incantata, oltre il regno materiale. Parlano di un luogo pieno di magia dove gli imprudenti, distratti dalle innumerevoli meraviglie, finiscono per smarrirsi in un sogno...",
             "Dicono che a Bandle City, ogni sensazione è amplificata, per chi non è yordle. I colori sono più accesi. Cibo e bevande esaltano i sensi per anni ed è impossibile dimenticarne il sapore. La luce del sole emette sempre quel bagliore dorato, le acque sono cristalline e i raccolti perennemente abbondanti e produttivi. Forse alcune delle storie sono vere, o forse sono tutte false, perché nessuno dice mai di aver visto le stesse cose.",
@@ -7,6 +8,7 @@
         ]
     },
     "bilgewater":{
+        "name": "Bilgewater",
         "description": [
             "Nascosta nell'arcipelago delle Isole Fiammablu, Bilgewater è una città portuale unica, abitata da cacciatori di serpenti, bande criminali e contrabbandieri da tutto il mondo conosciuto. Qui le fortune vengono accumulate e le ambizioni vengono infrante in un batter d'occhio. Per coloro in fuga da giustizia, debiti o persecuzioni, è una città per nuovi inizi; a nessuno nei vicoli di Bilgewater interessa del tuo passato. Ciò nonostante, ogni mattina il sorgere del sole rivela incauti viaggiatori che galleggiano nel porto, con la gola tagliata e il borsello vuoto...",
             "Pur essendo pericolosa, Bilgewater è ricca di opportunità, essendo libera dai vincoli di un governo formale e dalle leggi commerciali. Se hai denaro, praticamente tutto può essere comprato, da tecnologia proibita a favori dei signori del crimine.",
@@ -14,6 +16,7 @@
         ]
     },
     "demacia":{
+        "name": "Demacia",
         "description": [
             "Demacia, un potente regno ligio alla legge e con una prestigiosa tradizione militare, ha un popolo che venera ideali di giustizia, onore e dovere e che, soprattutto, è fiero del proprio retaggio culturale. Nonostante questi nobili principi, questa nazione ampiamente autosufficiente è diventata sempre più isolazionista negli ultimi secoli.",
             "Ora Demacia è un regno in subbuglio.",
@@ -24,6 +27,7 @@
         ]
     },
     "freljord":{
+        "name": "Freljord",
         "description": [
             "Il Freljord è un luogo crudele e spietato, i cui abitanti nascono come abili guerrieri costretti a resistere contro ogni avversità.",
             "Le tribù della zona, fiere e ferocemente indipendenti, sono spesso considerate selvagge, rudi e 'incivili' dai loro vicini in tutta Valoran, ignari delle antiche tradizioni che li hanno plasmati. Molti millenni or sono, l'alleanza tra le sorelle Avarosa, Serylda e Lissandra si infranse, dando origine ad una guerra che minacciò inconsapevolmente di coinvolgere tutta Runeterra, facendo piombare le terre del nord nel caos e in un inverno quasi perenne. Oggi, solo quegli eccezionali mortali che sembrano immuni alle devastazioni del fuoco o del ghiaccio, pare siano destinati a comandare o, almeno, in grado di farlo.",
@@ -32,6 +36,7 @@
         ]
     },
     "ionia":{
+        "name": "Ionia",
         "description": [
             "Circondata da mari insidiosi, Ionia è composta da una serie di province alleate sparse nel grande arcipelago delle Terre Antiche. Visto che la cultura di Ionia è da tempo plasmata dalla ricerca dell'equilibrio, il confine tra i reami materiali e spirituali qui è più permeabile, soprattutto nelle foreste e sui monti.",
             "Anche se gli incantesimi di queste terre sono mutevoli e le creature sono pericolose e fatate, gli ioniani vi prosperano da secoli. I monasteri dei guerrieri, le milizie di provincia e la stessa terra di Ionia erano stati una protezione sufficiente.",
@@ -41,6 +46,7 @@
         ]
     },
     "ixtal":{
+        "name": "Ixtal",
         "description": [
             "Famosa per la sua padronanza con la magia elementale, Ixtal fu una delle prime nazioni indipendenti a unirsi all'impero shurimano. In realtà la cultura ixtali è ben più antica. Fece parte della grande diaspora occidentale che diede vita a civiltà come i Buhru, i magnifici Helia e gli asceti di Targon. È anche probabile che abbia avuto un ruolo significativo nella creazione del primo Asceso.",
             "Tuttavia, i maghi di Ixtal riuscirono a sopravvivere al Vuoto, e in seguito ai Darkin, distanziandosi dai vicini e facendosi scudo con la natura. Avendo già perso molto, erano determinati a preservare quel poco che era rimasto...",
@@ -48,6 +54,7 @@
         ]
     },
     "noxus":{
+        "name": "Noxus",
         "description": [
             "Noxus è un potente impero con una temibile reputazione. Per coloro che vivono al di là dei suoi confini è brutale, espansionista e minaccioso, eppure chi riesce a guardare oltre questo guscio bellicoso, scorge una società insolitamente inclusiva, in cui la forza e le doti dei suoi abitanti vengono rispettate e coltivate.",
             "I Noxii un tempo erano un popolo di feroci tribù barbare, finché non assaltarono l'antica città che oggi è il cuore del loro dominio. Sotto attacco da ogni lato, riuscirono a respingere i nemici combattendo, allargando ogni anno i confini del loro regno. La lotta per la sopravvivenza ha reso i Noxiani un popolo fiero, che apprezza la forza più di ogni altra cosa, ma che riconosce questa qualità in molte forme diverse.",
@@ -56,11 +63,13 @@
         ]
     },
     "piltover":{
+        "name": "Piltover",
         "description": [
             "Piltover è una città in continua evoluzione, con un potere e un ascendente in crescita. È il centro culturale di Valoran dove arte, maestria, commercio e innovazione avanzano di pari passo. Il suo potere non proviene da forze militari, ma dai motori del commercio e del progresso. Situata sulle scogliere del distretto di Zaun con affaccio sull'oceano, flotte navali attraversano gli enormi canali, portando merce da tutto il mondo. Tutta la conseguente ricchezza ha fatto progredire la città in modi mai visti. Piltover continua a reinventarsi, diventando una città in cui si può fare fortuna e ogni sogno può essere esaudito. L'affluenza di mercanti finanzia lo sviluppo delle attività più difficoltose: fantastici ed eccentrici lavori artistici, ricerca esoterica nell'hextech e importanti monumenti architettonici. Con un crescente numero di inventori immersi nell'emergente tradizione hextech, Piltover attira come una calamita gli artigiani più abili di tutto il mondo."
         ]
     },
     "shadow_isles":{
+        "name": "Isole Ombra",
         "description": [
             "Questa terra maledetta era un tempo la patria di una civiltà nobile e illuminata, nota ad alleati ed emissari come le Isole Benedette. Tuttavia, più di mille anni fa, un cataclisma magico senza precedenti ridusse a brandelli la barriera tra il regno materiale e quello spirituale, unendoli e condannando ogni creatura vivente all'istante.",
             "Oggi una maligna Nebbia Oscura avvolge costantemente le Isole e la terra stessa è corrotta dalla magia nera. La vita dei mortali che si avventurano in queste lugubri sponde viene lentamente risucchiata, attirando gli insaziabili spiriti inquieti dei morti.",
@@ -68,6 +77,7 @@
         ]
     },
     "shurima":{
+        "name": "Shurima",
         "description": [
             "In passato l'impero di Shurima era una civiltà fiorente che si estendeva per un intero continente. Forgiato in un'era remota dai potenti dei-guerrieri dell'Ordine degli Ascesi, riuniva tutti i diversi popoli del sud, imponendo tra loro una pace duratura.",
             "Pochi osavano ribellarsi. Coloro che lo facevano, come la nazione maledetta di Icathia, venivano schiacciati senza pietà.",
@@ -76,17 +86,20 @@
         ]
     },
     "targon":{
+        "name": "Targon",
         "description": [
             "Il Monte Targon è la vetta più imponente di Runeterra, una montagna altissima costituita da rocce illuminate dal sole, unica al mondo in termini di proporzioni. Distante da ogni forma di civiltà, il Monte Targon è completamente nascosto e assolutamente impossibile da raggiungere, a eccezione dei più ostinati esploratori. Come molte leggende ancorate al Monte Targon e, come ogni luogo della mitologia, è una fonte d'ispirazione per sognatori, uomini irrazionali e avventurieri. Alcune anime coraggiose hanno tentato di scalare l’impenetrabile montagna, forse alla ricerca di giudizio o illuminazione o forse alla ricerca di gloria o per un profondo desiderio di scorgerne la vetta. La scalata non è impossibile, e per quei pochi che riescono in qualche modo a sopravvivere e raggiungere la vetta, la prova non termina lì. Tra coloro che fanno ritorno, alcuni hanno uno sguardo tormentato, vuoto; altri sono del tutto cambiati, permeati da un'Incarnazione di poteri soprannaturali il cui destino può essere compreso solo da pochi mortali."
         ]
     },
     "void":{
+        "name": "Il vuoto",
         "description": [
             "Il Vuoto è una manifestazione del nulla che si cela oltre l'insondabile, nato con un urlo insieme all'universo stesso. È una fame che non conosce sazietà, capace di attendere per eoni che i suoi padroni, le misteriose Sentinelle, sanciscano la fine di tutto.",
             "I mortali sfiorati da questo potere soffrono per aver visto uno spiraglio dell'eterna irrealtà, sufficiente a spezzare anche le menti più forti. Gli abitanti del Vuoto sono dei costrutti, spesso con una coscienza limitata, con un solo obiettivo. Traghettare Runeterra verso l'oblio."
         ]
     },
     "zaun":{
+        "name": "Zaun",
         "description": [
             "Zaun è un esteso distretto urbano che giace sulle profonde vallate di Piltover. La luce che arriva viene filtrata dai vapori che fuoriescono da grovigli di condotti corrosi e riflessa dalle vetrate decorate dell'architettura industriale. Un tempo, Zaun e Piltover erano due mondi uniti; ora, invece, sono separati pur essendo simbiotici. Anche se si trova in una zona crepuscolare ingrigita dallo smog, Zaun continua a evolvere, il suo popolo è attivo e la cultura ricca. La prosperità di Piltover ha permesso lo sviluppo di Zaun; l'oscuro riflesso della città soprastante. Molti prodotti di Piltover sono destinati al mercato nero di Zaun, e le pericolose ricerche condotte dagli inventori hextech spesso trovano qui dimora, altrimenti impossibile in una città a parer loro troppo restrittiva. Il continuo sviluppo di tecnologie esplosive e gli affari spericolati hanno reso l'intera Zaun inquinata e pericolosa. Fughe tossiche stagnano nelle aree più distanti dalla città, ma anche qui la gente trova un modo per sopravvivere e prosperare."
         ]

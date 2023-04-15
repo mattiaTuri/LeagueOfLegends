@@ -11,7 +11,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import SmarphoneViewChamp from "@/components/core/champions/SmartphoneViewChamp";
 import DesktopViewChamp from "@/components/core/champions/DesktopViewChamp";
-import { Champion } from "@/models/champion";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
