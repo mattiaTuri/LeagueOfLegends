@@ -50,8 +50,8 @@ export const regions: Region[] = [
         region_img: demacia,
     },
     {
-        id: "frelijord",
-        name: "Frelijord",
+        id: "freljord",
+        name: "Freljord",
         icon: freljord_icon,
         region_img: freljord,
     },

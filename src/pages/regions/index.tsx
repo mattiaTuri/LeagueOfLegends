@@ -26,8 +26,8 @@ function Region() {
                 href={`/regions/${region.id}`}
                 img={region?.region_img}
                 name={t(`regions:${region.id}.name`)}
-                width="full"
-                desktop_width="[50%]"
+                width="[30%]"
+                desktop_width="[30%]"
               />
             );
           })}

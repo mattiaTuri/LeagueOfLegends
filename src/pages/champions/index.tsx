@@ -82,8 +82,8 @@ function Champions({ champions }: any) {
   if (!loading)
     return (
       <>
-        <div className="pt-[80px]">
-          <div className="h-full pb-8 flex flex-col items-center">
+        <div className="pt-[80px] pb-10">
+          <div className="h-full flex flex-col items-center">
             <div className="p-8 w-full flex justify-center items-center">
               <h1 className="text-2xl text-center md:text-5xl">
                 {t("champions_showcase")}
@@ -187,7 +187,7 @@ function Champions({ champions }: any) {
                 </svg>
               </div>
             </Swiper>
-            <div className="pt-8">
+            <div className="pt-20">
               <h1 className="text-2xl text-center md:text-5xl">
                 {t("champions")}
               </h1>

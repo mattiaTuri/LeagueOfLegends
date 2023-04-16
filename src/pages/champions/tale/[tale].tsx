@@ -102,8 +102,10 @@ function Tale({ activeChampion }: any) {
   useEffect(() => {
     const scrollProgress = () => {
       const progressBar = document.getElementById("progressBar")!;
-      if (window.scrollY > 816) {
-        const value = window.scrollY - 816;
+      const taleView = document.getElementById("taleView")!;
+      const val = window.scrollY + 80;
+      if (val > taleView.offsetHeight) {
+        const value = val - taleView.offsetHeight;
         progressBar.style.transform = `translateY(${value}px)`;
       } else {
         progressBar.style.transform = `translateY(${0}px)`;
@@ -176,7 +178,10 @@ function Tale({ activeChampion }: any) {
   if (loadingTranslation)
     return (
       <>
-        <div className={`h-[100vh] relative ${style.imgGradient}`}>
+        <div
+          id="taleView"
+          className={`h-[100vh] relative ${style.imgGradient}`}
+        >
           <Image
             alt=""
             src={activeChampion.tale_img}
@@ -185,47 +190,54 @@ function Tale({ activeChampion }: any) {
           />
           <Container>
             <motion.div
-              className="relative w-full flex flex-col justify-end items-center bottom-40 p-8"
+              className="w-full flex flex-col justify-end items-center"
               initial="initial"
               animate="animate"
             >
-              <motion.div variants={name} className="py-8">
-                <div className="border border-[#C3A06A] p-2 flex">
-                  <span className="text-base lg:text-2xl">
-                    {activeChampion.name}
-                  </span>
-                </div>
-              </motion.div>
-              <div>
-                <motion.span
-                  variants={text}
-                  className="text-sm lg:text-base block text-center lg:text-left"
+              <div className="relative bottom-40">
+                <motion.div
+                  variants={name}
+                  className="py-8 flex justify-center"
                 >
-                  {t("league_of_legend_story")}
-                </motion.span>
-                <motion.h1
-                  variants={title}
-                  className="text-3xl md:text-5xl text-[#c4b998] text-center"
-                >
-                  {t(`champions:${activeChampion.id}.tale_title`).toUpperCase()}
-                </motion.h1>
-                {t(`champions:${activeChampion?.id}.tale_author`) && (
+                  <div className="p-2 border border-[#C3A06A]">
+                    <span className="text-base lg:text-2xl">
+                      {activeChampion.name}
+                    </span>
+                  </div>
+                </motion.div>
+                <div>
                   <motion.span
-                    variants={author}
-                    className="text-sm lg:text-base block text-center lg:text-right"
+                    variants={text}
+                    className="text-sm lg:text-base block text-center lg:text-left"
                   >
-                    by {t(`champions:${activeChampion.id}.tale_author`)}
+                    {t("league_of_legend_story")}
                   </motion.span>
-                )}
+                  <motion.h1
+                    variants={title}
+                    className="text-3xl md:text-5xl text-[#c4b998] text-center"
+                  >
+                    {t(
+                      `champions:${activeChampion.id}.tale_title`
+                    ).toUpperCase()}
+                  </motion.h1>
+                  {t(`champions:${activeChampion?.id}.tale_author`) && (
+                    <motion.span
+                      variants={author}
+                      className="text-sm lg:text-base block text-center lg:text-right"
+                    >
+                      by {t(`champions:${activeChampion.id}.tale_author`)}
+                    </motion.span>
+                  )}
+                </div>
               </div>
             </motion.div>
           </Container>
         </div>
         <Container>
-          <div id="tale" className="p-8 flex flex-col items-center relative">
+          <div id="tale" className="relative pb-10">
             <div
               id="progressBar"
-              className="hidden lg:block absolute left-0 p-8 top-10"
+              className="hidden lg:block absolute left-0 top-10 px-8"
             >
               <div className="flex flex-col w-[200px]">
                 <div className="border border-[#C3A06A] p-2 flex max-w-max">
@@ -244,44 +256,52 @@ function Tale({ activeChampion }: any) {
                 </div>
               </div>
             </div>
-            <Paragraph tale={tale_chapter_one} chapter={t("chapter_one")} />
-            {tale_chapter_two.length != 0 && (
-              <Paragraph tale={tale_chapter_two} chapter={t("chapter_two")} />
-            )}
-            {tale_chapter_three.length != 0 && (
-              <Paragraph
-                tale={tale_chapter_three}
-                chapter={t("chapter_three")}
-              />
-            )}
-            {tale_chapter_four.length != 0 && (
-              <Paragraph tale={tale_chapter_four} chapter={t("chapter_four")} />
-            )}
-            {tale_chapter_five.length != 0 && (
-              <Paragraph tale={tale_chapter_five} chapter={t("chapter_five")} />
-            )}
-            {tale_chapter_six.length != 0 && (
-              <Paragraph tale={tale_chapter_six} chapter={t("chapter_six")} />
-            )}
-            {tale_chapter_seven.length != 0 && (
-              <Paragraph
-                tale={tale_chapter_seven}
-                chapter={t("chapter_seven")}
-              />
-            )}
-            {tale_chapter_eight.length != 0 && (
-              <Paragraph
-                tale={tale_chapter_eight}
-                chapter={t("chapter_eight")}
-              />
-            )}
-            <div className="pt-8">
-              <CustomButton
-                href={`/champions/${activeChampion.id}`}
-                text={`${t(
-                  "back_to_champion"
-                )} ${activeChampion.name.toUpperCase()}`}
-              />
+            <div className="flex flex-col items-center">
+              <Paragraph tale={tale_chapter_one} chapter={t("chapter_one")} />
+              {tale_chapter_two.length != 0 && (
+                <Paragraph tale={tale_chapter_two} chapter={t("chapter_two")} />
+              )}
+              {tale_chapter_three.length != 0 && (
+                <Paragraph
+                  tale={tale_chapter_three}
+                  chapter={t("chapter_three")}
+                />
+              )}
+              {tale_chapter_four.length != 0 && (
+                <Paragraph
+                  tale={tale_chapter_four}
+                  chapter={t("chapter_four")}
+                />
+              )}
+              {tale_chapter_five.length != 0 && (
+                <Paragraph
+                  tale={tale_chapter_five}
+                  chapter={t("chapter_five")}
+                />
+              )}
+              {tale_chapter_six.length != 0 && (
+                <Paragraph tale={tale_chapter_six} chapter={t("chapter_six")} />
+              )}
+              {tale_chapter_seven.length != 0 && (
+                <Paragraph
+                  tale={tale_chapter_seven}
+                  chapter={t("chapter_seven")}
+                />
+              )}
+              {tale_chapter_eight.length != 0 && (
+                <Paragraph
+                  tale={tale_chapter_eight}
+                  chapter={t("chapter_eight")}
+                />
+              )}
+              <div className="pt-8">
+                <CustomButton
+                  href={`/champions/${activeChampion.id}`}
+                  text={`${t(
+                    "back_to_champion"
+                  )} ${activeChampion.name.toUpperCase()}`}
+                />
+              </div>
             </div>
           </div>
         </Container>

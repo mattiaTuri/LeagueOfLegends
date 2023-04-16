@@ -82,7 +82,7 @@ function ChampionPage({ activeChampion }: any) {
   }, []);
 
   return (
-    <div className="h-full w-full flex flex-col items-center justify-center pt-[80px]">
+    <div className="h-full w-full flex flex-col items-center justify-center pt-[80px] pb-10">
       <motion.div
         className="w-full flex justify-center items-center p-8"
         variants={container}

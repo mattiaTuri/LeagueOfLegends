@@ -31,33 +31,8 @@ function DesktopViewChamp({ champions }: any) {
               name={champion?.name}
               imgPosition={champion.bgPosition}
               width="[20%]"
+              desktop_width="[20%]"
             />
-            // <Link
-            //   key={index}
-            //   href={`/champions/${champion.id}`}
-            //   className="p-2 w-[20%] h-96 relative"
-            // >
-            //   <motion.div
-            //     className="h-full w-full relative overflow-hidden"
-            //     whileHover="hover"
-            //     initial="initial"
-            //   >
-            //     <motion.div
-            //       style={{
-            //         backgroundImage: `url('${champion.champion_img.src}')`,
-            //         backgroundRepeat: "no-repeat",
-            //         backgroundSize: "cover",
-            //         backgroundPosition: champion.bgPosition,
-            //       }}
-            //       variants={championImage}
-            //       transition={hoverTransition}
-            //       className="h-full w-full relative"
-            //     />
-            //     <div className="absolute bottom-0 bg-[#111] opacity-80 w-full h-[20%] flex flex-col justify-center items-center">
-            //       <span className="text-sm">{champion.name.toUpperCase()}</span>
-            //     </div>
-            //   </motion.div>
-            // </Link>
           );
         })}
       </div>

@@ -5,7 +5,7 @@ interface taleParagraph {
 
 function Paragraph({ tale, chapter }: taleParagraph) {
   return (
-    <div className="lg:w-[50%] pt-10">
+    <div className="lg:w-[50%] p-10">
       <span className="p-4 block text-center lg:text-2xl">
         {chapter.toUpperCase()}
       </span>
