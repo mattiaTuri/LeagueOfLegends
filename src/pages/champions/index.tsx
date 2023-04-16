@@ -193,7 +193,10 @@ function Champions({ champions }: any) {
               </h1>
             </div>
             {windowWidth > 767 ? (
-              <DesktopViewChamp champions={champions} />
+              <DesktopViewChamp
+                champions={champions}
+                windowWidth={windowWidth}
+              />
             ) : (
               <SmarphoneViewChamp />
             )}

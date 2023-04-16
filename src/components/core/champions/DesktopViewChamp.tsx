@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import Container from "@/components/shared/Container";
 import { motion } from "framer-motion";
 import { Champion } from "@/models/champion";
@@ -18,7 +17,7 @@ const championImage = {
   },
 };
 
-function DesktopViewChamp({ champions }: any) {
+function DesktopViewChamp({ champions, windowWidth }: any) {
   return (
     <Container>
       <div className="p-8 flex flex-wrap w-full">
@@ -30,8 +29,9 @@ function DesktopViewChamp({ champions }: any) {
               img={champion?.champion_img}
               name={champion?.name}
               imgPosition={champion.bgPosition}
-              width="[20%]"
-              desktop_width="[20%]"
+              width="20%"
+              desktop_width="20%"
+              windowWidth={windowWidth}
             />
           );
         })}

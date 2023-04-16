@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { StaticImageData } from "next/image";
 import Link from "next/link";
+import DesktopMenu from "../core/navbar/DesktopMenu";
 
 const hoverTransition = {
   duration: 1,
@@ -20,7 +21,8 @@ interface ImageProps {
   name: string;
   imgPosition?: string;
   width: string;
-  desktop_width?: string;
+  desktop_width: string;
+  windowWidth: number;
 }
 
 function ImageComponent({
@@ -30,11 +32,13 @@ function ImageComponent({
   imgPosition,
   width,
   desktop_width,
+  windowWidth,
 }: ImageProps) {
   return (
     <Link
       href={href}
-      className={`p-2 w-${width} h-96 relative lg:w-${desktop_width}`}
+      className={`p-2 h-96 relative`}
+      style={{ width: windowWidth > 1023 ? desktop_width : width }}
     >
       <motion.div
         className="h-full w-full relative overflow-hidden"
