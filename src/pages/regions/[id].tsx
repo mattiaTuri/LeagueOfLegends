@@ -4,6 +4,7 @@ import { regions } from "@/data/regions";
 import { easeInOut, motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import style from "./region.module.css";
 
 export async function getStaticPaths({ locales }: any) {
   const paths = regions
@@ -70,30 +71,38 @@ function Region({ activeRegion }: any) {
 
   return (
     <>
-      <div className="h-screen">
+      <div className={`h-screen ${style.bgLinearGradient}`}>
         <Image
-          alt=""
           src={activeRegion.region_img}
-          className={`absolute top-0 h-full object-cover z-[-1]`}
+          alt=""
+          className={`absolute top-0 h-full z-[-1]  object-cover`}
         />
         <Container>
           <div className="w-full flex flex-col justify-end items-center p-8">
-            <div className="relative bottom-40">
+            <motion.div
+              className="relative bottom-40"
+              initial="initial"
+              animate="animate"
+            >
+              <motion.div
+                className="flex justify-center"
+                variants={region_icon}
+              >
+                <Image src={activeRegion.icon} alt="" />
+              </motion.div>
               <motion.h1
-                initial="initial"
-                animate="animate"
                 variants={region_title}
                 className="text-3xl md:text-5xl text-[#c4b998] text-center py-10"
               >
-                {t(`champions:${activeRegion.id}.name`).toUpperCase()}
+                {t(`regions:${activeRegion.id}.name`).toUpperCase()}
               </motion.h1>
-            </div>
+            </motion.div>
           </div>
         </Container>
       </div>
       <Container>
-        <div className="w-full flex justify-center">
-          <div className="lg:w-[50%]">
+        <div className="flex justify-center p-10">
+          <div className="w-full lg:w-[50%]">
             {region_description.map((paragraph: string, index: number) => {
               return (
                 <p key={index} className="p-4 text-sm lg:text-base">
