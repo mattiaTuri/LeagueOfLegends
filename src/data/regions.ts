@@ -36,77 +36,103 @@ export const regions: Region[] = [
         name: "Bandle City",
         icon: bandle_city_icon,       
         region_img: bandle_city,
+        bgPosition: "60%",
+        width: "32"
     },
     {
         id: "bilgewater",
         name: "Bilgewater",
         icon: bilgewater_icon,
         region_img: bilgewater,
+        bgPosition: "center",
+        width: "20"
     },
     {
         id: "demacia",
         name: "Demacia",
         icon: demacia_icon,
         region_img: demacia,
+        bgPosition: "40%",
+        width: "20"
     },
     {
         id: "freljord",
         name: "Freljord",
         icon: freljord_icon,
         region_img: freljord,
+        bgPosition: "80%",
+        width: "20"
     },
     {
         id: "ionia",
         name: "Ionia",
         icon: ionia_icon,
         region_img: ionia,
+        bgPosition: "80%",
+        width: "24"
     },
     {
         id: "ixtal",
         name: "Ixtal",
         icon: ixtal_icon,
         region_img: ixtal,
+        bgPosition: "60%",
+        width: "32"
     }, 
     {
         id: "noxus",
         name: "Noxus",
         icon: noxus_icon,
         region_img: noxus,
+        bgPosition: "center",
+        width: "32"
     }, 
     {
         id: "piltover",
         name: "Piltover",
         icon: piltover_icon,
         region_img: piltover,
+        bgPosition: "80%",
+        width: "32"
     }, 
     {
         id: "shadow_isles",
         name: "Shadow Isles",
         icon: shadow_isles_icon,
         region_img: shadow_isles,
+        bgPosition: "center",
+        width: "32"
     }, 
     {
         id: "shurima",
         name: "Shurima",
         icon: shurima_icon,
         region_img: shurima,
+        bgPosition: "right",
+        width: "32"
     }, 
     {
         id: "targon",
         name: "Targon",
         icon: targon_icon,
         region_img: targon,
+        bgPosition: "90%",
+        width: "32"
     },
     {
         id: "void",
         name: "Void",
         icon: void_unknowable_icon,
         region_img: void_unknowable,
+        bgPosition: "center",
+        width: "32"
     }, 
     {
         id: "zaun",
         name: "Zaun",
         icon: zaun_icon,
         region_img: zaun,
+        bgPosition: "70%",
+        width: "32"
     }, 
 ]

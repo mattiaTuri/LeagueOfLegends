@@ -5,6 +5,7 @@ import { easeInOut, motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import style from "./region.module.css";
+import CustomButton from "@/components/shared/CustomButton";
 
 export async function getStaticPaths({ locales }: any) {
   const paths = regions
@@ -88,7 +89,11 @@ function Region({ activeRegion }: any) {
                 className="flex justify-center"
                 variants={region_icon}
               >
-                <Image src={activeRegion.icon} alt="" />
+                <Image
+                  src={activeRegion.icon}
+                  alt={t(`regions:${activeRegion.id}.name`)}
+                  className={`w-${activeRegion.width}`}
+                />
               </motion.div>
               <motion.h1
                 variants={region_title}
@@ -102,7 +107,7 @@ function Region({ activeRegion }: any) {
       </div>
       <Container>
         <div className="flex justify-center p-10">
-          <div className="w-full lg:w-[50%]">
+          <div className="w-full lg:w-[50%] flex flex-col items-center">
             {region_description.map((paragraph: string, index: number) => {
               return (
                 <p key={index} className="p-4 text-sm lg:text-base">
@@ -110,6 +115,9 @@ function Region({ activeRegion }: any) {
                 </p>
               );
             })}
+            <div className="pt-8">
+              <CustomButton href="/region" text={t("back_to_region_menu")} />
+            </div>
           </div>
         </div>
       </Container>

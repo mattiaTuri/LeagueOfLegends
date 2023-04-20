@@ -4,5 +4,7 @@ export interface Region {
     id: string;
     name: string;
     icon: StaticImageData;
-    region_img: StaticImageData
+    region_img: StaticImageData;
+    bgPosition:string;
+    width:string;
 }

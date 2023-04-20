@@ -43,6 +43,7 @@ function Region() {
                   href={`/regions/${region.id}`}
                   img={region?.region_img}
                   name={t(`regions:${region.id}.name`)}
+                  imgPosition={region.bgPosition}
                   width="100%"
                   desktop_width="50%"
                   windowWidth={windowWidth}

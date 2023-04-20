@@ -160,7 +160,10 @@ function ChampionPage({ activeChampion }: any) {
               <p className="pb-8 text-2xl lg:text-4xl">
                 {t(`champions:${activeChampion?.id}.region`).toUpperCase()}
               </p>
-              <CustomButton href="" text={t("explore_region")} />
+              <CustomButton
+                href={`region/${activeChampion.region}`}
+                text={t("explore_region")}
+              />
             </div>
           </div>
         </motion.div>

@@ -208,6 +208,7 @@ export const champions: Champion[] = [
   {
     id: "aatrox",
     name: "Aatrox",
+    region: "runeterra",
     tale:"the-cage",
     champion_img: aatrox_base,
     region_img: runeterra,
@@ -235,6 +236,7 @@ export const champions: Champion[] = [
   {
     id: "ahri",
     name: "Ahri",
+    region: "ionia",
     tale: "the-garden-of-forgetting",
     champion_img: ahri_base,
     region_img: ionia,
@@ -277,6 +279,7 @@ export const champions: Champion[] = [
   {
     id: "akali",
     name: "Akali",
+    region: "ionia",
     tale: "the-bow-and-the-kunai",
     champion_img: akali_bg,
     region_img: ionia,
@@ -316,6 +319,7 @@ export const champions: Champion[] = [
   {
     id: "ashe",
     name: "Ashe",
+    region: "freljord",
     tale: "the-harder-path",
     champion_img: ashe_bg,
     region_img: freljord,
@@ -356,6 +360,7 @@ export const champions: Champion[] = [
   {
     id: "aurelionson",
     name: "Aurelion Son",
+    region: "targon",
     tale: "twin-daws",
     champion_img: aurelion_son_base,
     region_img: targon,
@@ -377,6 +382,7 @@ export const champions: Champion[] = [
   {
     id: "caitlyn",
     name: "Caitlyn",
+    region: "piltover",
     tale: "Progress day",
     champion_img: caitlyn_base,
     region_img: piltover,
@@ -425,6 +431,7 @@ export const champions: Champion[] = [
   {
     id: "evelynn",
     name: "Evelynn",
+    region: "runeterra",
     tale: "the-tallest-daisy",
     champion_img: evelynn_base,
     region_img: runeterra,
@@ -461,6 +468,7 @@ export const champions: Champion[] = [
   {
     id: "heimerdinger",
     name: "Heimerdinger",
+    region: "piltover",
     tale: "from-the-journal-of-professor-cecil-b.-heimerdinger",
     champion_img: heimerdinger_base,
     region_img: piltover,
@@ -485,6 +493,7 @@ export const champions: Champion[] = [
   {
     id: "gwen",
     name: "Gwen",
+    region: "shadow_isles",
     tale: "the-stranger-who-sews",
     champion_img: gwen_base,
     region_img: shadow_isles,
@@ -506,6 +515,7 @@ export const champions: Champion[] = [
   {
     id: "jinx",
     name: "Jinx",
+    region: "zaun",
     tale: "the-wedding-crasher",
     champion_img: jinx_base,
     region_img: zaun,
@@ -539,6 +549,7 @@ export const champions: Champion[] = [
   {
     id: "ksante",
     name: "K'Sante",
+    region: "shurima",
     tale: "everything-we-should-have-said",
     champion_img: ksante_base,
     region_img: shurima,
@@ -560,6 +571,7 @@ export const champions: Champion[] = [
   {
     id: "maokai",
     name: "Maokai",
+    region: "shadow_isles",
     tale: "nightbloom",
     champion_img: maokai_base,
     region_img: shadow_isles,
@@ -590,6 +602,7 @@ export const champions: Champion[] = [
   {
     id: "milio",
     name: "Milio",
+    region: "ixtal",
     tale: "milio-s-super-special-adventure-reports",
     champion_img: milio_bg,
     region_img: ixtal,
@@ -608,6 +621,7 @@ export const champions: Champion[] = [
   {
     id: "missfortune",
     name: "Miss fortune",
+    region: "bilgewater",
     tale: "shadow-and-fortune",
     champion_img: missfortune_base,
     region_img: bilgewater,
@@ -650,6 +664,7 @@ export const champions: Champion[] = [
   {
     id: "seraphine",
     name: "Seraphine",
+    region: "piltover",
     tale: "standing-room-only",
     champion_img: seraphine_bg,
     region_img: piltover,
@@ -683,6 +698,7 @@ export const champions: Champion[] = [
   {
     id: "vex",
     name: "Vex",
+    region: "shadow_isles",
     tale: "the-meaning-in-misery",
     champion_img: vex_bg,
     region_img: shadow_isles,
@@ -704,6 +720,7 @@ export const champions: Champion[] = [
   {
     id: "yuumi",
     name: "Yuumi",
+    region: "bandle_city",
     tale: "the-biggest-catch",
     champion_img: yuumi_bg,
     region_img: bandle_city,
@@ -731,6 +748,7 @@ export const champions: Champion[] = [
   {
     id: "zeri",
     name: "Zeri",
+    region: "zaun",
     tale: "the-unexpected-spark",
     champion_img: zeri_bg,
     region_img: zaun,
@@ -749,6 +767,7 @@ export const champions: Champion[] = [
   {
     id: "ziggs",
     name: "Ziggs",
+    region: "zaun",
     tale: "bombs-a-tribute",
     champion_img: ziggs_base,
     region_img: zaun,
@@ -788,6 +807,7 @@ export const champions: Champion[] = [
   {
     id: "zoe",
     name: "Zoe",
+    region: "targon",
     tale: "meet-zoe",
     champion_img: zoe_bg,
     region_img: targon,
