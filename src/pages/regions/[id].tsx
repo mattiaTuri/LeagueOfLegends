@@ -76,7 +76,7 @@ function Region({ activeRegion }: any) {
         <Image
           src={activeRegion.region_img}
           alt=""
-          className={`absolute top-0 h-full z-[-1]  object-cover`}
+          className={`absolute top-0 h-full w-full z-[-1]  object-cover`}
         />
         <Container>
           <div className="w-full flex flex-col justify-end items-center p-8">
@@ -116,7 +116,7 @@ function Region({ activeRegion }: any) {
               );
             })}
             <div className="pt-8">
-              <CustomButton href="/region" text={t("back_to_region_menu")} />
+              <CustomButton href="/regions" text={t("back_to_region_menu")} />
             </div>
           </div>
         </div>

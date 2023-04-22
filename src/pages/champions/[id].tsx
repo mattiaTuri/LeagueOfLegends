@@ -161,7 +161,7 @@ function ChampionPage({ activeChampion }: any) {
                 {t(`champions:${activeChampion?.id}.region`).toUpperCase()}
               </p>
               <CustomButton
-                href={`region/${activeChampion.region}`}
+                href={`/regions/${activeChampion.region}`}
                 text={t("explore_region")}
               />
             </div>

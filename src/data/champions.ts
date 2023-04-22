@@ -802,7 +802,7 @@ export const champions: Champion[] = [
     ],
     tale_img : ziggs_splash_story,
     bgPosition: "80% 30%",
-    taleArtPosition: "center 10%"
+    taleArtPosition: "center 20%"
   },
   {
     id: "zoe",
