@@ -8,56 +8,58 @@ import { easeInOut, motion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import CustomButton from "@/components/shared/CustomButton";
 import Paragraph from "@/components/core/tale/Paragraph";
+import HeroPage from "@/components/shared/HeroPage";
+import StoryPage from "@/components/shared/StoryPage";
 
-const title = {
-  initial: { y: 100, opacity: 0 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      ease: [0, 0.95, 0.55, 1.15],
-    },
-  },
-};
+// const title = {
+//   initial: { y: 100, opacity: 0 },
+//   animate: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       duration: 1,
+//       ease: [0, 0.95, 0.55, 1.15],
+//     },
+//   },
+// };
 
-const author = {
-  initial: { y: 100, opacity: 0 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-      duration: 1,
-      ease: [0, 0.95, 0.55, 1.15],
-    },
-  },
-};
+// const author = {
+//   initial: { y: 100, opacity: 0 },
+//   animate: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       delay: 0.5,
+//       duration: 1,
+//       ease: [0, 0.95, 0.55, 1.15],
+//     },
+//   },
+// };
 
-const text = {
-  initial: { y: 100, opacity: 0 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 1,
-      duration: 1,
-      ease: [0, 0.95, 0.55, 1.15],
-    },
-  },
-};
+// const text = {
+//   initial: { y: 100, opacity: 0 },
+//   animate: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       delay: 1,
+//       duration: 1,
+//       ease: [0, 0.95, 0.55, 1.15],
+//     },
+//   },
+// };
 
-const name = {
-  initial: { opacity: 0 },
-  animate: {
-    opacity: 1,
-    transition: {
-      delay: 1.5,
-      duration: 1,
-      ease: easeInOut,
-    },
-  },
-};
+// const name = {
+//   initial: { opacity: 0 },
+//   animate: {
+//     opacity: 1,
+//     transition: {
+//       delay: 1.5,
+//       duration: 1,
+//       ease: easeInOut,
+//     },
+//   },
+// };
 
 export async function getStaticPaths({ locales }: any) {
   const paths = champions
@@ -90,57 +92,15 @@ export async function getStaticProps({ params, locale }: any) {
 }
 
 function Tale({ activeChampion }: any) {
-  const [scroolBarProgress, setScrollBarProgress] = useState<number>(0);
-  const [scrollYContainer, setScrollYContainer] = useState<number>(0);
+  // const [scroolBarProgress, setScrollBarProgress] = useState<number>(0);
+  // const [scrollYContainer, setScrollYContainer] = useState<number>(0);
   const [loadingTranslation, setLoadingTranslation] = useState<boolean>(false);
-  const [taleHeigth, setTaleHeigth] = useState<number>(0);
+  // const [taleHeigth, setTaleHeigth] = useState<number>(0);
   const { t } = useTranslation();
 
   useEffect(() => {
     setLoadingTranslation(true);
-    window.addEventListener("scroll", taleScrollProgress);
-    return () => {
-      window.removeEventListener("scroll", taleScrollProgress);
-    };
-  }, [scrollYContainer, taleHeigth]);
-
-  const taleScrollProgress = () => {
-    if (taleHeigth == 0) {
-      const tale = document.getElementById("tale")!.offsetHeight;
-      const talePreview = document.getElementById("taleView")!.offsetHeight;
-      const newTaleHeight = tale - talePreview;
-
-      setTaleHeigth(newTaleHeight);
-    }
-    const progressContainer = document.getElementById("progressContainer")!;
-    const talePreview = document.getElementById("taleView")!;
-    const actualScrollView = window.scrollY + 80;
-    if (actualScrollView > talePreview.offsetHeight) {
-      const newScrollY = actualScrollView - talePreview.offsetHeight;
-      progressContainer.style.transform = `translateY(${newScrollY}px)`;
-      setScrollYContainer(newScrollY);
-      const progressPercentage = getScrollPercentageProgress(newScrollY);
-      scrollProgress(progressPercentage);
-    } else {
-      progressContainer.style.transform = `translateY(${0}px)`;
-      setScrollBarProgress(0);
-    }
-  };
-
-  const getScrollPercentageProgress = (newScrollY: number) => {
-    /*
-    Calcolare la percentuale:
-    Es: 500: 100 = 80 : x --> dove 500 è il totale
-    x = (80 x 100) / 500  = 16 %   
-    */
-    return (newScrollY * 100) / taleHeigth;
-  };
-
-  const scrollProgress = (progressPercentage: number) => {
-    progressPercentage >= 100
-      ? setScrollBarProgress(100)
-      : setScrollBarProgress(progressPercentage);
-  };
+  });
 
   const tale_chapter_one: string[] = t(
     `champions:${activeChampion.id}.tale_chapter_one`,
@@ -201,62 +161,21 @@ function Tale({ activeChampion }: any) {
   if (loadingTranslation)
     return (
       <>
-        <div
-          id="taleView"
-          className={`h-[100vh] relative ${style.imgGradient}`}
-        >
-          <Image
-            alt=""
-            src={activeChampion.tale_img}
-            className={`absolute top-0 h-full w-full object-cover z-[-1]`}
-            style={{ objectPosition: activeChampion.taleArtPosition }}
-          />
-          <Container>
-            <motion.div
-              className="w-full flex flex-col justify-end items-center"
-              initial="initial"
-              animate="animate"
-            >
-              <div className="relative bottom-40">
-                <motion.div
-                  variants={name}
-                  className="py-8 flex justify-center"
-                >
-                  <div className="p-2 border border-[#C3A06A]">
-                    <span className="text-base lg:text-2xl">
-                      {activeChampion.name}
-                    </span>
-                  </div>
-                </motion.div>
-                <div>
-                  <motion.span
-                    variants={text}
-                    className="text-sm lg:text-base block text-center lg:text-left"
-                  >
-                    {t("league_of_legend_story")}
-                  </motion.span>
-                  <motion.h1
-                    variants={title}
-                    className="text-3xl md:text-5xl text-[#c4b998] text-center"
-                  >
-                    {t(
-                      `champions:${activeChampion.id}.tale_title`
-                    ).toUpperCase()}
-                  </motion.h1>
-                  {t(`champions:${activeChampion?.id}.tale_author`) && (
-                    <motion.span
-                      variants={author}
-                      className="text-sm lg:text-base block text-center lg:text-right"
-                    >
-                      by {t(`champions:${activeChampion.id}.tale_author`)}
-                    </motion.span>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          </Container>
-        </div>
-        <Container>
+        <HeroPage
+          name={activeChampion.name}
+          title={t(`champions:${activeChampion?.id}.tale_title`)}
+          author={t(`champions:${activeChampion?.id}.tale_author`)}
+          img={activeChampion.tale_img}
+          bgPosition={activeChampion.taleArtPosition}
+        />
+        <StoryPage
+          id={activeChampion.id}
+          name={activeChampion.name}
+          title={t(`champions:${activeChampion?.id}.tale_title`)}
+          story={}
+        />
+
+        {/* <Container>
           <div id="tale" className="relative pb-12">
             <div
               id="progressContainer"
@@ -328,7 +247,7 @@ function Tale({ activeChampion }: any) {
               </div>
             </div>
           </div>
-        </Container>
+        </Container> */}
       </>
     );
 }
