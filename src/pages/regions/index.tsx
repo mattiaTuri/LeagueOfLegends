@@ -31,7 +31,7 @@ function Region() {
   if (!loading)
     return (
       <Container>
-        <div className="pt-[80px] w-full p-8">
+        <div className="pt-[80px] w-full pb-12">
           <div className="text-center py-8">
             <h1 className="text-2xl md:text-5xl">{t("regions")}</h1>
           </div>

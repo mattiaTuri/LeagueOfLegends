@@ -82,7 +82,7 @@ function Champions({ champions }: any) {
   if (!loading)
     return (
       <>
-        <div className="pt-[80px] pb-10">
+        <div className="pt-[80px] pb-12">
           <div className="h-full flex flex-col items-center">
             <div className="p-8 w-full flex justify-center items-center">
               <h1 className="text-2xl text-center md:text-5xl">

@@ -34,7 +34,6 @@
     opacity: 0.3;
     height: 500px !important;
     width: 80% !important;
-    transition: 0.8s ease-in-out;
     pointer-events: none;
     overflow: hidden;
   }

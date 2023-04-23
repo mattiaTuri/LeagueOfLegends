@@ -76,7 +76,7 @@ function Region({ activeRegion }: any) {
         <Image
           src={activeRegion.region_img}
           alt=""
-          className={`absolute top-0 h-full w-full z-[-1]  object-cover`}
+          className={`absolute top-0 h-full w-full z-[-1] object-cover`}
         />
         <Container>
           <div className="w-full flex flex-col justify-end items-center p-8">
@@ -97,7 +97,7 @@ function Region({ activeRegion }: any) {
               </motion.div>
               <motion.h1
                 variants={region_title}
-                className="text-3xl md:text-5xl text-[#c4b998] text-center py-10"
+                className="text-3xl md:text-5xl text-[#c4b998] pt-10"
               >
                 {t(`regions:${activeRegion.id}.name`).toUpperCase()}
               </motion.h1>

@@ -37,7 +37,7 @@ function ImageComponent({
   return (
     <Link
       href={href}
-      className={`p-2 h-96 relative`}
+      className="p-2 h-96"
       style={{ width: windowWidth > 1023 ? desktop_width : width }}
     >
       <motion.div
@@ -54,7 +54,7 @@ function ImageComponent({
           }}
           variants={championImage}
           transition={hoverTransition}
-          className="h-full w-full relative"
+          className="h-full w-full object-cover"
         />
         <div className="absolute bottom-0 bg-[#111] opacity-80 w-full h-[20%] flex flex-col justify-center items-center">
           <span className="text-sm">{name.toUpperCase()}</span>

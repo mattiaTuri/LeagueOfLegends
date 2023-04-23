@@ -257,7 +257,7 @@ function Tale({ activeChampion }: any) {
           </Container>
         </div>
         <Container>
-          <div id="tale" className="relative pb-10">
+          <div id="tale" className="relative pb-12">
             <div
               id="progressContainer"
               className="hidden lg:block absolute left-0 top-10 px-8"
@@ -275,7 +275,6 @@ function Tale({ activeChampion }: any) {
                   <motion.div
                     id="progressBar"
                     className="sticky bg-[#C3A06A] h-[5px] origin-left w-0"
-                    // style={{ scaleX }}
                     style={{ width: `${scroolBarProgress}%` }}
                   ></motion.div>
                 </div>

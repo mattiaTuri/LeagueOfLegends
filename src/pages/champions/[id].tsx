@@ -202,7 +202,7 @@ function ChampionPage({ activeChampion }: any) {
         </div>
       </div>
       <Container>
-        <div className="pt-20 pb-8 relative w-full">
+        <div className="pt-20 pb-12 relative w-full">
           <div className="pb-8 text-center">
             <h3 className="text-[#c4b998] text-2xl lg:text-5xl">
               {t("available_skins")}
