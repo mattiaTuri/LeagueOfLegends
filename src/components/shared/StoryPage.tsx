@@ -1,9 +1,7 @@
-import { easeIn, motion } from "framer-motion";
 import Container from "./Container";
 import { useEffect, useState } from "react";
 import CustomButton from "./CustomButton";
 import { Trans, useTranslation } from "next-i18next";
-import Paragraph from "../core/tale/Paragraph";
 
 interface StoryPageProps {
   id: string;
@@ -90,9 +88,12 @@ function StoryPage({ id, name, title, story }: StoryPageProps) {
               i18nKey={story}
               t={t}
               components={[
-                <br />,
-                <p className="text-sm lg:text-base"></p>,
-                <span className="block text-center lg:text-2xl"></span>,
+                <br key="space" />,
+                <p key="text" className="text-sm lg:text-base"></p>,
+                <span
+                  key="chapter"
+                  className="block text-center lg:text-2xl"
+                ></span>,
               ]}
               values={{
                 chapter_one: "CAPITOLO 1",
@@ -106,29 +107,6 @@ function StoryPage({ id, name, title, story }: StoryPageProps) {
               }}
             />
           </div>
-
-          {/* <Paragraph tale={tale_chapter_one} chapter={t("chapter_one")} />
-          {tale_chapter_two.length != 0 && (
-            <Paragraph tale={tale_chapter_two} chapter={t("chapter_two")} />
-          )}
-          {tale_chapter_three.length != 0 && (
-            <Paragraph tale={tale_chapter_three} chapter={t("chapter_three")} />
-          )}
-          {tale_chapter_four.length != 0 && (
-            <Paragraph tale={tale_chapter_four} chapter={t("chapter_four")} />
-          )}
-          {tale_chapter_five.length != 0 && (
-            <Paragraph tale={tale_chapter_five} chapter={t("chapter_five")} />
-          )}
-          {tale_chapter_six.length != 0 && (
-            <Paragraph tale={tale_chapter_six} chapter={t("chapter_six")} />
-          )}
-          {tale_chapter_seven.length != 0 && (
-            <Paragraph tale={tale_chapter_seven} chapter={t("chapter_seven")} />
-          )}
-          {tale_chapter_eight.length != 0 && (
-            <Paragraph tale={tale_chapter_eight} chapter={t("chapter_eight")} />
-          )} */}
           <div className="pt-8">
             <CustomButton
               href={`/champions/${id}`}

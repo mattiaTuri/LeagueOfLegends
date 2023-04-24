@@ -6,8 +6,6 @@ import Container from "@/components/shared/Container";
 import style from "./tale.module.css";
 import { easeInOut, motion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import CustomButton from "@/components/shared/CustomButton";
-import Paragraph from "@/components/core/tale/Paragraph";
 import HeroPage from "@/components/shared/HeroPage";
 import StoryPage from "@/components/shared/StoryPage";
 
