@@ -172,7 +172,7 @@ function Tale({ activeChampion }: any) {
           id={activeChampion.id}
           name={activeChampion.name}
           title={t(`champions:${activeChampion?.id}.tale_title`)}
-          story={}
+          story={t(`champions:${activeChampion?.id}.tale`)}
         />
 
         {/* <Container>

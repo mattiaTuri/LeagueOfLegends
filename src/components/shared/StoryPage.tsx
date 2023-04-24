@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
+import { easeIn, motion } from "framer-motion";
 import Container from "./Container";
 import { useEffect, useState } from "react";
 import CustomButton from "./CustomButton";
-import { useTranslation } from "next-i18next";
+import { Trans, useTranslation } from "next-i18next";
 import Paragraph from "../core/tale/Paragraph";
 
 interface StoryPageProps {
@@ -76,16 +76,36 @@ function StoryPage({ id, name, title, story }: StoryPageProps) {
             </div>
             <span className="py-4">{title}</span>
             <div className="bg-[#111] ">
-              <motion.div
+              <div
                 id="progressBar"
                 className="sticky bg-[#C3A06A] h-[5px] origin-left w-0"
                 style={{ width: `${scroolBarProgress}%` }}
-              ></motion.div>
+              ></div>
             </div>
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <Paragraph tale={story} chapter={t("chapter_one")} />
+          <div className="lg:w-[50%] p-10">
+            <Trans
+              i18nKey={story}
+              t={t}
+              components={[
+                <br />,
+                <p className="text-sm lg:text-base"></p>,
+                <span className="block text-center lg:text-2xl"></span>,
+              ]}
+              values={{
+                chapter_one: "CAPITOLO 1",
+                chapter_two: "CAPITOLO 2",
+                chapter_three: "CAPITOLO 3",
+                chapter_four: "CAPITOLO 4",
+                chapter_five: "CAPITOLO 5",
+                chapter_six: "CAPITOLO 6",
+                chapter_seven: "CAPITOLO 7",
+                chapter_eight: "CAPITOLO 8",
+              }}
+            />
+          </div>
 
           {/* <Paragraph tale={tale_chapter_one} chapter={t("chapter_one")} />
           {tale_chapter_two.length != 0 && (
