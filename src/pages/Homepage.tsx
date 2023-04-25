@@ -27,11 +27,12 @@ function Homepage() {
             <div className="hidden lg:flex absolute bottom-10 right-0 px-8">
               <div className="w-80 h-40">
                 <Link
-                  href="/arcane"
+                  href=""
                   className={`w-full h-full flex justify-center items-center border border-[#ba8964] ${style.link}`}
                 >
                   <div className={style.backdrop}></div>
-                  <div className="absolute z-10">
+                  <div className="absolute z-10 flex flex-col items-center">
+                    <span className="text-[#c4b998]">{t("coming_soon")}</span>
                     <h2 className="text-5xl text-[#ba8964]">ARCANE</h2>
                   </div>
                   <video

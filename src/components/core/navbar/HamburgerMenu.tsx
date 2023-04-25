@@ -22,11 +22,9 @@ function HamburgerMenu() {
   const changeLanguage = (lng: string) => {
     const { pathname, asPath, query } = router;
     router.push({ pathname, query }, asPath, { locale: lng });
-
     document.querySelectorAll("#menuLanguage button").forEach((elem) => {
       elem.classList.remove(style.langActiveLink);
     });
-
     const lang_button: HTMLElement = document.getElementById(lng)!;
     lang_button.classList.add(style.langActiveLink);
   };
@@ -75,8 +73,12 @@ function HamburgerMenu() {
             {t("regions")}
           </Link>
         </div>
-        <div className="h-[25%] flex items-center border-b border-[#c4b998]">
-          <Link href="/arcane" className="text-2xl">
+        <div className="h-[25%] flex flex-col items-center justify-center border-b border-[#c4b998]">
+          <span className="text-[#c4b998]">{t("coming_soon")}</span>
+          <Link
+            href="/arcane"
+            className="text-2xl pointer-events-none opacity-50"
+          >
             {t("arcane")}
           </Link>
         </div>

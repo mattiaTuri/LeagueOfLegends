@@ -1,7 +1,9 @@
 import Container from "./Container";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useMemo, useState } from "react";
 import CustomButton from "./CustomButton";
 import { Trans, useTranslation } from "next-i18next";
+import StoryMemo from "./StoryMemo";
+import { motion } from "framer-motion";
 
 interface StoryPageProps {
   id: string;
@@ -31,17 +33,14 @@ function StoryPage({ id, name, title, story }: StoryPageProps) {
 
       setTaleHeigth(newTaleHeight);
     }
-    const progressContainer = document.getElementById("progressContainer")!;
     const talePreview = document.getElementById("taleView")!;
     const actualScrollView = window.scrollY + 80;
     if (actualScrollView > talePreview.offsetHeight) {
       const newScrollY = actualScrollView - talePreview.offsetHeight;
-      //progressContainer.style.transform = `translateY(${newScrollY}px)`; //Dopo aver cambiato i paragrafi delle storie con il component Trans scatta quando la pagina scrolla
       setScrollYContainer(newScrollY);
       const progressPercentage = getScrollPercentageProgress(newScrollY);
       scrollProgress(progressPercentage);
     } else {
-      //progressContainer.style.transform = `translateY(${0}px)`;
       setScrollBarProgress(0);
     }
   };
@@ -61,6 +60,16 @@ function StoryPage({ id, name, title, story }: StoryPageProps) {
       : setScrollBarProgress(progressPercentage);
   };
 
+  const progress = {
+    initial: {},
+    animate: {
+      width: `${scroolBarProgress}%`,
+      transition: {
+        ease: [0.25, 1, 0.5, 1],
+      },
+    },
+  };
+
   return (
     <Container>
       <div id="tale" className="relative pb-12 w-full">
@@ -74,37 +83,19 @@ function StoryPage({ id, name, title, story }: StoryPageProps) {
             </div>
             <span className="py-4">{title}</span>
             <div className="bg-[#111] ">
-              <div
+              <motion.div
                 id="progressBar"
                 className="sticky bg-[#C3A06A] h-[5px] origin-left w-0"
-                style={{ width: `${scroolBarProgress}%` }}
-              ></div>
+                initial="initial"
+                animate="animate"
+                variants={progress}
+              ></motion.div>
             </div>
           </div>
         </div>
         <div className="flex flex-col items-center">
           <div className="lg:w-[50%] p-10">
-            <Trans
-              i18nKey={story}
-              t={t}
-              components={[
-                <p key="text" className="text-sm lg:text-base p-4"></p>,
-                <span
-                  key="chapter"
-                  className="block text-center lg:text-2xl pt-16"
-                ></span>,
-              ]}
-              values={{
-                chapter_one: "CAPITOLO 1",
-                chapter_two: "CAPITOLO 2",
-                chapter_three: "CAPITOLO 3",
-                chapter_four: "CAPITOLO 4",
-                chapter_five: "CAPITOLO 5",
-                chapter_six: "CAPITOLO 6",
-                chapter_seven: "CAPITOLO 7",
-                chapter_eight: "CAPITOLO 8",
-              }}
-            />
+            <StoryMemo story={story} t={t} />
           </div>
           <div className="pt-8">
             <CustomButton

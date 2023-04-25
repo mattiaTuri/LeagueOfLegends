@@ -14,7 +14,7 @@
   "tale": "TALE",
   "back_to_champion": "BACK TO",
   "back_to_region_menu": "REGION MENU",
-  "league_of_legend_story":"A league of legends story",
+  "league_of_legend_story": "A league of legends story",
   "chapter_one": "Chapter one",
   "chapter_two": "Chapter two",
   "chapter_three": "Chapter three",
@@ -22,5 +22,6 @@
   "chapter_five": "Chapter five",
   "chapter_six": "Chapter six",
   "chapter_seven": "Chapter seven",
-  "chapter_eight": "Chapter eight"
+  "chapter_eight": "Chapter eight",
+  "coming_soon": "Cooming soon"
 }
