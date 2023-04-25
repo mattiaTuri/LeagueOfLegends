@@ -36,12 +36,12 @@ function StoryPage({ id, name, title, story }: StoryPageProps) {
     const actualScrollView = window.scrollY + 80;
     if (actualScrollView > talePreview.offsetHeight) {
       const newScrollY = actualScrollView - talePreview.offsetHeight;
-      progressContainer.style.transform = `translateY(${newScrollY}px)`;
+      //progressContainer.style.transform = `translateY(${newScrollY}px)`; //Dopo aver cambiato i paragrafi delle storie con il component Trans scatta quando la pagina scrolla
       setScrollYContainer(newScrollY);
       const progressPercentage = getScrollPercentageProgress(newScrollY);
       scrollProgress(progressPercentage);
     } else {
-      progressContainer.style.transform = `translateY(${0}px)`;
+      //progressContainer.style.transform = `translateY(${0}px)`;
       setScrollBarProgress(0);
     }
   };
@@ -66,9 +66,9 @@ function StoryPage({ id, name, title, story }: StoryPageProps) {
       <div id="tale" className="relative pb-12 w-full">
         <div
           id="progressContainer"
-          className="hidden lg:block absolute left-0 top-10 px-8"
+          className="hidden lg:block left-0 sticky top-[100px] px-8" //sticky top-[100px] //absolute top-10
         >
-          <div className="flex flex-col w-[200px]">
+          <div className="flex flex-col w-[200px] absolute top-10">
             <div className="border border-[#C3A06A] p-2 flex max-w-max">
               <span className="text-base">{name.toUpperCase()}</span>
             </div>
@@ -88,11 +88,10 @@ function StoryPage({ id, name, title, story }: StoryPageProps) {
               i18nKey={story}
               t={t}
               components={[
-                <br key="space" />,
-                <p key="text" className="text-sm lg:text-base"></p>,
+                <p key="text" className="text-sm lg:text-base p-4"></p>,
                 <span
                   key="chapter"
-                  className="block text-center lg:text-2xl"
+                  className="block text-center lg:text-2xl pt-16"
                 ></span>,
               ]}
               values={{
