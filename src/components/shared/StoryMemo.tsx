@@ -27,4 +27,6 @@ const StoryMemo = memo(({ story, t }: any) => {
   );
 });
 
+StoryMemo.displayName = "StoryMemo";
+
 export default StoryMemo;
