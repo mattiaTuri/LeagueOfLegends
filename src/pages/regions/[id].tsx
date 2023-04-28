@@ -2,7 +2,7 @@ import Container from "@/components/shared/Container";
 import Image from "next/image";
 import { regions } from "@/data/regions";
 import { easeInOut, motion } from "framer-motion";
-import { useTranslation } from "next-i18next";
+import { Trans, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import style from "./region.module.css";
 import CustomButton from "@/components/shared/CustomButton";
@@ -106,15 +106,11 @@ function Region({ activeRegion }: any) {
         </Container>
       </div>
       <Container>
-        <div className="flex justify-center p-10">
+        <div className="flex justify-center p-10 w-full">
           <div className="w-full lg:w-[50%] flex flex-col items-center">
-            {region_description.map((paragraph: string, index: number) => {
-              return (
-                <p key={index} className="p-4 text-sm lg:text-base">
-                  {paragraph}
-                </p>
-              );
-            })}
+            <Trans i18nKey={t(`regions:${activeRegion.id}.description`)}
+            components={[<p key="text" className="text-sm lg:text-base p-4"></p>]}
+            />
             <div className="pt-8">
               <CustomButton href="/regions" text={t("back_to_region_menu")} />
             </div>

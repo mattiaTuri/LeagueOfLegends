@@ -5,12 +5,15 @@ const StoryMemo = memo(({ story, t }: any) => {
   return (
     <Trans
       i18nKey={story}
-      t={t}
       components={[
         <p key="text" className="text-sm lg:text-base p-4"></p>,
         <span
           key="chapter"
           className="block text-center lg:text-2xl pt-16"
+        ></span>,
+        <span
+          key="chapter"
+          className="block text-center lg:text-2xl"
         ></span>,
       ]}
       values={{

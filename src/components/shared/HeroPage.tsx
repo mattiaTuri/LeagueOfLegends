@@ -57,7 +57,6 @@ const name_anim = {
 interface ChampionProps {
   name: string;
   title: string;
-  //text: string[];
   author: string;
   img: StaticImageData;
   bgPosition: string;
