@@ -13,7 +13,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import {
   letter_container_anim,
   letter_name_anim,
-  img_champ_initial_effect,
 } from "../../animation/FramerMotion";
 
 export async function getStaticPaths({ locales }: any) {
