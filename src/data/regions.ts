@@ -32,7 +32,7 @@ import zaun_icon from "../../public/assets/images/regions/icons/zaun_icon.png";
 
 export const regions: Region[] = [
     {
-        id: "bandle_city",
+        id: "bandle-city",
         name: "Bandle City",
         icon: bandle_city_icon,       
         region_img: bandle_city,
@@ -96,7 +96,7 @@ export const regions: Region[] = [
         width: "32"
     }, 
     {
-        id: "shadow_isles",
+        id: "shadow-isles",
         name: "Shadow Isles",
         icon: shadow_isles_icon,
         region_img: shadow_isles,

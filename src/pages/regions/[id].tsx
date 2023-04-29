@@ -55,7 +55,10 @@ function Region({ activeRegion }: any) {
               initial="initial"
               animate="animate"
             >
-              <motion.div className="flex justify-center" variants={title_anim}>
+              <motion.div
+                className="flex justify-center"
+                variants={region_icon_anim}
+              >
                 <Image
                   src={activeRegion.icon}
                   alt={t(`regions:${activeRegion.id}.name`)}
@@ -63,7 +66,7 @@ function Region({ activeRegion }: any) {
                 />
               </motion.div>
               <motion.h1
-                variants={region_icon_anim}
+                variants={title_anim}
                 className="text-3xl md:text-5xl text-[#c4b998] pt-10"
               >
                 {t(`regions:${activeRegion.id}.name`).toUpperCase()}
