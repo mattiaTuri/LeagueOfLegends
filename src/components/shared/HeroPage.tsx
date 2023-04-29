@@ -1,58 +1,16 @@
 import Image, { StaticImageData } from "next/image";
 import Container from "./Container";
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import style from "./heropage.module.css";
 import { useTranslation } from "next-i18next";
-
-const title_anim = {
-  initial: { y: 100, opacity: 0 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      ease: [0, 0.95, 0.55, 1.15],
-    },
-  },
-};
-
-const author_anim = {
-  initial: { y: 100, opacity: 0 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-      duration: 1,
-      ease: [0, 0.95, 0.55, 1.15],
-    },
-  },
-};
-
-const text_anim = {
-  initial: { y: 100, opacity: 0 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 1,
-      duration: 1,
-      ease: [0, 0.95, 0.55, 1.15],
-    },
-  },
-};
-
-const name_anim = {
-  initial: { opacity: 0 },
-  animate: {
-    opacity: 1,
-    transition: {
-      delay: 1.5,
-      duration: 1,
-      ease: easeInOut,
-    },
-  },
-};
+import {
+  title_anim,
+  author_anim,
+  text_anim,
+  champ_name_anim,
+  arrow_anim,
+  arrow_container,
+} from "../../animation/FramerMotion";
 
 interface ChampionProps {
   name: string;
@@ -79,9 +37,9 @@ function HeroPage({ name, title, author, img, bgPosition }: ChampionProps) {
           initial="initial"
           animate="animate"
         >
-          <div className="relative bottom-40">
+          <div className="relative bottom-32">
             <motion.div
-              variants={name_anim}
+              variants={champ_name_anim}
               className="py-8 flex justify-center"
             >
               <div className="p-2 border border-[#C3A06A]">
@@ -110,6 +68,15 @@ function HeroPage({ name, title, author, img, bgPosition }: ChampionProps) {
                 </motion.span>
               )}
             </div>
+            <motion.div
+              variants={arrow_container}
+              className="pt-8 flex justify-center"
+            >
+              <motion.div
+                variants={arrow_anim}
+                className={style.triangle}
+              ></motion.div>
+            </motion.div>
           </div>
         </motion.div>
       </Container>

@@ -1,19 +1,10 @@
 import { motion } from "framer-motion";
 import { StaticImageData } from "next/image";
 import Link from "next/link";
-import DesktopMenu from "../core/navbar/DesktopMenu";
-
-const hoverTransition = {
-  duration: 1,
-  ease: [0.25, 1, 0.5, 1],
-};
-
-const championImage = {
-  initial: {},
-  hover: {
-    scale: 1.1,
-  },
-};
+import {
+  img_scale_anim,
+  img_hover_transition,
+} from "../../animation/FramerMotion";
 
 interface ImageProps {
   href: string;
@@ -52,8 +43,8 @@ function ImageComponent({
             backgroundSize: "cover",
             backgroundPosition: imgPosition,
           }}
-          variants={championImage}
-          transition={hoverTransition}
+          variants={img_scale_anim}
+          transition={img_hover_transition}
           className="h-full w-full object-cover"
         />
         <div className="absolute bottom-0 bg-[#111] opacity-80 w-full h-[20%] flex flex-col justify-center items-center">

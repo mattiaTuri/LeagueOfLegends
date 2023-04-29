@@ -10,29 +10,11 @@ import "swiper/swiper-bundle.min.css";
 import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-const container = {
-  initial: {},
-  animate: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      delayChildren: 1,
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const item = {
-  initial: { y: 320 },
-  animate: {
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: [0.6, 0.01, 0.05, 0.9],
-    },
-  },
-};
+import {
+  letter_container_anim,
+  letter_name_anim,
+  img_champ_initial_effect,
+} from "../../animation/FramerMotion";
 
 export async function getStaticPaths({ locales }: any) {
   const paths = champions
@@ -85,13 +67,17 @@ function ChampionPage({ activeChampion }: any) {
     <div className="h-full w-full flex flex-col items-center justify-center pt-[80px] pb-10">
       <motion.div
         className="w-full flex justify-center items-center p-8"
-        variants={container}
+        variants={letter_container_anim}
         initial="initial"
         animate="animate"
       >
         {nameSplit?.map((letter: string, index: number) => {
           return (
-            <motion.h1 key={index} variants={item} className="text-5xl">
+            <motion.h1
+              key={index}
+              variants={letter_name_anim}
+              className="text-5xl"
+            >
               {letter != " " ? letter : <span>&nbsp;</span>}
             </motion.h1>
           );

@@ -1,11 +1,12 @@
 import Container from "@/components/shared/Container";
 import Image from "next/image";
 import { regions } from "@/data/regions";
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Trans, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import style from "./region.module.css";
 import CustomButton from "@/components/shared/CustomButton";
+import { title_anim, region_icon_anim } from "@/animation/FramerMotion";
 
 export async function getStaticPaths({ locales }: any) {
   const paths = regions
@@ -36,39 +37,8 @@ export async function getStaticProps({ params, locale }: any) {
   };
 }
 
-const region_title = {
-  initial: { y: 100, opacity: 0 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      ease: [0, 0.95, 0.55, 1.15],
-    },
-  },
-};
-
-const region_icon = {
-  initial: { opacity: 0 },
-  animate: {
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-      duration: 1,
-      ease: easeInOut,
-    },
-  },
-};
-
 function Region({ activeRegion }: any) {
   const { t } = useTranslation();
-
-  const region_description: string[] = t(
-    `regions:${activeRegion.id}.description`,
-    {
-      returnObjects: true,
-    }
-  );
 
   return (
     <>
@@ -85,10 +55,7 @@ function Region({ activeRegion }: any) {
               initial="initial"
               animate="animate"
             >
-              <motion.div
-                className="flex justify-center"
-                variants={region_icon}
-              >
+              <motion.div className="flex justify-center" variants={title_anim}>
                 <Image
                   src={activeRegion.icon}
                   alt={t(`regions:${activeRegion.id}.name`)}
@@ -96,7 +63,7 @@ function Region({ activeRegion }: any) {
                 />
               </motion.div>
               <motion.h1
-                variants={region_title}
+                variants={region_icon_anim}
                 className="text-3xl md:text-5xl text-[#c4b998] pt-10"
               >
                 {t(`regions:${activeRegion.id}.name`).toUpperCase()}
@@ -108,8 +75,11 @@ function Region({ activeRegion }: any) {
       <Container>
         <div className="flex justify-center p-10 w-full">
           <div className="w-full lg:w-[50%] flex flex-col items-center">
-            <Trans i18nKey={t(`regions:${activeRegion.id}.description`)}
-            components={[<p key="text" className="text-sm lg:text-base p-4"></p>]}
+            <Trans
+              i18nKey={t(`regions:${activeRegion.id}.description`)}
+              components={[
+                <p key="text" className="text-sm lg:text-base p-4"></p>,
+              ]}
             />
             <div className="pt-8">
               <CustomButton href="/regions" text={t("back_to_region_menu")} />

@@ -1,7 +1,6 @@
-import Container from "@/components/shared/Container";
 import style from "./champions.module.css";
 import { champions, randomChampions } from "../../data/champions";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper";
 import "swiper/css";
@@ -13,45 +12,12 @@ import SmarphoneViewChamp from "@/components/core/champions/SmartphoneViewChamp"
 import DesktopViewChamp from "@/components/core/champions/DesktopViewChamp";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-const hoverTransition = {
-  duration: 1,
-  ease: [0.25, 1, 0.5, 1],
-};
-
-const championImage = {
-  initial: {},
-  hover: {
-    scale: 1.1,
-  },
-};
-
-const textContainer = {
-  initial: {},
-  hover: {
-    opacity: 1,
-    transition: {
-      delayChildren: 0.1,
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const textMotion = {
-  initial: {
-    opacity: 0,
-    y: 180,
-  },
-  hover: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      delayChildren: 0.3,
-      duration: 1,
-      ease: [0.25, 1, 0.5, 1],
-    },
-  },
-};
+import {
+  img_scale_anim,
+  img_hover_transition,
+  champ_slider_title_container,
+  text_motion_anim,
+} from "../../animation/FramerMotion";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -117,8 +83,8 @@ function Champions({ champions }: any) {
                         >
                           <motion.div
                             className="h-full"
-                            variants={championImage}
-                            transition={hoverTransition}
+                            variants={img_scale_anim}
+                            transition={img_hover_transition}
                           >
                             <Image
                               src={champion.champion_img}
@@ -129,16 +95,16 @@ function Champions({ champions }: any) {
                           </motion.div>
                           <motion.div
                             className={style.championName}
-                            variants={textContainer}
+                            variants={champ_slider_title_container}
                           >
                             <motion.h2
-                              variants={textMotion}
+                              variants={text_motion_anim}
                               className="text-5xl lg:text-5xl"
                             >
                               {champion.name.toUpperCase()}
                             </motion.h2>
                             <motion.h3
-                              variants={textMotion}
+                              variants={text_motion_anim}
                               className="text-2xl"
                             >
                               - {t(`champions:${champion.id}.title`)} -

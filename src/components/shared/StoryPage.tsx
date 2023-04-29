@@ -75,7 +75,7 @@ function StoryPage({ id, name, title, story }: StoryPageProps) {
       <div id="tale" className="relative pb-12 w-full">
         <div
           id="progressContainer"
-          className="hidden lg:block left-0 sticky top-[100px] px-8" //sticky top-[100px] //absolute top-10
+          className="hidden lg:block left-0 sticky top-[100px] px-8"
         >
           <div className="flex flex-col w-[200px] absolute top-10">
             <div className="border border-[#C3A06A] p-2 flex max-w-max">

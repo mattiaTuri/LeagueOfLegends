@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import Homepage from "./Homepage";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
