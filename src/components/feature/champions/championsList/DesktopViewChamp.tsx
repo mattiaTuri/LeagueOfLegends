@@ -1,7 +1,10 @@
 import Container from "components/shared/Container";
 import ImageComponent from "components/shared/ImageContainer";
+import useWidth from "components/shared/useWidth";
+import { champions } from "data/champions";
 
-function DesktopViewChamp({ champions, windowWidth }: any) {
+function DesktopViewChamp() {
+  const { windowWidth } = useWidth();
   return (
     <Container>
       <div className="p-8 flex flex-wrap w-full">

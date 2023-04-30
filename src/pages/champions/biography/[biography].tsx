@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { champions } from "../../../data/champions";
 import { easeInOut, motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
-import HeroPage from "components/shared/HeroPage";
+import HeroPage from "components/shared/heroPage/HeroPage";
 import StoryPage from "components/shared/StoryPage";
 
 export async function getStaticPaths({ locales }: any) {

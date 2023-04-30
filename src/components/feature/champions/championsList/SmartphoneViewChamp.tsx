@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { champions } from "../../../data/champions";
+import { champions } from "data/champions";
 
 function SmarphoneViewChamp() {
   return (
     <div className="w-full pt-8">
-      {champions.map((champion, index) => {
+      {champions.map((champion: any, index: number) => {
         return (
           <Link
             key={index}
