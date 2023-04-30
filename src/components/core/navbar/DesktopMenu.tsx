@@ -1,4 +1,4 @@
-import Container from "@/components/shared/Container";
+import Container from "components/shared/Container";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";

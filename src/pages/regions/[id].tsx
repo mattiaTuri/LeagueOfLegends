@@ -1,12 +1,12 @@
-import Container from "@/components/shared/Container";
+import Container from "components/shared/Container";
 import Image from "next/image";
-import { regions } from "@/data/regions";
+import { regions } from "data/regions";
 import { motion } from "framer-motion";
 import { Trans, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import style from "./region.module.css";
-import CustomButton from "@/components/shared/CustomButton";
-import { title_anim, region_icon_anim } from "@/animation/FramerMotion";
+import CustomButton from "components/shared/CustomButton";
+import { title_anim, region_icon_anim } from "animation/FramerMotion";
 
 export async function getStaticPaths({ locales }: any) {
   const paths = regions

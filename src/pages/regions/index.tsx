@@ -1,8 +1,8 @@
-import Container from "@/components/shared/Container";
+import Container from "components/shared/Container";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { regions } from "../../data/regions";
 import { useTranslation } from "next-i18next";
-import ImageComponent from "@/components/shared/ImageContainer";
+import ImageComponent from "components/shared/ImageContainer";
 import { useEffect, useState } from "react";
 
 export const getStaticProps = async ({ locale }: any) => ({

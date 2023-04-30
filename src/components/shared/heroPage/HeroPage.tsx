@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
-import Container from "./Container";
+import Container from "components/shared/Container";
 import { motion } from "framer-motion";
-import style from "./heropage.module.css";
+import style from "components/shared/heroPage/heropage.module.css";
 import { useTranslation } from "next-i18next";
 import {
   title_anim,
@@ -10,15 +10,8 @@ import {
   champ_name_anim,
   arrow_anim,
   arrow_container,
-} from "../../animation/FramerMotion";
-
-interface ChampionProps {
-  name: string;
-  title: string;
-  author: string;
-  img: StaticImageData;
-  bgPosition: string;
-}
+} from "animation/FramerMotion";
+import { ChampionProps } from "components/types";
 
 function HeroPage({ name, title, author, img, bgPosition }: ChampionProps) {
   const { t } = useTranslation();

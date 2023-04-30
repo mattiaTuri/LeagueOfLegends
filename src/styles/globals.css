@@ -17,82 +17,89 @@
   src: url("../../public/assets/font/Atami-Regular.otf");
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: black;
 }
 
-h1,h2, h3, span{
-  color: #C3A06A;
+h1,
+h2,
+h3,
+span {
+  color: #c3a06a;
 }
 
-h1,h2{
+h1,
+h2 {
   font-family: "Atami-Display-Bold";
 }
 
-a,h3, span{
+a,
+h3,
+span {
   font-family: "Atami-Bold";
 }
 
-p{
+p {
   font-family: "Atami-Regular";
   color: #c4b998;
 }
 
-.swiper-slide-active{
+.swiper-slide-active {
   opacity: 1 !important;
   pointer-events: all !important;
-} 
-
-.swiper-slide-thumb-active{
-  border: 1px solid #C3A06A;
 }
 
+.swiper-slide-thumb-active {
+  border: 1px solid #c3a06a;
+}
 
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
   width: 50px !important;
   height: 50px !important;
   background-color: #191716;
 }
 
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
   visibility: collapse;
 }
 
-.swiper-button-prev:hover{
+.swiper-button-prev:hover {
   transform: translateX(-25px);
- }
-
-.swiper-button-next:hover{
- transform: translateX(25px);
 }
 
-.swiper-button-prev::after, .swiper-button-next::after{
+.swiper-button-next:hover {
+  transform: translateX(25px);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
   content: none !important;
 }
 
 @media screen and (min-width: 1024px) {
-
   /* .swiper-slide{
     width: 50% !important;
   } */
 
-  .swiper-button-prev{
+  .swiper-button-prev {
     visibility: visible;
     left: 25% !important;
     transition: 0.3s ease;
-    border: 1px solid #C3A06A;
+    border: 1px solid #c3a06a;
   }
-  
-  .swiper-button-next{
+
+  .swiper-button-next {
     visibility: visible;
     right: 25% !important;
     transition: 0.3s ease;
-    border: 1px solid #C3A06A;
+    border: 1px solid #c3a06a;
   }
 }

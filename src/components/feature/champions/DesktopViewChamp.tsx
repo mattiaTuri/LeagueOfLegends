@@ -1,5 +1,5 @@
-import Container from "@/components/shared/Container";
-import ImageComponent from "@/components/shared/ImageContainer";
+import Container from "components/shared/Container";
+import ImageComponent from "components/shared/ImageContainer";
 
 function DesktopViewChamp({ champions, windowWidth }: any) {
   return (

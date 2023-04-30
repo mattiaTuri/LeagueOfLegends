@@ -1,9 +1,9 @@
-import Container from "@/components/shared/Container";
+import Container from "components/shared/Container";
 import { champions } from "../../data/champions";
 import Image from "next/image";
 import style from "./id.module.css";
 import { motion } from "framer-motion";
-import CustomButton from "@/components/shared/CustomButton";
+import CustomButton from "components/shared/CustomButton";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, FreeMode, Navigation, Thumbs } from "swiper";
 import "swiper/swiper-bundle.min.css";

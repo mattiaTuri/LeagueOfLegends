@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Homepage from "./Homepage";
+import Homepage from "../components/feature/homePage/Homepage";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }: any) {

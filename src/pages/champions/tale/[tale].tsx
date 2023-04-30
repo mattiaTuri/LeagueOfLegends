@@ -2,8 +2,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { champions } from "../../../data/champions";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
-import HeroPage from "@/components/shared/HeroPage";
-import StoryPage from "@/components/shared/StoryPage";
+import HeroPage from "components/shared/HeroPage";
+import StoryPage from "components/shared/StoryPage";
 
 export async function getStaticPaths({ locales }: any) {
   const paths = champions
@@ -42,7 +42,6 @@ function Tale({ activeChampion }: any) {
   useEffect(() => {
     setLoadingTranslation(true);
   });
-
 
   if (loadingTranslation)
     return (

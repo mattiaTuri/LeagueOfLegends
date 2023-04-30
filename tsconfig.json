@@ -14,10 +14,14 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "baseUrl": "src"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/shared/PageTransition.tsx", "next-i18next.config.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/shared/PageTransition.tsx",
+    "next-i18next.config.js"
+  ],
   "exclude": ["node_modules"]
 }
