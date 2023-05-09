@@ -1,4 +1,3 @@
-import style from "pages/champions/champions.module.css";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";

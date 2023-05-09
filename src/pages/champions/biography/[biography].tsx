@@ -1,8 +1,6 @@
-import Container from "components/shared/Container";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
 import { champions } from "../../../data/champions";
-import { easeInOut, motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import HeroPage from "components/shared/heroPage/HeroPage";
 import StoryPage from "components/shared/StoryPage";

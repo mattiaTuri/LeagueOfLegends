@@ -1,6 +1,5 @@
 import Link from "next/link";
 import arcaneClip from "assets/video/arcaneClip.mp4";
-import style from "./homepage.module.css";
 import { useTranslation } from "next-i18next";
 
 function VideoPlayer() {
@@ -10,9 +9,9 @@ function VideoPlayer() {
       <div className="w-80 h-40">
         <Link
           href=""
-          className={`w-full h-full flex justify-center items-center border border-[#ba8964] ${style.link}`}
+          className="w-full h-full flex justify-center items-center border border-[#ba8964] clip-polygon group"
         >
-          <div className={style.backdrop}></div>
+          <div className="w-full h-full bg-[#111] opacity-90 absolute left-0 top-0 translate-x-[-100%] duration-500 ease-[cubic-bezier(.5,1.10,.47,1.36)] z-10 clip-polygon group-hover:translate-x-0"></div>
           <div className="absolute z-10 flex flex-col items-center">
             <span className="text-[#c4b998]">{t("coming_soon")}</span>
             <h2 className="text-5xl text-[#ba8964]">ARCANE</h2>
