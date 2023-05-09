@@ -3,7 +3,6 @@ import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import style from "./navbar.module.css";
 
 function DesktopMenu() {
   const { t } = useTranslation<string>();
@@ -28,42 +27,49 @@ function DesktopMenu() {
     const { pathname, asPath, query } = router;
     router.push({ pathname, query }, asPath, { locale: lng });
 
-    document.querySelectorAll("#menuLanguage button").forEach((elem) => {
-      elem.classList.remove(style.activeLink);
+    document.querySelectorAll("#menuLanguage button").forEach((elem:any) => {
+      elem.style.color = "#ba8964"
+      elem.style.background = "none"
     });
 
     const lang_slider: HTMLElement = document.getElementById("lang-slider")!;
-    const lang_button: HTMLElement = document.getElementById(lng)!;
+    const active_lang: HTMLElement = document.getElementById(lng)!;
+    active_lang.style.transitionDuration = ".5s"
+    active_lang.style.color = "black"
+    active_lang.style.background = "rgb(186, 137, 100)"
 
-    lang_button.classList.add(style.activeLink);
-
-    lang_slider.style.transform = `translateX(${lang_button.offsetLeft}px)`;
+    lang_slider.style.transform = `translateX(${active_lang.offsetLeft}px)`;
   };
 
   const changeActionMenu = (elem: string) => {
-    document.querySelectorAll("#menuLink a").forEach((elem) => {
-      elem.classList.remove(style.activeLink);
+    document.querySelectorAll("#menuLink a").forEach((elem:any) => {
+      elem.style.color = "#ba8964"
+      elem.style.background = "none"
     });
 
     const menu_slider: HTMLElement = document.getElementById("menu-slider")!;
-    const link: HTMLElement = document.getElementById(elem)!;
-    link.classList.add(style.activeLink);
+    const activeLink: HTMLElement = document.getElementById(elem)!;
+    activeLink.style.transitionDuration = "1s"
+    activeLink.style.color = "black"
+    activeLink.style.background = "rgb(186, 137, 100)"
 
-    menu_slider.style.width = `${link.offsetWidth}px`;
-    menu_slider.style.transform = `translateX(${link.offsetLeft}px)`;
+    menu_slider.style.width = `${activeLink.offsetWidth}px`;
+    menu_slider.style.transform = `translateX(${activeLink.offsetLeft}px)`;
   };
 
   const hoverEffect = (elem: string) => {
     const link: HTMLElement = document.getElementById(elem)!;
 
-    if (!link.classList.contains(style.activeLink)) {
+    if (link.style.background != "rgb(186, 137, 100)") {
       link.style.background = "#0000008b";
     }
   };
 
   const leaveHoverEffect = (elem: string) => {
     const link: HTMLElement = document.getElementById(elem)!;
-    link.style.background = "transparent";
+    if (link.style.background != "rgb(186, 137, 100)") {
+      link.style.background = "none";
+    }  
   };
 
   return (
@@ -76,7 +82,7 @@ function DesktopMenu() {
           <div id="menuLanguage" className="w-[50%] flex relative">
             <button
               id="it"
-              className={`w-[50%] text-sm z-10 ${style.linkStyle}`}
+              className={`w-[50%] text-sm z-10`}
               onClick={() => changeLanguage("it")}
               onMouseOver={() => hoverEffect("it")}
               onMouseLeave={() => leaveHoverEffect("it")}
@@ -85,7 +91,7 @@ function DesktopMenu() {
             </button>
             <button
               id="en"
-              className={`w-[50%] text-sm z-10 ${style.linkStyle}`}
+              className="w-[50%] text-sm z-10"
               onClick={() => changeLanguage("en")}
               onMouseOver={() => hoverEffect("en")}
               onMouseLeave={() => leaveHoverEffect("en")}
@@ -103,7 +109,7 @@ function DesktopMenu() {
             <Link
               id="home"
               href="/"
-              className={`w-full text-sm p-2 flex justify-center items-center ${style.linkStyle}`}
+              className="w-full text-sm p-2 flex justify-center items-center hover:duration-500"
               onClick={() => changeActionMenu("home")}
               onMouseOver={() => hoverEffect("home")}
               onMouseLeave={() => leaveHoverEffect("home")}
@@ -115,7 +121,7 @@ function DesktopMenu() {
             <Link
               id="champions"
               href="/champions"
-              className={`w-full text-sm p-2 flex justify-center items-center ${style.linkStyle}`}
+              className="w-full text-sm p-2 flex justify-center items-center hover:duration-500"
               onClick={() => changeActionMenu("champions")}
               onMouseOver={() => hoverEffect("champions")}
               onMouseLeave={() => leaveHoverEffect("champions")}
@@ -127,7 +133,7 @@ function DesktopMenu() {
             <Link
               id="regions"
               href="/regions"
-              className={`w-full text-sm p-2 flex justify-center items-center ${style.linkStyle}`}
+              className="w-full text-sm p-2 flex justify-center items-center hover:duration-500"
               onClick={() => changeActionMenu("regions")}
               onMouseOver={() => hoverEffect("regions")}
               onMouseLeave={() => leaveHoverEffect("regions")}

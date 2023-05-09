@@ -16,7 +16,7 @@ import { ChampionProps } from "components/types";
 function HeroPage({ name, title, author, img, bgPosition }: ChampionProps) {
   const { t } = useTranslation();
   return (
-    <div id="taleView" className={`h-[100vh] relative ${style.imgGradient}`}>
+    <div id="taleView" className="h-[100vh] relative bg-gradient">
       <Image
         alt={title}
         src={img}
@@ -67,7 +67,7 @@ function HeroPage({ name, title, author, img, bgPosition }: ChampionProps) {
             >
               <motion.div
                 variants={arrow_anim}
-                className={style.triangle}
+                className="w-[30px] h-[20px] bg-[#C3A06A] clip-triangle"
               ></motion.div>
             </motion.div>
           </div>

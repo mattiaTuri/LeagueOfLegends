@@ -33,12 +33,12 @@ function ImageSwiper({ champion, windowWidth }: ImageSwiper) {
             <Image
               src={champion_img}
               alt={name}
-              className={style.image}
+              className="h-full relative object-cover"
               style={{ objectPosition: bgPosition }}
             />
           </motion.div>
           <motion.div
-            className={style.championName}
+            className="absolute bottom-0 h-full w-full flex flex-col justify-center items-center"
             variants={champ_slider_title_container}
           >
             <motion.h2
@@ -53,11 +53,11 @@ function ImageSwiper({ champion, windowWidth }: ImageSwiper) {
           </motion.div>
         </motion.div>
       </Link>
-      <Link href={`/champions/${id}`} className={`${style.championBox}`}>
+      <Link href={`/champions/${id}`} className="bg-[#0000008b] w-full h-[20%] absolute bottom-0 flex flex-col justify-center items-center border border-[#C3A06A] lg:hidden">
         <div className="flex flex-col items-center justify-center">
-          <h2 className="text-[#ba8964]">{name}</h2>
+          <h2 className="text-[#ba8964]">{name.toUpperCase()}</h2>
           <h3 className="text-[#ba8964] text-base">
-            {t(`champions:${id}.title`)}
+            - {t(`champions:${id}.title`)} -
           </h3>
         </div>
       </Link>

@@ -4,7 +4,6 @@ import { EffectCoverflow, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Champion } from "models/champion";
-import style from "pages/champions/champions.module.css";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -42,7 +41,7 @@ function ChampionsShowcase() {
       >
         {randomChampions?.map((champion: Champion) => {
           return (
-            <SwiperSlide className={style.championSlider} key={champion.id}>
+            <SwiperSlide className="champions-showcase-slider" key={champion.id}>
               <ImageSwiper champion={champion} windowWidth={windowWidth} />
             </SwiperSlide>
           );

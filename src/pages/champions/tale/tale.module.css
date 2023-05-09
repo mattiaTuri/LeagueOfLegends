@@ -1,6 +1,0 @@
-.imgGradient {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 25%, rgb(0, 0, 0, 0.8)),
-    linear-gradient(90deg, rgba(0, 0, 0, 0) 25%, rgb(0, 0, 0, 0.8)),
-    linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0)),
-    linear-gradient(270deg, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.8));
-}

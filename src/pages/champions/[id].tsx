@@ -124,7 +124,7 @@ function ChampionPage({ activeChampion }: any) {
               </figcaption>
             </figure>
           </div>
-          <div className={style.triangle}></div>
+          <div className="w-[30px] h-[20px] bg-[#C3A06A] clip-triangle"></div>
           <div className="p-8 w-full flex flex-col items-center lg:w-[80%]">
             <p className="text-center pb-8">
               {t(`champions:${activeChampion?.id}.biography_preview`)}
@@ -190,7 +190,7 @@ function ChampionPage({ activeChampion }: any) {
         </div>
       </div>
       <Container>
-        <div className="pt-20 pb-12 relative w-full">
+        <div className="pt-20 pb-12 relative w-full md:p-8">
           <div className="pb-8 text-center">
             <h3 className="text-[#c4b998] text-2xl lg:text-5xl">
               {t("available_skins")}
@@ -214,7 +214,7 @@ function ChampionPage({ activeChampion }: any) {
             >
               {activeChampion?.splash_art.map((elem: any, index: number) => {
                 return (
-                  <SwiperSlide key={index} className={style.artSwiper}>
+                  <SwiperSlide key={index} className="splash-art-slider">
                     <Image
                       src={elem.splash_art_img}
                       alt=""
@@ -232,17 +232,17 @@ function ChampionPage({ activeChampion }: any) {
               freeMode={true}
               watchSlidesProgress={true}
               modules={[FreeMode, Navigation, Thumbs]}
-              className={`${style.containerSwiper}`}
+              className="splash-arts-list-swiper-container"
             >
               {activeChampion?.splash_art.map((elem: any, index: number) => {
                 return (
-                  <SwiperSlide key={index} className={style.iconSwiper}>
+                  <SwiperSlide key={index} className="splash-arts-list-slider">
                     <Image
                       src={elem.splash_art_img}
                       alt=""
                       className="w-full h-full lg:w-[70px]"
                     />
-                    <span className="hidden lg:block lg:text-sm">
+                    <span className="hidden lg:block lg:text-sm lg:pl-2">
                       {t(
                         `champions:${activeChampion.id}.splash_art.${index}.title`
                       ).toUpperCase()}
